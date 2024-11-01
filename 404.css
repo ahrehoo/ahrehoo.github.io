@@ -1,0 +1,14 @@
+table{
+    width: 700px;
+    position: relative;
+    top: calc(50vh - 223px - 5vh) !important;
+}
+td{
+    text-align: center;
+}
+img{
+    margin-right: 10px;
+}
+button{
+    height: 50px;
+}

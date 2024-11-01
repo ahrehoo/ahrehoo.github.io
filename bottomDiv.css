@@ -1,0 +1,41 @@
+.bottomTd {
+    text-align: left;
+    padding: 0px;
+    height: 50px;
+    vertical-align: top;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-bottom-left-radius: 19px;
+    border-bottom-right-radius: 19px;
+}
+
+.bottomTd:hover {
+    height: 60px;
+}
+
+.bottomDiv {
+    background-color: var(--forecolor);
+    width: 1000px;
+    height: 19px;
+    vertical-align: top;
+    border-bottom-left-radius: 19px;
+    border-bottom-right-radius: 19px;
+}
+.bottomLabel{
+    font-size: 12px;
+    color: black;
+    margin: 0px;
+    margin-top: 8px;
+    display: inline-flex;
+}
+
+.bottomLeftLabel {
+    width: 300px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.bottomRightLabel {
+    width: 50px;
+    text-align: right;
+    padding-left: 300px;
+}

@@ -1,0 +1,41 @@
+.tab0 {
+    position: absolute;
+    display: inline-block;
+    left: 5px;
+}
+
+.tab1 {
+    position: absolute;
+    display: inline-block;
+    left: 90px;
+}
+
+.tab2 {
+    position: absolute;
+    display: inline-block;
+    left: 205px;
+}
+
+.tab3 {
+    position: absolute;
+    display: inline-block;
+    left: 350px;
+}
+
+.tab4 {
+    position: absolute;
+    display: inline-block;
+    left: 505px;
+}
+
+.tab5 {
+    position: absolute;
+    display: inline-block;
+    left: 705px;
+}
+
+.tab6 {
+    position: absolute;
+    display: inline-block;
+    left: 935px;
+}
