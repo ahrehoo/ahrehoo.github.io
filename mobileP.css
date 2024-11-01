@@ -1,0 +1,78 @@
+@media only screen and (max-width: 1000px) and (orientation:portrait) {
+    .noHoverMobile {
+        pointer-events: none;
+    }
+
+    table {
+        border-radius: 50px;
+        width: 800px;
+        height: 100%;
+    }
+
+    td {
+        text-align: center;
+        width: 800px;
+        display: block;
+    }
+
+    .blueHeaderP {
+        font: var(--header1PFont);
+    }
+
+    input {
+        border-radius: 40px;
+        font: var(--textInputPFont);
+        margin: 30px;
+        width: 500px;
+        height: 100px;
+        border-width: 7px;
+        box-shadow: inset 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    input[type="submit"] {
+        border-bottom-width: 15px;
+        margin-top: 70px;
+        height: 140px;
+        width: 505px;
+        font: var(--buttonPFont);
+        box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    input[type="submit"]:hover {
+        transform: translateY(10px);
+    }
+
+    .bottomTd {
+        width: 802px;
+        height: 100px;
+        border-bottom-left-radius: 49px;
+        border-bottom-right-radius: 49px;
+    }
+
+    .bottomDiv {
+        height: 50px;
+        width: 802px;
+        border-bottom-left-radius: 49px;
+        border-bottom-right-radius: 49px;
+    }
+    .bottomLabel{
+        opacity: 0;
+    }
+}
+
+
+
+@media only screen and (max-width: 1000px) and (orientation:landscape) {
+    table {
+        width: 70%;
+    }
+
+    button,
+    input[type=submit] {
+        border-radius: 15px;
+        width: 60%;
+        height: 70px;
+        border-bottom: 10px solid var(--color1);
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.4);
+    }
+}

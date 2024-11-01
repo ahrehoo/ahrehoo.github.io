@@ -1,0 +1,23 @@
+.tab0 {
+    position: absolute;
+    display: inline-block;
+    left: 20px;
+}
+
+.tab1 {
+    position: absolute;
+    display: inline-block;
+    left: 80px;
+}
+
+.tab2 {
+    position: absolute;
+    display: inline-block;
+    left: 370px;
+}
+
+.tab3 {
+    position: absolute;
+    display: inline-block;
+    left: 670px;
+}

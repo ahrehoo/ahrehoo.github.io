@@ -1,0 +1,41 @@
+.wa {
+    font-variation-settings: var(--regular-font-variation);
+}
+
+.wb {
+    font-variation-settings: var(--demi-bold-font-variation);
+}
+
+.wc {
+    font-variation-settings: var(--bold-font-variation);
+}
+
+.sa {
+    font-size: var(--smaller-font-size);
+}
+
+.sb {
+    font-size: var(--small-font-size);
+}
+
+.sc {
+    font-size: var(--normal-font-size);
+}
+
+.sd {
+    font-size: var(--big-font-size);
+}
+
+.se {
+    font-size: var(--bigger-font-size);
+}
+
+.sf {
+    font-size: var(--title-font-size);
+}
+
+.fa {
+    -moz-font-feature-settings: "ss02";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+}

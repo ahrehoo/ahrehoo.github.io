@@ -1,0 +1,11 @@
+.tab0 {
+    position: absolute;
+    display: inline-block;
+    left: 80px;
+}
+
+.tab1 {
+    position: absolute;
+    display: inline-block;
+    left: 250px;
+}
