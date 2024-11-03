@@ -23,10 +23,8 @@ function loading() {
 
 
 function pageTransition() {
-    document.querySelector('body').style.opacity = 1
-    setTimeout(function () {
-        document.querySelector('.back-container').style.transform = "translateY(5vh)"
-    }, 250);
+    document.querySelector('body').style.opacity = 1;
+    document.querySelector('.back-container').style.transform = "translateY(5vh)";
 }
 
 

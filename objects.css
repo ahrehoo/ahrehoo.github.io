@@ -32,7 +32,9 @@ input[type=submit] {
 }
 
 button:hover,
-input[type=submit]:hover {
+button:focus,
+input[type=submit]:hover,
+input[type=submit]:focus {
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
     border-bottom-width: 2px;
     transform: translateY(4px);
@@ -59,14 +61,30 @@ input[type=submit]:hover {
 .dropdown-label {
     position: relative;
 }
-.dropdown {
+
+.dropdown,
+.dropdown-no-childs {
+    margin-left: -20px;
     z-index: 2;
-    margin: 10px;
+    margin-bottom: 20px;
     text-align: center;
     overflow: hidden;
-    width: fit-content;
     height: 50px;
+    width: 150px;
     border-bottom-left-radius: 20px;
+    box-shadow:
+        rgba(0, 0, 0, 0.12) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.dropdown-no-childs{
+    position: relative;
+    cursor: pointer;
+}
+.dropdown-no-childs:hover .dropdown-hover-object{
+    background-color: var(--shadow-color);
 }
 
 .dropdown:hover {
@@ -77,7 +95,7 @@ input[type=submit]:hover {
     background-color: var(--shadow-color);
     text-align: center;
     height: fit-content;
-    width: 300px;
+    width: 100%;
     transition: 0.3s;
 }
 
@@ -87,7 +105,7 @@ input[type=submit]:hover {
 
 .dropdown-item {
     cursor: pointer;
-    transition: 1s;
+    transition: 0.5s;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -112,6 +130,7 @@ input[type=submit]:hover {
 }
 
 .dropdown-label {
+    font-variation-settings: var(--demi-bold-font-variation);
     align-items: center;
     justify-content: center;
     display: inline-flex;
@@ -125,4 +144,10 @@ input[type=submit]:hover {
 .dropdown-item,
 .dropdown-label {
     position: relative;
+}
+
+.top-logo{
+    width: 150px;
+    left: calc(50vw - 700px / 2 - 150px - 20px);
+    filter: drop-shadow(1px 3px 5px rgb(0, 0, 0));
 }

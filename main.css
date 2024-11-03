@@ -1,8 +1,8 @@
 .back-container {
     z-index: 0;
     width: 750px;
-    height: 800px;
-    top: calc(50vh - 800px / 2 - 5vh);
+    height: 700px;
+    top: calc(50vh - 750px / 2 - 5vh + 50px);
     left: calc(50vw - 700px / 2);
 }
 .container{
@@ -11,4 +11,11 @@
     top: calc(50% - 300px / 2);
     right: calc(300px + 70px);
     border-radius: var(--page-border-radius);
+}
+.dropdown{
+    top: calc(50vh - 750px / 2 + 50px);
+    left: calc(50vw - 700px / 2 - 150px);
+}
+.dropdown-no-childs{
+    left: calc(50vw - 700px / 2 - 150px);
 }

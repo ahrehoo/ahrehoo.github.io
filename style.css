@@ -20,6 +20,8 @@
 }
 
 body {
+    transition: 1s;
+    opacity: 0;
     background-color: var(--back-color);
     background-image: url(resources/images/pattern.png);
     margin: 0px;
@@ -38,6 +40,7 @@ img {
 
 .back-container {
     border-radius: var(--page-border-radius);
+    border-top-left-radius: 0px;
     transition: 1s;
     background-color: var(--fore-color);
     box-shadow:
@@ -62,7 +65,7 @@ img {
     left: calc(50vw - 50px / 2);
     top: calc(50vh - 50px / 2);
     animation: spin 0.5s linear;
-    animation-iteration-count: 10;
+    animation-iteration-count: 100;
 }
 
 
