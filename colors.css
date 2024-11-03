@@ -1,14 +1,20 @@
 :root {
-    --backgroundcolor: #2f83c5;
-    --objectscolor: #2f83c5;
-    --forecolor: #ffffff;
-    --shadowcolor: #d8d8d8;
-    --darkshadowcolor: #c2c2c2;
-    --textonblack: white;
-    --textonwhite: #2f83c5;
-    --color1: #216aa7;
-    --color2: rgba(35, 123, 184, 0.3);
-    --color3: rgba(35, 150, 184, 0.05);
-    --color4: rgba(35, 150, 184, 0.17);
-    --color5: rgba(35, 123, 184, 0.47);
+    --dark-back-color: #0d5083;
+    --back-color: #2f83c5;
+    --object-color: #2f83c5;
+    --fore-color: #ffffff;
+
+    --shadow-color: #d8d8d8;
+    --dark-shadow-color: #c2c2c2;
+
+    --white-text-color: white;
+    --colorized-text-color: #2f83c5;
+    --black-text-color: #2f83c5;
+
+    --button-border-color: #1e6197;
+
+    --textbox-border-color: rgba(35, 123, 184, 0.3);
+    --textbox-back-color: rgba(35, 150, 184, 0.05);
+    --textbox-focus-back-color: rgba(35, 150, 184, 0.17);
+    --textbox-focus-border-color: rgba(35, 123, 184, 0.47);
 }

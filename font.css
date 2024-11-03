@@ -1,9 +1,8 @@
-
 @font-face {
     font-family: 'iransansxv';
     src: url('resources/fonts/iransansxv.woff') format('woff-variations'),
-    /* will be the standard and works in Safari now */
-    url('resources/fonts/iransansxv.woff') format('woff');
+        /* will be the standard and works in Safari now */
+        url('resources/fonts/iransansxv.woff') format('woff');
     /* for the other supporting browsers */
     font-weight: 100 1000;
     font-display: fallback;
@@ -13,6 +12,7 @@
     font-family: iransansx;
     src: url('resources/fonts/iransansx-regular.woff') format('woff');
 }
+
 @font-face {
     font-family: iransansx;
     src: url('resources/fonts/iransansx-bold.woff') format('woff');
@@ -22,32 +22,34 @@
 body {
     font-family: iransansx, tahoma;
 }
+
 @supports (font-variation-settings: normal) {
     body {
-     font-family: 'iransansxv', tahoma;
+        font-family: 'iransansxv', tahoma;
     }
 }
 
-:root{
-    --regular-font-variation: "wght" 550, "DOTS" 8;
-    --demi-bold-font-variation: "wght" 750, "DOTS" 8;
-    --bold-font-variation: "wght" 950, "DOTS" 8;
+:root {
+    --regular-font-variation: "wght" 450, "DOTS" 8;
+    --demi-bold-font-variation: "wght" 700, "DOTS" 8;
+    --bold-font-variation: "wght" 920, "DOTS" 8;
 
     --smaller-font-size: 12px;
-    --small-font-size: 14px;
-    --normal-font-size: 16px;
+    --small-font-size: 13px;
+    --normal-font-size: 15px;
     --big-font-size: 20px;
     --bigger-font-size: 24px;
     --title-font-size: 32px;
+    --xtitle-font-size: 50px;
 }
 
 
 @media only screen and (max-width: 1000px) and (orientation:portrait) {
-    :root{
+    :root {
         --regular-font-variation: "wght" 500, "DOTS" 8;
         --demi-bold-font-variation: "wght" 750, "DOTS" 8;
         --bold-font-variation: "wght" 950, "DOTS" 8;
-    
+
         --smaller-font-size: 32px;
         --small-font-size: 36px;
         --normal-font-size: 44px;

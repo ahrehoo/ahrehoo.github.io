@@ -1,68 +1,76 @@
 * {
-  z-index: 0;
-  transition: 0.3s;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
 
-  
-  -webkit-user-select: none;
-  /* Safari */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE10+/Edge */
-  user-select: none;
-  /* Standard */
+    transition: 0.3s;
+    font-family: 'iransansxv';
+    font-variation-settings: var(--regular-font-variation);
+    font-size: var(--normal-font-size);
+}
+
+:root {
+    --page-border-radius: 20px;
+    --object-border-radius: 15px;
 }
 
 body {
-  margin: 0;
-  opacity: 0;
-  background-image: url(/resources/images/pattern.png);
-  background-color: var(--backgroundcolor);
+    background-color: var(--back-color);
+    background-image: url(resources/images/pattern.png);
+    margin: 0px;
+    padding: 0px;
 }
 
-table {
-  transition: 1.2s;
-  border-collapse: collapse;
-  border-radius: 20px;
-  margin: auto;
-  width: 1000px;
-  height: 100%;
-  align-items: center;
-  background-color: var(--forecolor);
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+div {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
 }
 
-.loadingDiv {
-  transition: 1s;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  position: absolute;
-  background-color: var(--backgroundcolor);
-  width: 100%;
-  height: 100vh;
+img {
+    position: absolute;
 }
 
-.loadingImg {
-  position: relative;
-  left: calc(50vw - 25px) !important;
-  top: calc(50vh - 25px) !important;
-  animation: spin 0.5s linear;
-  animation-iteration-count: 10;
+.back-container {
+    border-radius: var(--page-border-radius);
+    transition: 1s;
+    background-color: var(--fore-color);
+    box-shadow:
+        rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.25) 0px -12px 30px,
+        rgba(0, 0, 0, 0.25) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.inputCell {
-  height: 50px;
+.loading-container {
+    transition: 0.7s;
+    z-index: 1;
+    background-color: var(--dark-back-color);
+    width: 100vw;
+    height: 100vh;
 }
 
-::placeholder {
-  text-align: center;
+.loading-img {
+    position: relative;
+    width: 50px;
+    left: calc(50vw - 50px / 2);
+    top: calc(50vh - 50px / 2);
+    animation: spin 0.5s linear;
+    animation-iteration-count: 10;
 }
+
 
 .mobile-break {
-  display: none;
+    display: none;
 }
-
-table {
-  position: relative;
+@media only screen and (max-width: 1000px) and (orientation:portrait) {
+    .noHoverMobile {
+        pointer-events: none;
+    }
 }

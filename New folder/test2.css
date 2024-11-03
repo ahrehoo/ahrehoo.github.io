@@ -13,7 +13,7 @@ body{
     background-color: var(--backgroundcolor);
 }
 
-.drpDwn {
+.dropdown {
     position: relative;
     margin: 10px;
     text-align: center;
@@ -22,13 +22,14 @@ body{
     width: fit-content;
     height: 50px;
     border-bottom-left-radius: 20px;
-}
-
-.drpDwn:hover {
     height: calc(5 * 30px + 50px);
 }
 
-.drpDwnChild {
+.dropdown:hover {
+    height: calc(5 * 30px + 50px);
+}
+
+.dropdown-child-container {
     background-color: var(--shadowcolor);
     text-align: center;
     height: fit-content;
@@ -36,11 +37,11 @@ body{
     transition: 0.3s;
 }
 
-.drpDwnButtonSpacer {
+.dropdown-bottom-spacer {
     height: 50px;
 }
 
-.drpDwnItem {
+.dropdown-item {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -50,11 +51,11 @@ body{
     height: 30px;
 }
 
-.drpDwnItem:hover {
+.dropdown-item:hover {
     background: var(--darkshadowcolor);
 }
 
-.drpDwnHover {
+.dropdown-hover-object {
     background-color: var(--forecolor);
     vertical-align: middle;
     top: 0;
@@ -64,7 +65,7 @@ body{
     border-bottom-left-radius: 20px;
 }
 
-span {
+.dropdown-label {
     align-items: center;
     justify-content: center;
     display: inline-flex;

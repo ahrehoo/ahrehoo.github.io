@@ -1,0 +1,14 @@
+.back-container {
+    z-index: 0;
+    width: 750px;
+    height: 800px;
+    top: calc(50vh - 800px / 2 - 5vh);
+    left: calc(50vw - 700px / 2);
+}
+.container{
+    text-align: center;
+    height: 300px;
+    top: calc(50% - 300px / 2);
+    right: calc(300px + 70px);
+    border-radius: var(--page-border-radius);
+}

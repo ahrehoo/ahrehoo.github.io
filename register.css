@@ -1,27 +1,4 @@
-.loginCheetahLogo{
-    padding-top: 200px;
-}
-table{
-    top: calc(50vh - 290px - 5vh) !important;
-}
-
-@media only screen and (max-width: 1000px) and (orientation:portrait) {
-    table {
-        top: calc(50vh - 769px - 5vh) !important;
-    }
-
-    .loginCheetahLogo {
-        padding-top: 80px;
-        padding-bottom: 50px;
-    }
-
-    input {
-        margin: 15px !important;
-    }
-
-    input[type="submit"] {
-        margin-top: 70px !important;
-        height: 140px;
-        width: 505px;
-    }
+.container{
+    height: 380px;
+    top: calc(50% - 380px / 2);
 }

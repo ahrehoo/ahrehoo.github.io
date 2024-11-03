@@ -1,73 +1,36 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Register Page</title>
-  <script src="scripts.js"></script>
-  <link rel="stylesheet" href="animations.css">
-  <link rel="stylesheet" href="bottomDiv.css">
-  <link rel="stylesheet" href="colors.css">
-  <link rel="stylesheet" href="objects.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="login.css">
-  <link rel="stylesheet" href="en_fonts.css">
-  <link rel="stylesheet" href="register.css">
-  <link rel="stylesheet" href="mobileP.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="en.js"></script>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="objects.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="register.css">
+    <title>Register</title>
 </head>
-
-<body onload="pageLoad()">
-  <form action="/login" method="post">
-    <table>
-      <tr class="topSpaceTr">
-        <td></td>
-      </tr>
-      <tr class="loginLogoTr">
-        <td></td>
-        <td rowspan="6" class="midTd"></td>
-        <td rowspan="6"><img class="noHoverMobile loginCheetahLogo" src="resources/images/Cheetah4.png" alt=""></td>
-      </tr>
-      <tr class="loginLabelTr">
-        <td>
-          <p class="blueHeaderP">Register</p>
-        </td>
-      </tr>
-      <tr class="inputCell">
-        <td>
-          <input type="tel" id="phone" name="phone" placeholder="Phone number">
-        </td>
-      </tr>
-      <tr class="inputCell">
-        <td>
-          <input type="text" id="username" name="username" placeholder="Username">
-        </td>
-      </tr>
-      <tr class="inputCell">
-        <td>
-          <input type="password" id="password" name="password" placeholder="Password">
-        </td>
-      </tr>
-      <tr class="inputCell">
-        <td>
-          <input type="password" id="password" name="password" placeholder="Confirm password">
-        </td>
-      </tr>
-      <tr class="inputCell">
-        <td>
-          <input type="submit" value="Register">
-        </td>
-      </tr>
-      <tr class="bottomSpaceTr">
-        <td></td>
-      </tr>
-      <tr>
-        <td colspan="3" class="noHoverMobile bottomTd">
-          <div class="bottomDiv"></div>
-          <pre class="bottomLabel bottomLeftLabel">Cheetah security control panel build 194320</pre>
-          <pre class="bottomLabel bottomRightLabel">CH-SM10</pre>
-        </td>
-      </tr>
-    </table>
-    <div id="loadingDiv" class="loadingDiv"><img class="loadingImg" src="resources/images/loading.png" alt=""
-        width="50px"></div>
-  </form>
+<body onload="loading(); setRegisterTexts();">
+    <div id="loading-element" class="loading-container">
+        <img class="loading-img" src="resources/images/loading.png" alt="">
+    </div>
+    <div class="back-container">
+        <div class="container">
+            <span id="register" class="title"></span>
+            <form action="/login" method="post">
+                <input id="phone" type="text">
+                <input id="username" type="text">
+                <input id="password" type="password">
+                <input id="confirm-pass" type="password">
+                <input id="submit" type="submit">
+            </form>
+            <a href="/forget-account-data" id="forget-account" class="small-text"></a>
+        </div>
+        <img src="resources/images/Cheetah.png">
+    </div>
 </body>
+</html>
