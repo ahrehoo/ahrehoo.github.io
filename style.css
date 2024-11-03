@@ -39,6 +39,7 @@ img {
 }
 
 .back-container {
+    z-index: 1 !important;
     border-radius: var(--page-border-radius);
     border-top-left-radius: 0px;
     transition: 1s;
