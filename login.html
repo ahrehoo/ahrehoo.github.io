@@ -31,11 +31,33 @@
         <div class="back-container">
             <div class="container">
                 <span id="login" class="title"></span>
-                <form target="_blank" action="login.html">
+                <form id="myForm" target="_blank" action="login.html">
                     <input id="username" type="text">
                     <input id="password" type="password">
-                    <input onclick="window.location.href = '/status.html';" id="submit" type="submit">
+                    <input id="submit" type="submit">
                 </form>
+                <script>
+                    const EL_form = document.querySelector("#myForm");
+                    const EL_formSubmitBtn = EL_form.querySelector("#submit");
+
+                    const Progress = (evt) => {
+                        document.querySelector(".big-container").style.transition="0.3s";
+                        document.querySelector(".big-container").style.opacity=0;
+                        evt.preventDefault(); // Prevent Browser Submit action
+
+
+                        setTimeout(function () {
+                            window.location.replace("status.html");
+                            //EL_form.submit(); // Or do AJAX stuff here
+                        }, 300);
+                    };
+
+
+                    // Use Element.addEventListener instead of inline JS
+                    // Don't attach handlers to button, rather use the Form "submit" Event:
+                    EL_form.addEventListener("submit", Progress);
+
+                </script>
                 <a href="/forget-account-data" id="forget-account" class="small-text"></a>
             </div>
             <img src="resources/images/cheetah-blue.svg" class="login-logo">

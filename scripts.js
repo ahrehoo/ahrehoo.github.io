@@ -12,8 +12,8 @@ document.addEventListener('load', function (event) {
 function loading() {
     document.querySelector('.big-container').style.opacity = 1;
     setTimeout(function () {
-        document.querySelector('.back-container').style.transform="translateY(5vh)";
-        document.querySelector('.loading-container').style.opacity=0;
+        document.querySelector('.back-container').style.transform = "translateY(5vh)";
+        document.querySelector('.loading-container').style.opacity = 0;
     }, 500);
     setTimeout(function () {
         const element = document.getElementById("loading-element");
@@ -28,7 +28,7 @@ function pageTransition() {
 }
 
 
-function delay(URL) {
+function delayed(URL) {
     setTimeout(function () { window.location = URL }, 100);
 }
 
