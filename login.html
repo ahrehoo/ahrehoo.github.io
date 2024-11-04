@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="fa.js"></script>
+    <script src="en.js"></script>
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="font.css">
@@ -13,21 +14,34 @@
     <link rel="stylesheet" href="login.css">
     <title>Login</title>
 </head>
+
 <body onload="loading(); setLoginTexts();">
     <div id="loading-element" class="loading-container">
         <img class="loading-img" src="resources/images/loading.png" alt="">
     </div>
-    <div class="back-container">
-        <div class="container">
-            <span id="login" class="title"></span>
-            <form action="/login" method="post">
-                <input id="username" type="text">
-                <input id="password" type="password">
-                <input id="submit" type="submit">
-            </form>
-            <a href="/forget-account-data" id="forget-account" class="small-text"></a>
+
+    <div class="background-image-container">
+        <img class="background-image background-image-top-left" src="resources/images/background-top-left.svg">
+        <img class="background-image background-image-top-right" src="resources/images/background-top-right.svg">
+        <img class="background-image background-image-bottom-left" src="resources/images/background-bottom-left.svg">
+        <img class="background-image background-image-bottom-right" src="resources/images/background-bottom-right.svg">
+    </div>
+    <div class="big-container">
+
+        <div class="back-container">
+            <div class="container">
+                <span id="login" class="title"></span>
+                <form target="_blank" action="login.html">
+                    <input id="username" type="text">
+                    <input id="password" type="password">
+                    <input onclick="window.location.href = '/status.html';" id="submit" type="submit">
+                </form>
+                <a href="/forget-account-data" id="forget-account" class="small-text"></a>
+            </div>
+            <img src="resources/images/cheetah-blue.svg" class="login-logo">
         </div>
-        <img src="resources/images/cheetah-blue.svg">
+
     </div>
 </body>
+
 </html>

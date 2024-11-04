@@ -66,13 +66,10 @@ input[type=submit]:focus {
 }
 
 
-.dropdown,
 .dropdown-no-childs,
-.dropdown-bottom-spacer,
 .dropdown-child-container,
-.dropdown-hover-object,
 .dropdown-item,
-.dropdown-label {
+.dropdown-bottom-spacer {
     position: relative;
 }
 
@@ -89,8 +86,8 @@ input[type=submit]:focus {
         rgba(0, 0, 0, 0.12) 0px 54px 55px,
         rgba(0, 0, 0, 0.12) 0px -12px 30px,
         rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px,
-        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        rgba(0, 0, 0, 0.1) 0px 12px 13px,
+        rgba(0, 0, 0, 0.07) 0px -3px 5px;
 }
 
 .dropdown-quick-setup,
@@ -103,11 +100,12 @@ input[type=submit]:focus {
         rgba(0, 0, 0, 0.12) 0px 54px 55px,
         rgba(0, 0, 0, 0.12) 0px -12px 30px,
         rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px,
-        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        rgba(0, 0, 0, 0.1) 0px 12px 13px,
+        rgba(0, 0, 0, 0.07) 0px -3px 5px;
 }
 
 .dropdown-no-childs {
+    background-color: var(--fore-color);
     cursor: pointer;
 }
 
@@ -124,7 +122,7 @@ input[type=submit]:focus {
     border-radius: var(--page-border-radius) 0px 0px 0px;
 }
 
-.dropdown-no-childs:hover .dropdown-hover-object {
+.dropdown-no-childs:hover {
     background-color: var(--shadow-color);
 }
 
@@ -180,19 +178,11 @@ input[type=submit]:focus {
     height: 100%;
 }
 
-.dropdown,
-.dropdown-bottom-spacer,
-.dropdown-child-container,
-.dropdown-item,
-.dropdown-label {
-    position: relative;
-}
-
 .top-logo {
     top: calc(var(--back-container-top) - 100px - var(--dropdown-spacing));
     height: 100px;
     object-fit:cover;
     width: var(--dropdown-width);
     left: calc(var(--back-container-left) - var(--dropdown-width) - var(--dropdown-spacing));
-    filter: drop-shadow(1px 3px 5px rgb(0, 0, 0));
+    filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
 }

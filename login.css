@@ -1,5 +1,6 @@
 .back-container {
     border-top-left-radius: var(--page-border-radius);
+    border-top-right-radius: var(--page-border-radius);
     z-index: 0;
     width: 750px;
     height: 500px;
@@ -13,12 +14,12 @@
     right: calc(300px + 70px);
     border-radius: var(--page-border-radius);
 }
-img{
+.login-logo{
     width: 320px;
     top: calc(50% - 200px / 2);
     right: 70px;
 }
-img:hover{
+.login-logo:hover{
     width: 340px;
     top: calc(50% - 213px / 2);
 }

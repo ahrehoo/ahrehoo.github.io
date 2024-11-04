@@ -10,7 +10,7 @@ document.addEventListener('load', function (event) {
 })
 
 function loading() {
-    document.body.style.opacity = 1;
+    document.querySelector('.big-container').style.opacity = 1;
     setTimeout(function () {
         document.querySelector('.back-container').style.transform="translateY(5vh)";
         document.querySelector('.loading-container').style.opacity=0;
@@ -23,7 +23,7 @@ function loading() {
 
 
 function pageTransition() {
-    document.querySelector('body').style.opacity = 1;
+    document.querySelector('.big-container').style.opacity = 1;
     document.querySelector('.back-container').style.transform = "translateY(5vh)";
 }
 

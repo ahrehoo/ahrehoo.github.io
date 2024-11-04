@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" version="1.1" viewBox="-368.1 -326.8 502.9 502.9">
+  <!-- Generator: Adobe Illustrator 29.0.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 192)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#linear-gradient);
+        mix-blend-mode: overlay;
+      }
+
+      .st0, .st1 {
+        isolation: isolate;
+      }
+
+      .st2 {
+        fill: none;
+      }
+
+      .st3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st2" width="750" height="500"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="422.3" y1="1152.5" x2="840.8" y2="710.8" gradientTransform="translate(686.2 828) rotate(-180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g class="st1">
+    <g id="OBJECTS">
+      <g class="st3">
+        <polygon class="st0" points="134.8 -326.8 -368.1 176.1 -66.3 176.1 134.8 -21.9 134.8 -326.8"/>
+      </g>
+    </g>
+  </g>
+</svg>
