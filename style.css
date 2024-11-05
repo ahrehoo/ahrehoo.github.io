@@ -99,8 +99,9 @@ img {
     position: relative;
     top: calc(50vh - 75px / 2);
     left: calc(50vw - 75px / 2);
-    width: 75px;
-    height: 75px;
+    width: 150px;
+    height: 150px;
+    scale: 0.5;
     animation: rotate 0.5s linear infinite;
 }
 
