@@ -39,7 +39,7 @@
 .dropdown-quick-setup,
 .dropdown-simple,
 .dropdown-advanced {
-    top: calc(var(--back-container-top) - 50px - var(--dropdown-spacing));
+    top: calc(var(--back-container-top) - var(--dropdown-height) - var(--dropdown-spacing));
 }
 
 .panel-layout-state,

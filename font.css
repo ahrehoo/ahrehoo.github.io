@@ -34,9 +34,10 @@ body {
     --demi-bold-font-variation: "wght" 700, "DOTS" 8;
     --bold-font-variation: "wght" 880, "DOTS" 8;
 
-    --smaller-font-size: 12px;
-    --small-font-size: 14px;
-    --normal-font-size: 15px;
+    --smaller-font-size: 11px;
+    --small-font-size: 12px;
+    --normal-font-size: 13px;
+    --xnormal-font-size: 15px;
     --big-font-size: 20px;
     --bigger-font-size: 24px;
     --title-font-size: 32px;

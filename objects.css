@@ -1,11 +1,11 @@
 :root {
-    --dropdown-width: 170px;
-    --dropdown-height: 50px;
+    --dropdown-width: 140px;
+    --dropdown-height: 40px;
     --dropdown-items-height: 30px;
     --dropdown-spacing: 20px;
 
     --back-container-width: 750px;
-    --back-container-height: 650px;
+    --back-container-height: 575px;
     --back-container-top-spacing: 25px;
     --back-container-top: calc(50vh - (var(--back-container-height) - 120px) / 2 - 20px);
     --back-container-left: calc(50vw - (var(--back-container-width) - var(--dropdown-width) - var(--dropdown-spacing)) / 2);
@@ -33,6 +33,7 @@ input:focus {
 
 button,
 input[type=submit] {
+    font-size: var(--xnormal-font-size);
     font-variation-settings: var(--demi-bold-font-variation);
     transition: 0.3s;
     cursor: pointer;
@@ -150,7 +151,7 @@ input[type=submit]:focus {
     padding-left: 20px;
     align-items: center;
     background-color: var(--shadow-color);
-    font-size: var(--small-font-size);
+    font-size: var(--normal-font-size);
     border: none;
     width: 100%;
     height: 30px;
@@ -165,11 +166,12 @@ input[type=submit]:focus {
     vertical-align: middle;
     top: 0;
     position: absolute;
-    height: 50px;
+    height: var(--dropdown-height);
     width: 100%;
 }
 
 .dropdown-label {
+    font-size: var(--xnormal-font-size);
     font-variation-settings: var(--demi-bold-font-variation);
     align-items: center;
     justify-content: center;
