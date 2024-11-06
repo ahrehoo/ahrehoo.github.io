@@ -79,7 +79,7 @@ img {
     animation-iteration-count: 100;
 }
 .background-image{
-    width: 115%;
+    width: 100%;
     transition: 2s;
     position: absolute;
 }
