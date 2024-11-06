@@ -76,7 +76,6 @@ img {
     width: 50px;
     left: calc(50vw - 50px / 2);
     top: calc(50vh - 50px / 2);
-    animation: spin 0.5s linear;
     animation-iteration-count: 100;
 }
 .background-image{

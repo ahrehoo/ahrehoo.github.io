@@ -14,11 +14,11 @@ function loading() {
     setTimeout(function () {
         document.querySelector('.back-container').style.transform = "translateY(5vh)";
         document.querySelector('.loading-container').style.opacity = 0;
-    }, 15000);
+    }, 500);
     setTimeout(function () {
         const element = document.getElementById("loading-element");
         element.remove(element);
-    }, 125000);
+    }, 1250);
 }
 
 
