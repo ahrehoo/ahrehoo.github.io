@@ -79,26 +79,23 @@ img {
     animation-iteration-count: 100;
 }
 .background-image{
-    transition: 3s;
+    width: 115%;
+    transition: 2s;
     position: absolute;
 }
 .background-image-top-left{
-    width: 80%;
     top: 0;
     left: 0;
 }
 .background-image-top-right{
-    width: 80%;
     top: 0;
     right: 0;
 }
 .background-image-bottom-left{
-    width: 80%;
     left: 0;
     bottom: 0;
 }
 .background-image-bottom-right{
-    width: 80%;
     right: 0;
     bottom: 0;
 }
