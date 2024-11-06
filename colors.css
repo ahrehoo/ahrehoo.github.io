@@ -1,6 +1,6 @@
 :root {
     --dark-back-color: #044271;
-    --back-color: #2f83c5;
+    --back-color: rgb(40,40,40);
     --object-color: #2f83c5;
     --secondary-color: #2f9cc5;
     --fore-color: #ffffff;
