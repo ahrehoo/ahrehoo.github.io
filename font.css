@@ -45,7 +45,7 @@ body {
 }
 
 
-@media only screen and (max-width: 1000px) and (orientation:portrait) {
+/*@media only screen and (max-width: 1000px) and (orientation:portrait) {
     :root {
         --regular-font-variation: "wght" 500, "DOTS" 8;
         --demi-bold-font-variation: "wght" 750, "DOTS" 8;
@@ -58,4 +58,4 @@ body {
         --bigger-font-size: 54px;
         --title-font-size: 60px;
     }
-}
+}*/
