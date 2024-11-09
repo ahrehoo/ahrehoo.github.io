@@ -15,7 +15,7 @@ function setRegisterTexts(lang) {
     document.getElementById('phone').placeholder = "Phone";
     document.getElementById('submit').value = "Register";
 }
-function setStatusTexts(lang) {
+function setPanelTexts(lang) {
     document.getElementById('status').innerText = "Status";
     document.getElementById('sensors').innerText = "Sensors";
     document.getElementById('phones').innerText = "Phones";

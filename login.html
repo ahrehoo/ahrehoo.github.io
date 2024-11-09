@@ -16,21 +16,22 @@
 </head>
 
 <body onload="loading(); setLoginTexts();">
+    <!--loading area-->
     <div id="loading-element" class="loading-container">
         <img src="resources/images/loading.svg" class="loading-img" alt="">
     </div>
-
+    <!--background images area-->
     <div class="background-image-container">
         <img class="background-image background-image-top-left" src="resources/images/background-top-left.svg">
         <img class="background-image background-image-top-right" src="resources/images/background-top-right.svg">
         <img class="background-image background-image-bottom-left" src="resources/images/background-bottom-left.svg">
         <img class="background-image background-image-bottom-right" src="resources/images/background-bottom-right.svg">
     </div>
+    <!--content area-->
     <div class="big-container">
-
         <div class="back-container">
             <div class="container">
-                <span id="login" class="title"></span>
+                <span id="login" class="xtitle"></span>
                 <form id="myForm" target="_blank" action="login.html">
                     <input id="username" type="text">
                     <input id="password" type="password">
@@ -41,13 +42,13 @@
                     const EL_formSubmitBtn = EL_form.querySelector("#submit");
 
                     const Progress = (evt) => {
-                        document.querySelector(".big-container").style.transition="0.3s";
-                        document.querySelector(".big-container").style.opacity=0;
+                        document.querySelector(".big-container").style.transition = "0.3s";
+                        document.querySelector(".big-container").style.opacity = 0;
                         evt.preventDefault(); // Prevent Browser Submit action
 
 
                         setTimeout(function () {
-                            window.location.replace("status.html");
+                            window.location.replace("panel.html");
                             //EL_form.submit(); // Or do AJAX stuff here
                         }, 300);
                     };

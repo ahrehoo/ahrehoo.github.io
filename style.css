@@ -129,6 +129,15 @@ img {
     stroke-dashoffset: 440;
     animation: animate 3s linear infinite;
 }
+
+.top-logo {
+    top: calc(var(--back-container-top) - 100px - var(--dropdown-spacing));
+    height: 100px;
+    object-fit: cover;
+    width: var(--dropdown-width);
+    left: calc(var(--back-container-left) - var(--dropdown-width) - var(--dropdown-spacing));
+    filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
+}
 @keyframes animate{
     0%,100%{
         stroke-dashoffset: 440;

@@ -15,7 +15,7 @@ function setRegisterTexts(lang) {
     document.getElementById('confirm-pass').placeholder = "تایید رمز عبور";
     document.getElementById('submit').value = "ثبت نام";
 }
-function setStatusTexts(lang) {
+function setPanelTexts(lang) {
     document.getElementById('status').innerText = "وضعیت";
     document.getElementById('sensors').innerText = "سنسور ها";
     document.getElementById('phones').innerText = "تلفن ها";
