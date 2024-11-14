@@ -36,6 +36,7 @@ input[type=checkbox]{
 
 button:focus,
 input:focus {
+    border-radius: calc(var(--object-border-radius) - 8px);
     background-color: var(--textbox-focus-back-color);
     border-color: var(--textbox-focus-border-color);
     outline: none;

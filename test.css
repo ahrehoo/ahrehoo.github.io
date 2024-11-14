@@ -1,8 +1,70 @@
-input[type=radio]{
+input[type=radio] {
     width: 15px;
     height: 15px;
 }
-input[type=checkbox]{
+
+input[type=checkbox] {
     width: 15px;
     height: 15px;
 }
+
+input {
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+
+.back-container {
+    overflow: hidden;
+}
+
+.front-container {
+    overflow-y: auto;
+    left: 70px;
+    right: 4px;
+    top: 10px;
+    bottom: 10px;
+    box-shadow: inset 0 -40px 20px -20px white;
+    -webkit-box-shadow: inset 0 -40px 20px -20px white;
+    -moz-box-shadow: inset 0 -40px 20px -20px white;
+    transition: --var1 .1s linear , --var2 .1s linear;
+}
+.front-container:hover{
+    --var1:#bbb;
+    --var2:6px;
+}
+
+.bottom-shadow-container {
+    width: 100%;
+    height: 15px;
+    background-color: white;
+    z-index: 20;
+    box-shadow: 0 0 20px 20px white;
+    bottom: 0;
+}
+
+@property --var1 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #ddd;
+}
+
+@property --var2 {
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 4px;
+}
+
+::-webkit-scrollbar {
+    transition: 0.3s !important;
+    width: var(--var2);
+}
+
+::-webkit-scrollbar-thumb {
+    transition: 0.3s !important;
+    border-radius: 9999px;
+    background: var(--var1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+}
+

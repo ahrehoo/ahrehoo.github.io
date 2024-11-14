@@ -1,0 +1,74 @@
+.toggle-container{
+    display: flex;
+    align-items: center;
+    width: 370px;
+    height: 50px;
+    position: relative;
+}
+.checkbox-label{
+    margin-right: 220px;
+    height: 100%;
+    line-height: 50px;
+    display: inline-block;
+    text-align: left;
+    align-items: center;
+}
+
+.checkbox-switch {
+    display: none;
+}
+.checkbox-switch-btn{
+    display: inline-flex;
+    align-items: center;
+}
+
+.checkbox-switch-btn {
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    border-radius: 3px;
+    transition: 0.2s;
+    background: var(--deactive-object-color);
+    outline: 0;
+    width: 80px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.checkbox-switch-btn:after,
+.checkbox-switch-btn:before {
+    position: absolute;
+    content: "";
+}
+
+.checkbox-switch-btn:after,
+.checkbox-switch-btn:before {
+    display: inline-block;
+    transition: 0.2s;
+    width: 100%;
+    text-align: center;
+    line-height: 29px;
+    color: var(--white-text-color);
+}
+
+.checkbox-switch-btn:after {
+    left: 100%;
+    content: attr(data-tg-on);
+}
+
+.checkbox-switch-btn:before {
+    left: 0;
+    content: attr(data-tg-off);
+}
+
+.checkbox-switch:checked+.checkbox-switch-btn {
+    background:  var(--active-object-color);
+}
+
+.checkbox-switch:checked+.checkbox-switch-btn:before {
+    left: -100%;
+}
+
+.checkbox-switch:checked+.checkbox-switch-btn:after {
+    left: 0;
+}

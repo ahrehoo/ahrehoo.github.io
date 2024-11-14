@@ -8,7 +8,7 @@
     user-select: none;
     /* Standard */
 
-    
+
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -32,7 +32,8 @@ body {
     margin: 0px;
     padding: 0px;
 }
-.big-container{
+
+.big-container {
     transition: 1s;
     opacity: 0;
     width: 100vw;
@@ -78,28 +79,34 @@ img {
     top: calc(50vh - 50px / 2);
     animation-iteration-count: 100;
 }
-.background-image{
+
+.background-image {
     width: 100%;
     transition: 2s;
     position: absolute;
 }
-.background-image-top-left{
+
+.background-image-top-left {
     top: 0;
     left: 0;
 }
-.background-image-top-right{
+
+.background-image-top-right {
     top: 0;
     right: 0;
 }
-.background-image-bottom-left{
+
+.background-image-bottom-left {
     left: 0;
     bottom: 0;
 }
-.background-image-bottom-right{
+
+.background-image-bottom-right {
     right: 0;
     bottom: 0;
 }
-.background-image-container{
+
+.background-image-container {
     opacity: 0.5;
     width: 100vw;
     height: 100vh;
@@ -138,19 +145,25 @@ img {
     left: calc(var(--back-container-left) - var(--dropdown-width) - var(--dropdown-spacing));
     filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
 }
-@keyframes animate{
-    0%,100%{
+
+@keyframes animate {
+
+    0%,
+    100% {
         stroke-dashoffset: 440;
     }
-    50%{
+
+    50% {
         stroke-dashoffset: 100;
     }
 }
-@keyframes rotate{
-    0%{
+
+@keyframes rotate {
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
@@ -158,6 +171,7 @@ img {
 .mobile-break {
     display: none;
 }
+
 @media only screen and (max-width: 1000px) and (orientation:portrait) {
     .noHoverMobile {
         pointer-events: none;
