@@ -14,8 +14,8 @@
 
 /*buttons & inputs*/
 button,
-input
- {
+.i,
+input[type=submit] {
     transition: 0.7s;
     margin-top: var(--objects-spacing);
     text-align: center;
@@ -26,8 +26,9 @@ input
     border-radius: var(--object-border-radius);
     box-shadow: inset 0px 2px 8px -1px rgba(0, 0, 0, 0.35);
 }
+
 input[type=radio],
-input[type=checkbox]{
+input[type=checkbox] {
     width: auto;
     height: auto;
     box-shadow: none;
@@ -35,7 +36,7 @@ input[type=checkbox]{
 }
 
 button:focus,
-input:focus {
+.i:focus {
     border-radius: calc(var(--object-border-radius) - 8px);
     background-color: var(--textbox-focus-back-color);
     border-color: var(--textbox-focus-border-color);
