@@ -19,6 +19,7 @@ span{
     width: 600px;
     display: inline-block;
     text-align: right;
+    margin-right: 20px;
     margin-bottom: 5px;
     margin-top: 25px;
     font-size: var(--small-font-size);
