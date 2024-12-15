@@ -1,0 +1,59 @@
+.input-holder .eye:dir(rtl) {
+    left: 0;
+    margin-left: 9px;
+}
+
+.input-holder .eye:dir(ltr) {
+    right: 0;
+    margin-right: 9px;
+}
+
+.icon-textbox:dir(rtl) {
+    background-position: calc(100% - 5px) 7px;
+}
+
+.icon-textbox:dir(ltr) {
+    background-position: 5px 7px;
+}
+
+.submit-holder .arrow-wrapper:dir(ltr) {
+    left: 100px;
+}
+
+.submit-holder .arrow-wrapper:dir(rtl) {
+    right: 100px;
+}
+
+.submit-holder .arrow:dir(ltr)::after {
+    right: 0;
+    transform: rotate(-45deg);
+}
+
+.submit-holder .arrow:dir(rtl)::after {
+    left: 0;
+    transform: rotate(135deg);
+}
+
+.submit-holder:dir(ltr)::before {
+    left: -21px;
+}
+
+.submit-holder:dir(rtl)::before {
+    right: -21px;
+}
+
+.submit-holder:hover .submit:dir(ltr) {
+    padding-right: 30px;
+}
+
+.submit-holder:hover .submit:dir(rtl) {
+    padding-left: 30px;
+}
+
+.submit:dir(ltr) {
+    padding-right: 20px;
+}
+
+.submit:dir(rtl) {
+    padding-left: 20px;
+}

@@ -1,0 +1,232 @@
+:root{
+                      /*    brand                            */
+                      --clr-brand:      hsl(209 ,80%  ,54% );
+                      --clr-brand1:     hsl(209 ,100% ,15% );
+                      --clr-brand2:     hsl(209 ,100% ,24% );
+                      --clr-brand3:     hsl(209 ,90%  ,33% );
+                      --clr-brand4:     hsl(209 ,80%  ,43% );
+                      --clr-brand5:     hsl(209 ,80%  ,54% );
+                      --clr-brand6:     hsl(209 ,88%  ,65% );
+                      --clr-brand7:     hsl(209 ,100% ,76% );
+                      --clr-brand8:     hsl(209 ,100% ,93% );
+                      --clr-brand9:     hsl(209 ,100% ,97% );
+                      /*    gray                             */
+                      --clr-gray:       hsl(209 ,28%  ,54% );
+                      --clr-gray1:      hsl(209 ,28%  ,15% );
+                      --clr-gray2:      hsl(209 ,28%  ,24% );
+                      --clr-gray3:      hsl(209 ,28%  ,33% );
+                      --clr-gray4:      hsl(209 ,28%  ,43% );
+                      --clr-gray5:      hsl(209 ,28%  ,54% );
+                      --clr-gray6:      hsl(209 ,28%  ,65% );
+                      --clr-gray7:      hsl(209 ,28%  ,76% );
+                      --clr-gray8:      hsl(209 ,28%  ,89% );
+                      --clr-gray9:      hsl(209 ,28%  ,97% );
+                      /*    black                            */
+                      --clr-black:      hsl(209 ,0%   ,54% );
+                      --clr-black1:     hsl(209 ,0%   ,10% );
+                      --clr-black2:     hsl(209 ,0%   ,19% );
+                      --clr-black3:     hsl(209 ,0%   ,30% );
+                      --clr-black4:     hsl(209 ,0%   ,45% );
+                      --clr-black5:     hsl(209 ,0%   ,61% );
+                      --clr-black6:     hsl(209 ,0%   ,70% );
+                      --clr-black7:     hsl(209 ,0%   ,82% );
+                      --clr-black8:     hsl(209 ,0%   ,87% );
+                      --clr-black9:     hsl(209 ,0%   ,92% );
+                      /*    blue                             */
+                      --clr-blue:       hsl(209 ,80%  ,54% );
+                      --clr-blue1:      hsl(209 ,100% ,15% );
+                      --clr-blue2:      hsl(209 ,100% ,24% );
+                      --clr-blue3:      hsl(209 ,90%  ,33% );
+                      --clr-blue4:      hsl(209 ,80%  ,43% );
+                      --clr-blue5:      hsl(209 ,80%  ,54% );
+                      --clr-blue6:      hsl(209 ,88%  ,65% );
+                      --clr-blue7:      hsl(209 ,100% ,76% );
+                      --clr-blue8:      hsl(209 ,100% ,93% );
+                      --clr-blue9:      hsl(209 ,100% ,97% );
+                      /*    green                            */
+                      --clr-green:      hsl(140 ,82%  ,51% );
+                      --clr-green1:     hsl(140 ,100% ,15% );
+                      --clr-green2:     hsl(140 ,100% ,24% );
+                      --clr-green3:     hsl(140 ,100% ,31% );
+                      --clr-green4:     hsl(140 ,85%  ,42% );
+                      --clr-green5:     hsl(140 ,81%  ,54% );
+                      --clr-green6:     hsl(140 ,88%  ,65% );
+                      --clr-green7:     hsl(140 ,100% ,76% );
+                      --clr-green8:     hsl(140 ,100% ,93% );
+                      --clr-green9:     hsl(140 ,100% ,97% );
+                      /*    yellow                           */
+                      --clr-yellow:     hsl(51  ,81%  ,54% );
+                      --clr-yellow1:    hsl(51  ,100% ,15% );
+                      --clr-yellow2:    hsl(51  ,100% ,24% );
+                      --clr-yellow3:    hsl(51  ,90%  ,33% );
+                      --clr-yellow4:    hsl(51  ,80%  ,43% );
+                      --clr-yellow5:    hsl(51  ,81%  ,54% );
+                      --clr-yellow6:    hsl(51  ,88%  ,65% );
+                      --clr-yellow7:    hsl(51  ,100% ,76% );
+                      --clr-yellow8:    hsl(51  ,100% ,93% );
+                      --clr-yellow9:    hsl(51  ,100% ,97% );
+                      /*    red                              */
+                      --clr-red:        hsl(0   ,81%  ,54% );
+                      --clr-red1:       hsl(0   ,100% ,15% );
+                      --clr-red2:       hsl(0   ,100% ,24% );
+                      --clr-red3:       hsl(0   ,90%  ,33% );
+                      --clr-red4:       hsl(0   ,80%  ,43% );
+                      --clr-red5:       hsl(0   ,81%  ,54% );
+                      --clr-red6:       hsl(0   ,88%  ,65% );
+                      --clr-red7:       hsl(0   ,100% ,76% );
+                      --clr-red8:       hsl(0   ,100% ,93% );
+                      --clr-red9:       hsl(0   ,100% ,97% );
+}
+/*   brand                                                      */
+.clr-brandb         { background-color: hsl(209 ,80%  ,54% ); }
+.clr-brandb1        { background-color: hsl(209 ,100% ,15% ); }
+.clr-brandb2        { background-color: hsl(209 ,100% ,24% ); }
+.clr-brandb3        { background-color: hsl(209 ,90%  ,33% ); }
+.clr-brandb4        { background-color: hsl(209 ,80%  ,43% ); }
+.clr-brandb5        { background-color: hsl(209 ,80%  ,54% ); }
+.clr-brandb6        { background-color: hsl(209 ,88%  ,65% ); }
+.clr-brandb7        { background-color: hsl(209 ,100% ,76% ); }
+.clr-brandb8        { background-color: hsl(209 ,100% ,93% ); }
+.clr-brandb9        { background-color: hsl(209 ,100% ,97% ); }
+.clr-brandc         { color:            hsl(209 ,80%  ,54% ); }
+.clr-brandc1        { color:            hsl(209 ,100% ,15% ); }
+.clr-brandc2        { color:            hsl(209 ,100% ,24% ); }
+.clr-brandc3        { color:            hsl(209 ,90%  ,33% ); }
+.clr-brandc4        { color:            hsl(209 ,80%  ,43% ); }
+.clr-brandc5        { color:            hsl(209 ,80%  ,54% ); }
+.clr-brandc6        { color:            hsl(209 ,88%  ,65% ); }
+.clr-brandc7        { color:            hsl(209 ,100% ,76% ); }
+.clr-brandc8        { color:            hsl(209 ,100% ,93% ); }
+.clr-brandc9        { color:            hsl(209 ,100% ,97% ); }
+ 
+/*   gray                                                       */ 
+.clr-grayb          { background-color: hsl(209 ,28%  ,54% ); }
+.clr-grayb1         { background-color: hsl(209 ,28%  ,15% ); }
+.clr-grayb2         { background-color: hsl(209 ,28%  ,24% ); }
+.clr-grayb3         { background-color: hsl(209 ,28%  ,33% ); }
+.clr-grayb4         { background-color: hsl(209 ,28%  ,43% ); }
+.clr-grayb5         { background-color: hsl(209 ,28%  ,54% ); }
+.clr-grayb6         { background-color: hsl(209 ,28%  ,65% ); }
+.clr-grayb7         { background-color: hsl(209 ,28%  ,76% ); }
+.clr-grayb8         { background-color: hsl(209 ,28%  ,93% ); }
+.clr-grayb9         { background-color: hsl(209 ,28%  ,97% ); }
+.clr-grayc          { color:            hsl(209 ,28%  ,54% ); }
+.clr-grayc1         { color:            hsl(209 ,28%  ,15% ); }
+.clr-grayc2         { color:            hsl(209 ,28%  ,24% ); }
+.clr-grayc3         { color:            hsl(209 ,28%  ,33% ); }
+.clr-grayc4         { color:            hsl(209 ,28%  ,43% ); }
+.clr-grayc5         { color:            hsl(209 ,28%  ,54% ); }
+.clr-grayc6         { color:            hsl(209 ,28%  ,65% ); }
+.clr-grayc7         { color:            hsl(209 ,28%  ,76% ); }
+.clr-grayc8         { color:            hsl(209 ,28%  ,93% ); }
+.clr-grayc9         { color:            hsl(209 ,28%  ,97% ); }
+ 
+/*   black                                                      */ 
+.clr-blackb         { background-color: hsl(209 ,0%   ,54% ); }
+.clr-blackb1        { background-color: hsl(209 ,0%   ,10% ); }
+.clr-blackb2        { background-color: hsl(209 ,0%   ,19% ); }
+.clr-blackb3        { background-color: hsl(209 ,0%   ,30% ); }
+.clr-blackb4        { background-color: hsl(209 ,0%   ,45% ); }
+.clr-blackb5        { background-color: hsl(209 ,0%   ,61% ); }
+.clr-blackb6        { background-color: hsl(209 ,0%   ,70% ); }
+.clr-blackb7        { background-color: hsl(209 ,0%   ,82% ); }
+.clr-blackb8        { background-color: hsl(209 ,0%   ,87% ); }
+.clr-blackb9        { background-color: hsl(209 ,0%   ,92% ); }
+.clr-blackc         { color:            hsl(209 ,0%   ,54% ); }
+.clr-blackc1        { color:            hsl(209 ,0%   ,10% ); }
+.clr-blackc2        { color:            hsl(209 ,0%   ,19% ); }
+.clr-blackc3        { color:            hsl(209 ,0%   ,30% ); }
+.clr-blackc4        { color:            hsl(209 ,0%   ,45% ); }
+.clr-blackc5        { color:            hsl(209 ,0%   ,61% ); }
+.clr-blackc6        { color:            hsl(209 ,0%   ,70% ); }
+.clr-blackc7        { color:            hsl(209 ,0%   ,82% ); }
+.clr-blackc8        { color:            hsl(209 ,0%   ,87% ); }
+.clr-blackc9        { color:            hsl(209 ,0%   ,92% ); }
+ 
+/*   blue                                                       */ 
+.clr-blueb          { background-color: hsl(209 ,80%  ,54% ); }
+.clr-blueb1         { background-color: hsl(209 ,100% ,15% ); }
+.clr-blueb2         { background-color: hsl(209 ,100% ,24% ); }
+.clr-blueb3         { background-color: hsl(209 ,90%  ,33% ); }
+.clr-blueb4         { background-color: hsl(209 ,80%  ,43% ); }
+.clr-blueb5         { background-color: hsl(209 ,80%  ,54% ); }
+.clr-blueb6         { background-color: hsl(209 ,88%  ,65% ); }
+.clr-blueb7         { background-color: hsl(209 ,100% ,76% ); }
+.clr-blueb8         { background-color: hsl(209 ,100% ,93% ); }
+.clr-blueb9         { background-color: hsl(209 ,100% ,97% ); }
+.clr-bluec          { color:            hsl(209 ,80%  ,54% ); }
+.clr-bluec1         { color:            hsl(209 ,100% ,15% ); }
+.clr-bluec2         { color:            hsl(209 ,100% ,24% ); }
+.clr-bluec3         { color:            hsl(209 ,90%  ,33% ); }
+.clr-bluec4         { color:            hsl(209 ,80%  ,43% ); }
+.clr-bluec5         { color:            hsl(209 ,80%  ,54% ); }
+.clr-bluec6         { color:            hsl(209 ,88%  ,65% ); }
+.clr-bluec7         { color:            hsl(209 ,100% ,76% ); }
+.clr-bluec8         { color:            hsl(209 ,100% ,93% ); }
+.clr-bluec9         { color:            hsl(209 ,100% ,97% ); }
+ 
+/*   green                                                      */ 
+.clr-greenb         { background-color: hsl(140 ,82%  ,51% ); }
+.clr-greenb1        { background-color: hsl(140 ,100% ,15% ); }
+.clr-greenb2        { background-color: hsl(140 ,100% ,24% ); }
+.clr-greenb3        { background-color: hsl(140 ,100% ,31% ); }
+.clr-greenb4        { background-color: hsl(140 ,85%  ,42% ); }
+.clr-greenb5        { background-color: hsl(140 ,81%  ,54% ); }
+.clr-greenb6        { background-color: hsl(140 ,88%  ,65% ); }
+.clr-greenb7        { background-color: hsl(140 ,100% ,76% ); }
+.clr-greenb8        { background-color: hsl(140 ,100% ,93% ); }
+.clr-greenb9        { background-color: hsl(140 ,100% ,97% ); }
+.clr-greenc         { color:            hsl(140 ,82%  ,51% ); }
+.clr-greenc1        { color:            hsl(140 ,100% ,15% ); }
+.clr-greenc2        { color:            hsl(140 ,100% ,24% ); }
+.clr-greenc3        { color:            hsl(140 ,100% ,31% ); }
+.clr-greenc4        { color:            hsl(140 ,85%  ,42% ); }
+.clr-greenc5        { color:            hsl(140 ,81%  ,54% ); }
+.clr-greenc6        { color:            hsl(140 ,88%  ,65% ); }
+.clr-greenc7        { color:            hsl(140 ,100% ,76% ); }
+.clr-greenc8        { color:            hsl(140 ,100% ,93% ); }
+.clr-greenc9        { color:            hsl(140 ,100% ,97% ); }
+ 
+/*   yellow                                                     */ 
+.clr-yellowb        { background-color: hsl(51  ,81%  ,54% ); }
+.clr-yellowb1       { background-color: hsl(51  ,100% ,15% ); }
+.clr-yellowb2       { background-color: hsl(51  ,100% ,24% ); }
+.clr-yellowb3       { background-color: hsl(51  ,90%  ,33% ); }
+.clr-yellowb4       { background-color: hsl(51  ,80%  ,43% ); }
+.clr-yellowb5       { background-color: hsl(51  ,81%  ,54% ); }
+.clr-yellowb6       { background-color: hsl(51  ,88%  ,65% ); }
+.clr-yellowb7       { background-color: hsl(51  ,100% ,76% ); }
+.clr-yellowb8       { background-color: hsl(51  ,100% ,93% ); }
+.clr-yellowb9       { background-color: hsl(51  ,100% ,97% ); }
+.clr-yellowc        { color:            hsl(51  ,81%  ,54% ); }
+.clr-yellowc1       { color:            hsl(51  ,100% ,15% ); }
+.clr-yellowc2       { color:            hsl(51  ,100% ,24% ); }
+.clr-yellowc3       { color:            hsl(51  ,90%  ,33% ); }
+.clr-yellowc4       { color:            hsl(51  ,80%  ,43% ); }
+.clr-yellowc5       { color:            hsl(51  ,81%  ,54% ); }
+.clr-yellowc6       { color:            hsl(51  ,88%  ,65% ); }
+.clr-yellowc7       { color:            hsl(51  ,100% ,76% ); }
+.clr-yellowc8       { color:            hsl(51  ,100% ,93% ); }
+.clr-yellowc9       { color:            hsl(51  ,100% ,97% ); }
+
+/*   red                                                        */ 
+.clr-redb           { background-color: hsl(0   ,81%  ,54% ); }
+.clr-redb1          { background-color: hsl(0   ,100% ,15% ); }
+.clr-redb2          { background-color: hsl(0   ,100% ,24% ); }
+.clr-redb3          { background-color: hsl(0   ,90%  ,33% ); }
+.clr-redb4          { background-color: hsl(0   ,80%  ,43% ); }
+.clr-redb5          { background-color: hsl(0   ,81%  ,54% ); }
+.clr-redb6          { background-color: hsl(0   ,88%  ,65% ); }
+.clr-redb7          { background-color: hsl(0   ,100% ,76% ); }
+.clr-redb8          { background-color: hsl(0   ,100% ,93% ); }
+.clr-redb9          { background-color: hsl(0   ,100% ,97% ); }
+.clr-redc           { color:            hsl(0   ,81%  ,54% ); }
+.clr-redc1          { color:            hsl(0   ,100% ,15% ); }
+.clr-redc2          { color:            hsl(0   ,100% ,24% ); }
+.clr-redc3          { color:            hsl(0   ,90%  ,33% ); }
+.clr-redc4          { color:            hsl(0   ,80%  ,43% ); }
+.clr-redc5          { color:            hsl(0   ,81%  ,54% ); }
+.clr-redc6          { color:            hsl(0   ,88%  ,65% ); }
+.clr-redc7          { color:            hsl(0   ,100% ,76% ); }
+.clr-redc8          { color:            hsl(0   ,100% ,93% ); }
+.clr-redc9          { color:            hsl(0   ,100% ,97% ); }

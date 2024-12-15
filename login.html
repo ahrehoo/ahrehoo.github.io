@@ -1,75 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="en.js"></script>
-    <script src="scripts.js"></script>
-    <link rel="stylesheet" href="animations.css">
-    <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="colors.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="objects.css">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="i.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/color.css">
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/object.css">
+    <link rel="stylesheet" href="assets/css/dir/object.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/dir/login.css">
+    <script src="assets/js/scripts.js"></script>
+    <title>Document</title>
 </head>
 
-<body onload="loading(); setLoginTexts();">
+<body class="clr-brandb" onload="loading();">
     <!--loading area-->
-    <div id="loading-element" class="loading-container">
-        <img src="resources/images/loading.svg" class="loading-img" alt="">
+    <div id="loading-element" class="loading-container clr-brandb1">
+        <img src="assets/image/loading.svg" class="loading-img">
     </div>
-    <!--background images area-->
+    <!--background image area-->
     <div class="background-image-container">
-        <img class="background-image background-image-top-left" src="resources/images/background-top-left.svg">
-        <img class="background-image background-image-top-right" src="resources/images/background-top-right.svg">
-        <img class="background-image background-image-bottom-left" src="resources/images/background-bottom-left.svg">
-        <img class="background-image background-image-bottom-right" src="resources/images/background-bottom-right.svg">
+        <img class="background-image background-image-top-left" src="assets/image/background-top-left.svg">
+        <img class="background-image background-image-top-right" src="assets/image/background-top-right.svg">
+        <img class="background-image background-image-bottom-left" src="assets/image/background-bottom-left.svg">
+        <img class="background-image background-image-bottom-right" src="assets/image/background-bottom-right.svg">
     </div>
     <!--content area-->
-    <div class="big-container">
-        <div class="back-container">
-            <div class="container">
-                <span id="login" class="xtitle"></span>
-                <form id="myForm" target="_blank" action="login.html">
-                    <div class="group" style="margin-left: 90px; margin-top: 20px; margin-bottom: 10px;">
-                        <svg stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon">
-                        <path d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" stroke-linejoin="round" stroke-linecap="round"></path>
-                      </svg>
-                      <input class="input1" id="username" type="text">
-                      </div>
-                    <input class="i" id="password" type="password">
-                    <input id="submit" type="submit">
+    <div class="white-container clr-grayb9">
+        <div class="content-container">
+            <div class="login-form-container">
+                <!--content-->
+                <form action="" class="login-form">
+                    <p class="title fnt-s8 fnt-wb clr-brandc">Login</p>
+                    <div class="input-holder">
+                        <input class="cinput icon-textbox textbox username-input" type="text" placeholder="Username">
+                    </div>
+                    <div class="input-holder">
+                        <input class="cinput icon-textbox textbox password-input" type="password"
+                            placeholder="Password">
+                        <img class="eye" src="assets/image/close-eye.svg">
+                    </div>
+                    <div class="input-holder submit-holder">
+                        <input class="cinput submit" type="submit" value="Login">
+                        <div class="arrow-wrapper">
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
                 </form>
-                <script>
-                    const EL_form = document.querySelector("#myForm");
-                    const EL_formSubmitBtn = EL_form.querySelector("#submit");
-
-                    const Progress = (evt) => {
-                        document.querySelector(".big-container").style.transition = "0.3s";
-                        document.querySelector(".big-container").style.opacity = 0;
-                        evt.preventDefault(); // Prevent Browser Submit action
-
-
-                        setTimeout(function () {
-                            window.location.replace("panel.html");
-                            //EL_form.submit(); // Or do AJAX stuff here
-                        }, 300);
-                    };
-
-
-                    // Use Element.addEventListener instead of inline JS
-                    // Don't attach handlers to button, rather use the Form "submit" Event:
-                    EL_form.addEventListener("submit", Progress);
-
-                </script>
-                <a href="/forget-account-data" id="forget-account" class="small-text"></a>
             </div>
-            <img src="resources/images/cheetah-blue.svg" class="login-logo">
-        </div>
+            <div class="logo-container"><img class="logo" src="assets/image/cheetah.svg"></div>
+            <script>
+                const passwordField = document.querySelector(".password-input");
+                const togglePassword = document.querySelector(".eye");
 
+                togglePassword.addEventListener("click", function () {
+                    if (passwordField.type === "password") {
+                        passwordField.type = "text";
+                        togglePassword.src = "assets/image/open-eye.svg";
+                    } else {
+                        passwordField.type = "password";
+                        togglePassword.src = "assets/image/close-eye.svg";
+                    }
+                });
+            </script>
+        </div>
     </div>
 </body>
 

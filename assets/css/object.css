@@ -1,0 +1,123 @@
+.input-holder {
+  position: relative;
+  display: inline-flex;
+  width: 170px;
+  height: 35px;
+  margin: 10px;
+}
+
+.cinput {
+  border-radius: 7px;
+}
+
+.username-input {
+  background: url(/assets/image/user.svg);
+}
+
+.password-input {
+  background: url(/assets/image/password.svg);
+}
+
+.input-holder .eye {
+  position: absolute;
+  cursor: pointer;
+  width: 15px;
+  height: 100%;
+}
+
+.textbox {
+  color: var(--clr-black3);
+  width: calc(100% - 60px);
+  caret-color: var(--clr-brand);
+  border: 2px solid transparent;
+  outline: none;
+  transition: 0.5s;
+  background-color: var(--clr-gray8);
+}
+
+.textbox:hover,
+.textbox:focus {
+  background-color: white;
+  border: 2px solid var(--clr-brand5);
+  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+}
+
+.icon-textbox {
+  background-repeat: no-repeat;
+  background-size: 20px;
+  padding: 0 30px 0 30px;
+}
+
+.submit-holder {
+  --fore-color: var(--clr-gray9);
+  --hover-color: var(--clr-brand4);
+  --arrow-width: 20px;
+  --arrow-stroke: 2px;
+  overflow: hidden;
+  border-radius: 7px;
+  background-color: var(--clr-brand);
+  color: var(--clr-black9);
+  border: none;
+}
+
+.submit-holder .arrow-wrapper {
+  z-index: 2;
+  position: absolute;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-holder .arrow {
+  margin-top: 1px;
+  width: 8px;
+  background: transparent;
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.submit-holder .arrow::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--fore-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  background-color: transparent;
+  display: inline-block;
+  top: -3px;
+  transition: 0.2s;
+  padding: 3px;
+}
+
+.submit-holder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 20px;
+  background-color: var(--hover-color);
+  z-index: 1;
+  transition: all 500ms;
+}
+
+.submit-holder:hover::before {
+  width: 120%;
+}
+
+.submit-holder:hover .arrow {
+  background: var(--fore-color);
+  width: 20px;
+}
+
+.submit {
+  transition: 0.3s;
+  width: 100%;
+  z-index: 2;
+  background-color: transparent;
+  border: none;
+  color: var(--fore-color);
+  cursor: pointer;
+}

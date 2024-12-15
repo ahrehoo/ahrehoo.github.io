@@ -1,0 +1,91 @@
+* {
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  transition: 0.3s;
+  font-family: "iransansxv";
+  font-variation-settings: var(--regular-font-variation);
+  font-size: var(--normal-font-size);
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --page-border-radius: 25px;
+  --object-border-radius: 15px;
+}
+
+.loading-container {
+  position: absolute;
+  transition: 0.7s;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loading-img {
+  position: relative;
+  width: 50px;
+  left: calc(50vw - 25px);
+  top: calc(50vh - 25px);
+  animation-iteration-count: 100;
+}
+
+.background-image {
+  width: 100%;
+  transition: 2s;
+  position: absolute;
+}
+
+.background-image-top-left {
+  top: 0;
+  left: 0;
+}
+
+.background-image-top-right {
+  top: 0;
+  right: 0;
+}
+
+.background-image-bottom-left {
+  left: 0;
+  bottom: 0;
+}
+
+.background-image-bottom-right {
+  right: 0;
+  bottom: 0;
+}
+
+.background-image-container {
+  position: absolute;
+  opacity: 0.5;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden !important;
+}
+
+.white-container {
+  width: 500px;
+  height: 500px;
+  left: calc(50vw - 250px);
+  top: calc(50vh - 250px);
+  padding: 30px;
+  position: absolute;
+  border-radius: var(--page-border-radius);
+}
+
+.content-container {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,47 @@
+.white-container {
+  width: 500px;
+  height: 400px;
+  left: calc(50vw - 250px);
+  top: calc(50vh - 200px);
+}
+
+.content-container {
+  display: flex;
+}
+
+.login-form-container {
+  text-align: center;
+  align-items: center;
+  display: inline-flex;
+  overflow: hidden;
+  width: 250px;
+  height: 100%;
+}
+
+.logo-container {
+  align-items: center;
+  display: inline-flex;
+  width: 250px;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  width: 80%;
+  height: fit-content;
+}
+.logo:hover{
+  width: 85%;
+}
+
+.input-holder {
+  margin: 10px auto;
+}
+
+.title{
+  margin-bottom: 15px;
+}
+
+.submit-holder{
+  margin-top: 20px;
+}
