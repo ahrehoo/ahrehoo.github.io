@@ -5,7 +5,6 @@
     /* Firefox */
     -ms-user-select: none;
     /* IE10+/Edge */
-    user-select: none;
     /* Standard */
     
     box-sizing: border-box;
@@ -14,6 +13,7 @@
 }
 body{
     padding: 20px;
+    background-color: #298BE8;
 }
 span{
     width: 600px;
