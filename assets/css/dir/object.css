@@ -1,59 +1,63 @@
-.input-holder .eye:dir(rtl) {
-    left: 0;
-    margin-left: 9px;
-}
-
-.input-holder .eye:dir(ltr) {
+[dir="ltr"] .input-holder .eye {
     right: 0;
     margin-right: 9px;
 }
 
-.icon-textbox:dir(rtl) {
-    background-position: calc(100% - 5px) 7px;
+[dir="rtl"] .input-holder .eye {
+    left: 0;
+    margin-left: 9px;
 }
 
-.icon-textbox:dir(ltr) {
+[dir="ltr"] .icon-textbox {
     background-position: 5px 7px;
 }
 
-.submit-holder .arrow-wrapper:dir(ltr) {
+[dir="rtl"] .icon-textbox {
+    background-position: calc(100% - 5px) 7px;
+}
+
+[dir="rtl"] .tel-input {
+    text-align: right;
+}
+
+[dir="ltr"] .submit-holder .arrow-wrapper {
     left: 100px;
 }
 
-.submit-holder .arrow-wrapper:dir(rtl) {
+[dir="rtl"] .submit-holder .arrow-wrapper {
     right: 100px;
 }
 
-.submit-holder .arrow:dir(ltr)::after {
+[dir="ltr"] .submit-holder .arrow::after {
     right: 0;
     transform: rotate(-45deg);
 }
 
-.submit-holder .arrow:dir(rtl)::after {
+[dir="rtl"] .submit-holder .arrow::after {
     left: 0;
     transform: rotate(135deg);
 }
 
-.submit-holder:dir(ltr)::before {
+[dir="ltr"] .submit-holder::before {
     left: -21px;
 }
 
-.submit-holder:dir(rtl)::before {
+[dir="rtl"] .submit-holder::before {
     right: -21px;
 }
 
-.submit-holder:hover .submit:dir(ltr) {
+[dir="ltr"] .submit-holder:hover .submit {
     padding-right: 30px;
 }
 
-.submit-holder:hover .submit:dir(rtl) {
+[dir="rtl"] .submit-holder:hover .submit {
     padding-left: 30px;
 }
 
-.submit:dir(ltr) {
+[dir="ltr"] .submit {
     padding-right: 20px;
 }
 
-.submit:dir(rtl) {
+[dir="rtl"] .submit {
     padding-left: 20px;
 }

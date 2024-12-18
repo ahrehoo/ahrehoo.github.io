@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="assets/css/dir/login.css">
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/language.js"></script>
-    <title id="page-title" utext="title">login</title>
+    <title id="page-title" utext="title">register</title>
 </head>
 
 <body class="clr-brandb" onload="loading();">
@@ -38,14 +38,23 @@
                     <form action="" class="login-form">
                         <p class="title fnt-s8 fnt-wb clr-brandc" utext="title"></p>
                         <div class="input-holder">
+                            <input class="cinput icon-textbox textbox tel-input" type="tel" utext="tel"
+                                pattern="[0]{1}[9]{1}[0-9]{9}">
+                        </div>
+                        <div class="input-holder">
                             <input class="cinput icon-textbox textbox username-input" type="text" utext="username">
                         </div>
                         <div class="input-holder pass-holder">
                             <input class="cinput icon-textbox textbox password-input" type="password" utext="password">
                             <img class="eye" src="assets/image/close-eye.svg">
                         </div>
+                        <div class="input-holder pass-holder">
+                            <input class="cinput icon-textbox textbox password-input" type="password"
+                                utext="repeat-password">
+                            <img class="eye" src="assets/image/close-eye.svg">
+                        </div>
                         <div class="input-holder submit-holder">
-                            <input class="cinput submit" type="submit" utext="login-button">
+                            <input class="cinput submit" type="submit" utext="register-button">
                             <div class="arrow-wrapper">
                                 <div class="arrow"></div>
                             </div>

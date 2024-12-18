@@ -1,0 +1,15 @@
+[dir="ltr"] .side-items-container {
+    margin-right: var(--white-container-margin);
+}
+
+[dir="rtl"] .side-items-container {
+    margin-left: var(--white-container-margin);
+}
+
+[dir="ltr"] .top-logo {
+    margin-right: var(--white-container-margin);
+}
+
+[dir="rtl"] .top-logo {
+    margin-left: var(--white-container-margin);
+}

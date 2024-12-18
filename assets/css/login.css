@@ -1,8 +1,18 @@
+:root {
+  --page-brdr-radius: 25px;
+  --obj-brdr-radius: 9px;
+
+  --top-items-height: 0px;
+  --side-items-width: 0px;
+
+  --white-container-width: 500px;
+  --white-container-height: 450px;
+  --white-container-margin: 0px;
+}
+
 .white-container {
-  width: 500px;
-  height: 400px;
-  left: calc(50vw - 250px);
-  top: calc(50vh - 200px);
+  display: flex;
+  opacity: 0;
 }
 
 .content-container {
@@ -28,9 +38,10 @@
 .logo {
   display: flex;
   width: 80%;
-  height: fit-content;
+  height: auto;
 }
-.logo:hover{
+
+.logo:hover {
   width: 85%;
 }
 
@@ -38,10 +49,10 @@
   margin: 10px auto;
 }
 
-.title{
+.title {
   margin-bottom: 15px;
 }
 
-.submit-holder{
+.submit-holder {
   margin-top: 20px;
 }

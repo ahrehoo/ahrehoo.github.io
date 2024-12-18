@@ -5,24 +5,30 @@
   font-weight: 100 1000;
   font-display: fallback;
 }
-@font-face {
-  font-family: iransansx;
-  src: url("/assets/font/iransansx-regular.woff") format("woff");
-}
+
 @font-face {
   font-family: iransansx;
   src: url("/assets/font/iransansx-bold.woff") format("woff");
+  font-weight: 450;
+}
+
+@font-face {
+  font-family: iransansx;
+  src: url("/assets/font/iransansx-black.woff") format("woff");
   font-weight: 700;
 }
-body {
+
+* {
   font-family: iransansx, tahoma;
+  font-weight: 450;
 }
 
 @supports (font-variation-settings: normal) {
-  body {
+  * {
     font-family: "iransansxv", tahoma;
   }
 }
+
 :root {
   --regular-font-variation: "wght" 450, "DOTS" 8;
   --demi-bold-font-variation: "wght" 700, "DOTS" 8;
@@ -38,14 +44,17 @@ body {
 }
 
 .fnt-wr {
+  font-weight: 450;
   font-variation-settings: var(--regular-font-variation);
 }
 
 .fnt-wdb {
+  font-weight: bold;
   font-variation-settings: var(--demi-bold-font-variation);
 }
 
 .fnt-wb {
+  font-weight: bold;
   font-variation-settings: var(--bold-font-variation);
 }
 
@@ -95,5 +104,3 @@ body {
         --title-font-size: 60px;
     }
 }*/
-
-/*# sourceMappingURL=font.css.map */
