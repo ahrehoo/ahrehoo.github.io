@@ -1,6 +1,0 @@
-input[type=checkbox]:checked label::after{
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    content: attr(data-tg-on);
-}
