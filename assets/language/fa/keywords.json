@@ -1,0 +1,33 @@
+{
+    "second":"ثانیه",
+    "minute":"دقیقه",
+    "hour":"ساعت",
+    "day":"روز",
+    "week":"هفته",
+    "months":"ماه",
+    "year":"سال",
+
+    "active":"فعال",
+    "activated":"فعال شد!",
+    "deactive":"غیرفعال",
+    "deactivated":"غیرفعال شد!",
+    "on":"روشن",
+    "off":"خاموش",
+
+    "and":"و",
+    "in":"در",
+    "never":"هیچوقت",
+    "disconnected":"ارتباط قطع شد",
+    
+
+    "sensor-pir":"سنسور حرکتی",
+    "sensor-fire":"سنسور حریق",
+    "sensor-laser":"سنسور لیزری",
+    "sensor-sound":"سنسور صوتی",
+    "sensor-light":"سنسور نوری",
+    "sensor-weather":"سنسور آب و هوا",
+    "alarm-siren":"آژیر",
+    "alarm-fog":"نورافکن",
+    "tool-electronic-key":"کلید برقی",
+    "protective-electric-fance":"حفاظ الکتریگی"
+}

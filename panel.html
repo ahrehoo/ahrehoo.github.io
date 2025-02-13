@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" hasData="true" page="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/color.css">
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dir/style.css">
+    <link rel="stylesheet" href="assets/css/object.css">
+    <link rel="stylesheet" href="assets/css/dir/object.css">
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/moment.js"></script>
+    <title id="page-title" utext="title"></title>
+</head>
+
+<body class="clr-brandb" onload="loading();">
+    <!--loading area-->
+    <div id="loading-element" class="loading-container clr-brandb">
+        <img src="assets/image/loading.svg" class="loading-img">
+    </div>
+    <!--background image area-->
+    <div class="background-image-container">
+        <img class="background-image background-image-top-left" src="assets/image/background-top-left.svg">
+        <img class="background-image background-image-top-right" src="assets/image/background-top-right.svg">
+        <img class="background-image background-image-bottom-left" src="assets/image/background-bottom-left.svg">
+        <img class="background-image background-image-bottom-right" src="assets/image/background-bottom-right.svg">
+    </div>
+    <!--content area-->
+    <div class="element-container">
+        <img src="/assets/image/cheetah-white.svg" class="top-logo">
+        <div class="top-items-container">
+            <div class="cat-button dir-container">
+                <p utext="dir" class="top-dir clr-grayc9 fnt-wb fnt-s7"></p>
+            </div>
+            <div class="cat-button">
+                <p class="cat-button-label" utext="quick-setup" onclick="loadPage('quick-setup')"></p>
+            </div>
+            <div class="cat-button">
+                <p class="cat-button-label" utext="save-changes"></p>
+            </div>
+        </div>
+        <div class="side-items-container">
+            <div style="position: absolute; width: 100%; height: 100%;">
+                <div class="cat-button">
+                    <p class="cat-button-label" utext="dashboard" onclick="loadPage('dashboard')"></p>
+                </div>
+                <div class="cat-button">
+                    <p class="cat-button-label" utext="modules" onclick="loadPage('modules')"></p>
+                </div>
+                <div class="cat-button">
+                    <p class="cat-button-label" utext="phones" onclick="loadPage('phones')"></p>
+                </div>
+                <div class="cat-button">
+                    <p class="cat-button-label" utext="alarms" onclick="loadPage('alarms')"></p>
+                </div>
+                <div class="cat-button">
+                    <p class="cat-button-label" utext="security" onclick="loadPage('security')"></p>
+                </div>
+                <div class="cat-button">
+                    <p class="cat-button-label" utext="diagnostic" onclick="loadPage('diagnostic')"></p>
+                </div>
+                <div class="cat-button dropdown-container">
+                    <div utext="general-settings" class="dropdown"></div>
+                    <div utext="language" class="dropdown-item" onclick="loadPage('language')"></div>
+                    <div utext="user-area" class="dropdown-item" onclick="loadPage('user-area')"></div>
+                    <div utext="backup-and-restore" class="dropdown-item" onclick="loadPage('backup-and-restore')"></div>
+                    <div utext="update" class="dropdown-item" onclick="loadPage('update')"></div>
+                    <div utext="factory-reset" class="dropdown-item" onclick="loadPage('factory-reset')"></div>
+                </div>
+            </div>
+        </div>
+        <div class="white-container clr-grayb8">
+            <div class="content-container" id="container">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="assets/js/password.js"></script>
+</body>
+<script src="assets/js/fillPanel.js"></script>
+<script src="assets/js/translate.js"></script>
+
+</html>

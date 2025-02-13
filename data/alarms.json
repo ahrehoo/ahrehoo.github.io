@@ -1,0 +1,31 @@
+{
+    "warning-alarm-call":1,
+    "warning-alarm-sms":1,
+    "warning-alarm-spotlight":1,
+    "warning-alarm-siren":1,
+
+    "power-loss-call":1,
+    "power-loss-sms":1,
+    "power-loss-spotlight":1,
+    "power-loss-siren":1,
+    
+    "sim-no-service-spotlight":1,
+    "sim-no-service-siren":1,
+    
+    "device-low-battery-call":1,
+    "device-low-battery-sms":1,
+
+    "module-connection-fail-call":1,
+    "module-connection-fail-sms":1,
+    "module-connection-fail-spotlight":1,
+    "module-connection-fail-siren":1,
+    
+    "module-low-battery-call":1,
+    "module-low-battery-sms":1,
+    
+    "user-login-call":1,
+    "user-login-sms":1,
+    
+    "setting-changes-call":1,
+    "setting-changes-sms":1
+}

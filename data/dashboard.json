@@ -1,0 +1,56 @@
+{
+    "alarms-state": "[on]",
+    "last-alarm-module-type": "[sensor-laser]",
+    "last-alarm-module-name": "حیاط",
+    "last-alarm-datetime": "12/23/2012 11:46 PM",
+    "signal-strength": "16",
+    "last-sim-signal-loss": null,
+    "connected-modules-count": 6,
+    "disconnected-modules-count": 1,
+    "modules": [
+        {
+            "module-type": "[sensor-pir]",
+            "module-name": "آشپزخانه",
+            "module-uptime": "12/23/2024 11:46 PM",
+            "module-battery": 56
+        },
+        {
+            "module-type": "[alarm-siren]",
+            "module-name": "حیاط",
+            "module-uptime": "12/23/2012 11:46 PM",
+            "module-battery": 95
+        },
+        {
+            "module-type": "[sensor-sound]",
+            "module-name": "سالن",
+            "module-uptime": -1,
+            "module-battery": -1
+        },
+        {
+            "module-type": "[sensor-pir]",
+            "module-name": "حیاط",
+            "module-uptime": "12/23/2012 11:46 PM",
+            "module-battery": 26
+        },
+        {
+            "module-type": "[sensor-laser]",
+            "module-name": "اتاق کار",
+            "module-uptime": "12/23/2012 11:46 PM",
+            "module-battery": 45
+        },
+        {
+            "module-type": "[sensor-weather]",
+            "module-name": "پشت بام",
+            "module-uptime": "12/23/2012 11:46 PM",
+            "module-battery": 78
+        },
+        {
+            "module-type": "[tool-electronic-key]",
+            "module-name": "مودم",
+            "module-uptime": -1,
+            "module-battery": -1
+        }
+    ],
+    "main-battery-level": 96,
+    "modules-avg-battery-level": 55
+}

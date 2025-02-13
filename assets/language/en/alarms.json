@@ -1,0 +1,19 @@
+{
+    "alarms":"Alarms",
+    "warning-alarm":"Warning alarm",
+    "power-loss":"Power loss",
+    "sim-no-service":"SIM no service",
+    "device-battery":"Device battery",
+    "device-low-battery":"Low battery",
+    "modules":"Modules",
+    "module-connection-fail":"Module connection failed",
+    "module-low-battery":"Module low battery",
+    "settings-panel":"Settings",
+    "user-login":"User login",
+    "setting-changes":"Setting changes",
+
+    "call":"Call",
+    "sms":"SMS",
+    "spotlight":"Spotlight",
+    "siren":"Siren"
+}

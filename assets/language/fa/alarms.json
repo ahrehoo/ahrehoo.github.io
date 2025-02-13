@@ -1,0 +1,19 @@
+{
+    "alarms":"دزدگیر",
+    "warning-alarm":"هشدار دزدگیر",
+    "power-loss":"قطعی برق",
+    "sim-no-service":"از دست رفتن آنتن سیمکارت",
+    "device-battery":"باتری دستگاه",
+    "device-low-battery":"باتری کم",
+    "modules":"ماژول ها",
+    "module-connection-fail":"قطع ارتباط با ماژول",
+    "module-low-battery":"باتری کم ماژول",
+    "settings-panel":"تنظیمات",
+    "user-login":"ورود کاربر به پنل",
+    "setting-changes":"تغییرات تنظیمات",
+
+    "call":"تماس",
+    "sms":"پیامک",
+    "spotlight":"نورافکن",
+    "siren":"آژیر"
+}

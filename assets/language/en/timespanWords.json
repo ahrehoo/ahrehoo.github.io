@@ -1,0 +1,21 @@
+{
+    "words": [
+        {"key" :"seconds"       ,"value": "seconds"  },
+        {"key" :"minutes"       ,"value": "minutes"  },
+        {"key" :"hours"         ,"value": "hours"    },
+        {"key" :"days"          ,"value": "days"     },
+        {"key" :"weeks"         ,"value": "weeks"    },
+        {"key" :"years"         ,"value": "years"    },
+
+        {"key" :"second"        ,"value": "second"   },
+        {"key" :"minute"        ,"value": "minute"   },
+        {"key" :"hour"          ,"value": "hour"     },
+        {"key" :"day"           ,"value": "day"      },
+        {"key" :"week"          ,"value": "week"     },
+        {"key" :"month"         ,"value": "month"    },
+        {"key" :"year"          ,"value": "year"     },
+
+        {"key" :"ago"           ,"value": "ago"      },
+        {"key" :"a"             ,"value": "a"        }
+    ]
+}

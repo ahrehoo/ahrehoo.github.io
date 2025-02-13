@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "iransansxv";
+  src: url("/assets/font/iransansxv.woff") format("woff-variations"), url("/assets/font/iransansxv.woff") format("woff");
+  /* for the other supporting browsers */
+  font-weight: 100 1000;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: iransansx;
+  src: url("/assets/font/iransansx-bold.woff") format("woff");
+  font-weight: 450;
+}
+
+@font-face {
+  font-family: iransansx;
+  src: url("/assets/font/iransansx-black.woff") format("woff");
+  font-weight: 700;
+}
+
+* {
+  font-family: iransansx, tahoma;
+  font-weight: 450;
+}
+
+@supports (font-variation-settings: normal) {
+  * {
+    font-family: "iransansxv", tahoma;
+  }
+}
+
+:root {
+  --font-variation-regular: "wght" 450, "DOTS" 8;
+  --font-variation-demi-bold: "wght" 700, "DOTS" 8;
+  --font-variation-bold: "wght" 880, "DOTS" 8;
+  --font-size-smaller: 11px;
+  --font-size-small: 12px;
+  --font-size-normal: 13px;
+  --font-size-xnormal: 15px;
+  --font-size-big: 20px;
+  --font-size-bigger: 24px;
+  --font-size-bigger: 32px;
+  --font-size-xtitle: 50px;
+}
+
+.fnt-wr {
+  font-weight: 450;
+  font-variation-settings: var(--font-variation-regular);
+}
+
+.fnt-wdb {
+  font-weight: bold;
+  font-variation-settings: var(--font-variation-demi-bold);
+}
+
+.fnt-wb {
+  font-weight: bold;
+  font-variation-settings: var(--font-variation-bold);
+}
+
+.fnt-s1 {
+  font-size: var(--font-size-smaller);
+}
+
+.fnt-s2 {
+  font-size: var(--font-size-small);
+}
+
+.fnt-s3 {
+  font-size: var(--font-size-normal);
+}
+
+.fnt-s4 {
+  font-size: var(--font-size-xnormal);
+}
+
+.fnt-s5 {
+  font-size: var(--font-size-big);
+}
+
+.fnt-s6 {
+  font-size: var(--font-size-bigger);
+}
+
+.fnt-s7 {
+  font-size: var(--title-font-size);
+}
+
+.fnt-s8 {
+  font-size: var(--font-size-xtitle);
+}
+
+/*@media only screen and (max-width: 1000px) and (orientation:portrait) {
+    :root {
+        --font-variation-regular: "wght" 500, "DOTS" 8;
+        --font-variation-demi-bold: "wght" 750, "DOTS" 8;
+        --font-variation-bold: "wght" 950, "DOTS" 8;
+
+        --font-size-smaller: 32px;
+        --font-size-small: 36px;
+        --font-size-normal: 44px;
+        --font-size-big: 48px;
+        --font-size-bigger: 54px;
+        --title-font-size: 60px;
+    }
+}*/

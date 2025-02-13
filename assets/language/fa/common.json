@@ -1,0 +1,27 @@
+{
+    "quick-setup": "راه اندازی سریع",
+    "save-changes": "ذخیره تنظیمات",
+    "dashboard": "داشبورد",
+    "modules": "ماژول ها",
+    "phones": "تلفن ها",
+    "alarms": "هشدار ها",
+    "security": "امنیت",
+    "diagnostic": "بررسی و چکاپ",
+    "general-settings": "تنظیمات عمومی",
+    "language": "-زبان",
+    "user-area": "-اطلاعات کاربری",
+    "backup-and-restore": "-پشتیبان گیری و بازیابی",
+    "update": "-بروزرسانی",
+    "factory-reset": "-تنظیمات کارخانه",
+    "status":"وضعیت",
+    "signal-reception":"آنتن دهی",
+    "signal-strength":"شدت سیگنال",
+    "battery":"باتری",
+    
+    "username": "نام کاربری",
+    "password": "رمز عبور",
+    "login-button": "ورود",
+    "tel": "تلفن همراه",
+    "repeat-password": "تکرار رمز عبور",
+    "register-button": "ثبت نام"
+}

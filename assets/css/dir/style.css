@@ -1,0 +1,71 @@
+[dir="rtl"] * {
+    -moz-font-feature-settings: "ss01";
+    -webkit-font-feature-settings: "ss01";
+    font-feature-settings: "ss01";
+}
+
+[dir="ltr"] .side-items-container {
+    margin-right: var(--white-container-margin);
+}
+
+[dir="rtl"] .side-items-container {
+    margin-left: var(--white-container-margin);
+}
+
+[dir="ltr"] .top-logo {
+    margin-right: var(--white-container-margin);
+}
+
+[dir="rtl"] .top-logo {
+    margin-left: var(--white-container-margin);
+}
+
+[dir="ltr"] .top-items-container .cat-button {
+    margin-right: var(--white-container-margin);
+}
+
+[dir="rtl"] .top-items-container .cat-button {
+    margin-left: var(--white-container-margin);
+}
+
+[dir="ltr"] .dir-container {
+    margin-left: var(--page-brdr-radius);
+}
+
+[dir="rtl"] .dir-container {
+    margin-right: var(--page-brdr-radius);
+}
+
+[dir="ltr"] .dropdown-item {
+    padding-left: 10px;
+}
+
+[dir="rtl"] .dropdown-item {
+    padding-right: 10px;
+}
+
+[dir="ltr"] .next-margin {
+    margin-right: 15px;
+}
+
+[dir="rtl"] .next-margin {
+    margin-left: 15px;
+}
+
+[dir="ltr"] .before-margin {
+    margin-right: 15px;
+}
+
+[dir="rtl"] .before-margin {
+    margin-left: 15px;
+}
+
+[dir="ltr"] .content-container {
+    padding-right: calc(var(--padding-for-scroll));
+}
+
+[dir="rtl"] .content-container {
+    width: calc(100% - var(--white-container-padding) * 2 - var(--padding-for-scroll) + 5px);
+    padding-right: calc(var(--padding-for-scroll) + 10px);
+    margin-right: var(--padding-for-scroll);
+}

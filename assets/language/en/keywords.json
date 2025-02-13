@@ -1,0 +1,32 @@
+{
+    "second":"second",
+    "minute":"minute",
+    "hour":"hour",
+    "day":"day",
+    "week":"week",
+    "months":"month",
+    "year":"year",
+
+    "active":"Actived",
+    "actived":"Active",
+    "deactive":"Deactive",
+    "deactived":"Deactived",
+    "on":"On",
+    "off":"Off",
+
+    "and": "and",
+    "in":"in",
+    "never":"Never",
+    "disconnected":"Disconnnected",
+
+    "sensor-pir":"Pir sensor",
+    "sensor-fire":"Fire sensor",
+    "sensor-laser":"Laser sensor",
+    "sensor-sound":"Sound sensor",
+    "sensor-light":"Light sensor",
+    "sensor-weather":"Weather sensor",
+    "alarm-siren":"Siren",
+    "alarm-fog":"Spotlight",
+    "tool-electronic-key":"Electric key",
+    "protective-electric-fance":"Electrinc fance"
+}

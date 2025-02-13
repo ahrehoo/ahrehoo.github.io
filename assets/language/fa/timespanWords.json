@@ -1,0 +1,21 @@
+{
+    "words": [
+        {"key" :"seconds"       ,"value": "ثانیه"    },
+        {"key" :"minutes"       ,"value": "دقیقه"    },
+        {"key" :"hours"         ,"value": "ساعت"     },
+        {"key" :"days"          ,"value": "روز"      },
+        {"key" :"weeks"         ,"value": "هفته"     },
+        {"key" :"years"         ,"value": "سال"      },
+
+        {"key" :"second"        ,"value": "ثانیه"    },
+        {"key" :"minute"        ,"value": "دقیقه"    },
+        {"key" :"hour"          ,"value": "ساعت"     },
+        {"key" :"day"           ,"value": "روز"      },
+        {"key" :"week"          ,"value": "هفته"     },
+        {"key" :"month"         ,"value": "ماه"      },
+        {"key" :"year"          ,"value": "سال"      },
+
+        {"key" :"ago"           ,"value": "قبل"      },
+        {"key" :"a"             ,"value": "یک"       }
+    ]
+}

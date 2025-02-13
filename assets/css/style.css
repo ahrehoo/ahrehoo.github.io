@@ -1,0 +1,279 @@
+* {
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  transition: 0.3s;
+  font-variation-settings: var(--font-variation-regular);
+  font-size: var(--font-size-normal);
+  color: var(--clr-gray4);
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  white-space: pre-wrap;
+}
+
+td {
+  font-size: var(--font-size-smaller);
+}
+
+table {
+  display: flex;
+}
+
+:root {
+  --page-brdr-radius: 25px;
+  --group-brdr-radius: 17px;
+  --obj-brdr-radius: 9px;
+  --top-items-height: 60px;
+  --side-items-width: 120px;
+  --side-items-height: 35px;
+
+  --white-container-width: 600px;
+  --white-container-height: 500px;
+  --white-container-padding: 30px;
+  --white-container-margin: 10px;
+}
+
+.loading-container {
+  position: absolute;
+  transition: 0.7s;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loading-img {
+  position: absolute;
+  width: 50px;
+  left: calc(50vw - 25px);
+  top: calc(50vh - 25px);
+  animation: spin 0.7s infinite linear;
+}
+
+.background-image {
+  width: 120%;
+  transition: 2s ease-out;
+  position: absolute;
+}
+
+.background-image-top-left {
+  top: 0;
+  left: 0;
+}
+
+.background-image-top-right {
+  top: 0;
+  right: 0;
+}
+
+.background-image-bottom-left {
+  left: 0;
+  bottom: 0;
+}
+
+.background-image-bottom-right {
+  right: 0;
+  bottom: 0;
+}
+
+.background-image-container {
+  position: absolute;
+  opacity: 0.5;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden !important;
+}
+
+.white-container {
+  width: var(--white-container-width);
+  height: var(--white-container-height);
+  position: relative;
+  display: inline-block;
+  border-radius: var(--page-brdr-radius);
+  transition: 0.7s;
+}
+
+.element-container {
+  position: absolute;
+  --element-container-width: calc(var(--white-container-width) + var(--white-container-margin) + var(--side-items-width));
+  --element-container-height: calc(var(--top-items-height) + var(--white-container-margin) + var(--white-container-height));
+  width: var(--element-container-width);
+  height: var(--element-container-height);
+  left: calc(50vw - var(--element-container-width) / 2);
+  top: calc(50vh - var(--element-container-height) / 2 - 5vh);
+  font-size: 0;
+
+}
+
+.top-items-container {
+  --padding-top: calc((var(--side-items-height) - var(--top-items-height)) * -1);
+  padding-top: var(--padding-top);
+  font-size: 0;
+  margin-bottom: var(--white-container-margin);
+  position: relative;
+  width: var(--white-container-width);
+  height: var(--side-items-height);
+  display: inline-block;
+}
+
+.side-items-container {
+  width: var(--side-items-width);
+  height: var(--white-container-height);
+  position: relative;
+  display: inline-block;
+}
+
+.top-logo {
+  margin-bottom: var(--white-container-margin);
+  width: var(--side-items-width);
+  height: var(--top-items-height);
+}
+
+@property --scrollbar-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsl(209, 28%, 70%);
+}
+
+.content-container {
+  --padding-for-scroll: 15px;
+  transition: --scrollbar-color .3s;
+  padding-right: 5px;
+  direction: ltr;
+  margin: var(--white-container-padding);
+  width: calc(100% - var(--white-container-padding) * 2);
+  height: calc(100% - var(--white-container-padding) * 2);
+  position: absolute;
+  overflow-y: auto;
+}
+
+.cat-button {
+  background-color: var(--clr-gray9);
+  position: relative;
+  display: inline-block;
+  margin-bottom: var(--white-container-margin);
+  border-radius: var(--obj-brdr-radius);
+  cursor: pointer;
+  width: var(--side-items-width);
+  height: var(--side-items-height);
+}
+
+.cat-button:hover {
+  background-color: var(--clr-gray8);
+}
+
+.side-items-container .cat-button:first-child {
+  margin-top: var(--page-brdr-radius);
+}
+
+.dropdown {
+  font-variation-settings: var(--font-variation-demi-bold);
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background-color: var(--clr-gray9);
+  display: inline-flex;
+  position: relative;
+  border-radius: var(--obj-brdr-radius);
+  width: var(--side-items-width);
+  height: var(--side-items-height);
+}
+
+.dropdown-item {
+  font-variation-settings: var(--font-variation-demi-bold);
+  font-size: var(--font-size-smaller);
+  align-items: center;
+  display: inline-flex;
+  position: relative;
+  width: var(--side-items-width);
+  height: 25px;
+  cursor: pointer;
+}
+
+.dropdown+.dropdown-item {
+  margin-top: -10px;
+  border-top: 10px solid transparent;
+}
+
+.dropdown+.dropdown-item:hover {
+  border-top: 10px solid var(--clr-gray7);
+}
+
+.dropdown-item:last-child {
+  border-radius: 0 0 var(--obj-brdr-radius) var(--obj-brdr-radius);
+}
+
+.dropdown-item:hover {
+  background-color: var(--clr-gray7);
+}
+
+.dropdown-container {
+  font-size: 0;
+  display: inline-block;
+  position: relative;
+  background-color: var(--clr-gray8);
+  cursor: default;
+  overflow: hidden;
+}
+
+.dropdown-container:hover {
+  height: calc(var(--side-items-height) + 25px * 5);
+  background-color: var(--clr-gray8);
+}
+
+.top-dir {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -10px;
+}
+
+.top-items-container .cat-button {
+  display: inline-flex;
+  position: relative;
+}
+
+.dir-container {
+  width: calc(var(--white-container-width) - var(--side-items-width) * 2 - var(--white-container-margin) - var(--page-brdr-radius) * 2);
+  background-color: transparent;
+  cursor: default;
+  border-radius: 0;
+}
+
+.dir-container:hover {
+  background-color: transparent;
+}
+
+.cat-button-label {
+  font-variation-settings: var(--font-variation-demi-bold);
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: var(--scrollbar-color);
+}
+
+.content-container:hover {
+  --scrollbar-color: var(--clr-gray5);
+}

@@ -1,0 +1,27 @@
+{
+    "quick-setup": "Quick setup",
+    "save-changes": "Save changes",
+    "dashboard": "Dashboard",
+    "modules": "Modules",
+    "phones": "Phones",
+    "alarms": "Alarms",
+    "security": "Security",
+    "diagnostic": "Diagnostics",
+    "general-settings": "General settings",
+    "language": "-Language",
+    "user-area": "-User information",
+    "backup-and-restore": "-Backup & Restore",
+    "update": "-Update",
+    "factory-reset": "-Factory reset",
+    "status":"Status",
+    "signal-reception":"Signal",
+    "signal-strength":"Signal strength",
+    "battery":"Battery",
+    
+    "username":"Username",
+    "password":"Password",
+    "login-button":"Login",
+    "tel":"Phone",
+    "repeat-password":"Repeat password",
+    "register-button":"Register"
+}

@@ -1,0 +1,14 @@
+{
+    "title": "panel",
+    "dir": "Dashboard",
+    "stat-alarm-toggle-data": "alarms-state",
+    "last-saved-alarm": "Last saved alarm",
+    "last-alarm-data": "last-alarm-module-type last-alarm-module-name\nin last-alarm-datetime",
+    "signal-strength-data": "signal-strengthDB",
+    "last-sim-signal-loss":"Last signal lost",
+    "last-sim-signal-loss-data": "last-sim-signal-loss",
+    "modules-counter":"Connected modules: connected-modules-count\nDisconnected modules: disconnected-modules-count",
+    "main-battery-level": "main-battery-level%",
+    "battery-overal-level": "Main device: main-battery-level%\nModules avg: modules-avg-battery-level%",
+    "battery-status":"Battery status"
+}

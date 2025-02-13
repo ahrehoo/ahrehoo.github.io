@@ -1,0 +1,14 @@
+{
+    "title": "پنل کاربری",
+    "dir": "داشبورد",
+    "stat-alarm-toggle-data": "alarms-state",
+    "last-saved-alarm": "آخرین هشدار ثبت شده",
+    "last-alarm-data": "last-alarm-module-type last-alarm-module-name\nدر last-alarm-datetime",
+    "signal-strength-data": "signal-strengthDB",
+    "last-sim-signal-loss": "آخرین قطعی آنتن ثبت شده",
+    "last-sim-signal-loss-data": "last-sim-signal-loss",
+    "modules-counter": "متصل: connected-modules-count عدد\nقطع ارتباط: disconnected-modules-count عدد",
+    "main-battery-level": "main-battery-level%",
+    "battery-overal-level": "دستگاه اصلی: main-battery-level%\nمیانگین ماژول ها: modules-avg-battery-level%",
+    "battery-status":"وضعیت باتری ها"
+}
