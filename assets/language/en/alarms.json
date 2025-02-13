@@ -1,4 +1,6 @@
 {
+    "title":"Alarms",
+    "dir":"Alarms",
     "alarms":"Alarms",
     "warning-alarm":"Warning alarm",
     "power-loss":"Power loss",

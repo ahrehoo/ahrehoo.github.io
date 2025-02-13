@@ -236,7 +236,7 @@ table {
 .top-dir {
   position: absolute;
   bottom: 0;
-  margin-bottom: -10px;
+  margin-bottom: -5px;
 }
 
 .top-items-container .cat-button {

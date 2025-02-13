@@ -39,7 +39,7 @@
   --font-size-xnormal: 15px;
   --font-size-big: 20px;
   --font-size-bigger: 24px;
-  --font-size-bigger: 32px;
+  --font-size-title: 32px;
   --font-size-xtitle: 50px;
 }
 
@@ -83,7 +83,7 @@
 }
 
 .fnt-s7 {
-  font-size: var(--title-font-size);
+  font-size: var(--font-size-title);
 }
 
 .fnt-s8 {
