@@ -5,6 +5,7 @@
         {"key" :"hours"         ,"value": "ساعت"     },
         {"key" :"days"          ,"value": "روز"      },
         {"key" :"weeks"         ,"value": "هفته"     },
+        {"key" :"months"        ,"value": "ماه"   },
         {"key" :"years"         ,"value": "سال"      },
 
         {"key" :"second"        ,"value": "ثانیه"    },

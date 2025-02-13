@@ -90,6 +90,31 @@ function translateTimespan(timespan) {
     return timespan;
 }
 
+function getTimespanFromMilliseconds(milliseconds) {
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
+    const week = day * 7;
+    const month = week * 4;
+    const year = month * 12;
+
+    if (milliseconds / year >= 1)
+        return Math.round(milliseconds / year).toString() + " years ago";
+    else if (milliseconds / month >= 1)
+        return Math.round(milliseconds / month).toString() + " month ago";
+    else if (milliseconds / year >= 1)
+        return Math.round(milliseconds / week).toString() + " week ago";
+    else if (milliseconds / year >= 1)
+        return Math.round(milliseconds / day).toString() + " day ago";
+    else if (milliseconds / year >= 1)
+        return Math.round(milliseconds / hour).toString() + " hour ago";
+    else if (milliseconds / year >= 1)
+        return Math.round(milliseconds / minute).toString() + " minute ago";
+    else if (milliseconds / second >= 1)
+        return Math.round(milliseconds / second).toString() + " second ago";
+}
+
 function fillTable(element, dataKeyInformation) {
     var elementText = "";
     data[dataKeyInformation[0]].forEach(row => {
@@ -101,7 +126,7 @@ function fillTable(element, dataKeyInformation) {
                     if (row[key] == -1)
                         elementText += keywords["disconnected"];
                     else {
-                        var timespan = moment(Date.parse(row[key])).fromNow();
+                        var timespan = getTimespanFromMilliseconds(Date.now() - Date.parse(row[key]));
                         elementText += translateTimespan(timespan);
                     }
                 else
