@@ -148,7 +148,7 @@ table {
 }
 
 .content-container {
-  --padding-for-scroll: 15px;
+  --padding-for-scroll: 10px;
   transition: --scrollbar-color .3s;
   padding-right: 5px;
   direction: ltr;

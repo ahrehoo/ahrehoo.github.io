@@ -1,1 +1,22 @@
-{}
+{
+    "title": "Security",
+    "dir": "Security",
+
+    "two-step-authentication":"Two step authentication",
+    "two-step-number":"Two step number",
+    "number":"Number",
+    "send-verfication-code":"Send code",
+    "verfication-code":"verfication code",
+    "authentication-on-login":"Authentication on login",
+    "authentication-on-saving-changes":"Authentication on saving changes",
+    "restore-password-by-phone":"Restore password by phone number",
+    "verfication-code-incurrent":"Verfication code incurrent!",
+    "invalid-number":"Invalid phone number!",
+
+    "change-password":"Change password",
+    "current-password":"Current password",
+    "new-password":"New password",
+    "confirm-password":"Confirm password",
+    "set-password":"Set password",
+    "password-wrong":"Password wrong!"
+}

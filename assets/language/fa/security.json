@@ -1,1 +1,41 @@
-{}
+{
+    "title": "امنیت",
+    "dir": "امنیت",
+
+    "two-step-authentication":"تنظیمات دو مرحله ای",
+    "two-step-number":"تلفن دو مرحله ای",
+    "number":"تلفن",
+    "send-verfication-code":"ارسال پیامک",
+    "verfication-code":"کد فعالسازی",
+    "authentication-on-login":"ورود دو مرحله ای",
+    "authentication-on-saving-changes":"تایید پیامکی تنظیمات",
+    "restore-password-by-phone":"بازیابی رمز عبور توسط پیامک ",
+    "verfication-code-incurrent":"کد فعالسازی نامعتبر است!",
+    "invalid-number":"تلفن وارد شده معتبر نمیباشد!",
+
+    "change-password":"تغییر رمز عبور",
+    "current-password":"رمز عبور فعلی",
+    "new-password":"رمز عبور جدید",
+    "confirm-password":"تکرار رمز عبور",
+    "set-password":"ثبت رمز عبور",
+    "password-wrong":"پسورد اشتباه است!",
+
+    
+    "alarms":"دزدگیر",
+    "warning-alarm":"هشدار دزدگیر",
+    "power-loss":"قطعی برق",
+    "sim-no-service":"از دست رفتن آنتن سیمکارت",
+    "device-battery":"باتری دستگاه",
+    "device-low-battery":"باتری کم",
+    "modules":"ماژول ها",
+    "module-connection-fail":"قطع ارتباط با ماژول",
+    "module-low-battery":"باتری کم ماژول",
+    "settings-panel":"تنظیمات",
+    "user-login":"ورود کاربر به پنل",
+    "setting-changes":"تغییرات تنظیمات",
+
+    "call":"تماس",
+    "sms":"پیامک",
+    "spotlight":"نورافکن",
+    "siren":"آژیر"
+}

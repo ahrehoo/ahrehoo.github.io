@@ -7,6 +7,8 @@
 }
 
 .cinput {
+  width: 80px;
+  padding: 0 7px 0 7px;
   border-radius: var(--obj-brdr-radius);
 }
 
@@ -31,19 +33,18 @@
 
 .textbox {
   color: var(--clr-black3);
-  width: calc(100% - 60px);
   caret-color: var(--clr-brand);
   border: 2px solid transparent;
   outline: none;
   transition: 0.5s;
-  background-color: var(--clr-gray8);
+  background-color: var(--clr-gray9);
 }
 
 .textbox:hover,
 .textbox:focus {
   background-color: white;
   border: 2px solid var(--clr-brand5);
-  box-shadow: 0px 0px 0px 7px var(--clr-gray8);
+  box-shadow: 0px 0px 0px 3px var(--clr-gray7);
 }
 
 .icon-textbox {
@@ -326,7 +327,7 @@
   display: flex;
   flex-shrink: 0;
   line-height: var(--line-height);
-  width: 230px;
+  width: 210px;
 }
 
 .objrow-content {
@@ -367,5 +368,28 @@
 
 .toggles-container .checkbox-container input[type=checkbox]:checked+label {
   color: var(--clr-gray8);
-  background-color: #298BE8;
+  background-color: var(--clr-brand);
+}
+
+.button{
+  background-color: var(--clr-brand);
+  border-radius: var(--obj-brdr-radius);
+  white-space: nowrap;
+  padding: 0 10px 0 10px;
+  cursor: pointer;
+  width: 80px;
+  color: var(--clr-gray8);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.button:hover{
+  background-color: var(--clr-brand4);
+}
+
+.button:active{
+  transition:0.1s;
+  background-color: var(--clr-brand5);
+  box-shadow: 0 0 0 3px var(--clr-brand8);
 }

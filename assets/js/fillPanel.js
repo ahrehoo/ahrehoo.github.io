@@ -5,12 +5,12 @@ window.addEventListener('DOMContentLoaded', async () => {
 });
 
 async function loadPage(page) {
-    page = page == null ? "dashboard" : page;/*
+    page = page == null ? "dashboard" : page;
     if (window.location.search != "?page=" + page) {
         const urlParams = new URLSearchParams(window.location.search);
         urlParams.set('page', page);
         window.location.search = urlParams;
-    }*/
+    }
     const pageData = await fetchPage(`pages/${page}.html`);
     document.getElementById("container").innerHTML = pageData;
     document.documentElement.setAttribute("page", page);

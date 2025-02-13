@@ -53,6 +53,19 @@
   margin-bottom: 15px;
 }
 
+.cinput{
+  width: calc(100% - 60px);
+}
+
+.textbox{
+  background-color: var(--clr-gray8);
+}
+
+.textbox:hover,
+.textbox:focus {
+  box-shadow: 0px 0px 0px 7px var(--clr-gray8);
+}
+
 .submit-holder {
   margin-top: 20px;
 }

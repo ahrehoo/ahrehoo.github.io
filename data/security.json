@@ -1,1 +1,5 @@
-{}
+{
+    "authentication-on-login": 1,
+    "authentication-on-saving-changes": 1,
+    "restore-password-by-phone": 1
+}
