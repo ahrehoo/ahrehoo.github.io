@@ -1,3 +1,4 @@
+File,pages\alarms.html,189
 File,pages\backup-and-restore.html,1
 File,pages\dashboard.html,144
 File,pages\diagnostic.html,1
@@ -109,11 +110,11 @@ Folder,assets,3163
 Folder,data,97
 File,index.html,15
 File,login.html,62
-Folder,pages,154
-File,panel.html,86
+Folder,pages,343
+File,panel.html,85
 File,register.html,71
-File,report.csv,123
+File,report.csv,120
 File,settings.json,1
 File,sms-dialog.json,1
 File,user-setting.json,3
-Total number of lines,,3776
+Total number of lines,,3961
