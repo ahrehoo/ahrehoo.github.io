@@ -1,4 +1,19 @@
 {
     "title": "Diagnostic",
-    "dir": "Diagnostic"
+    "dir": "Diagnostic",
+
+    "sensors": "Sensors",
+    "check-sensors-connectivity-automatically": "Check sensors connectivity automatically",
+    "check-sensors-connectivity-interval": "Sensors connectivity check interval",
+    "send-batteries-sms-log": "Send batteries SMS log",
+    "battery-sms-log-interval": "Battery SMS log interval",
+    "check-now": "Check now!",
+    "simcard": "Simcard",
+    "send-test-sms": "Send test SMS",
+    "send-test-sms-to-all-numbers": "Send to\nAll numbers",
+    "send-test-sms-to-main-number": "Send to\nMain number",
+    "call-test": "Call test",
+    "call":"Call now",
+
+    "hour":"(Hour)"
 }

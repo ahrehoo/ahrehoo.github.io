@@ -371,25 +371,26 @@
   background-color: var(--clr-brand);
 }
 
-.button{
+.button {
   background-color: var(--clr-brand);
   border-radius: var(--obj-brdr-radius);
-  white-space: nowrap;
-  padding: 0 10px 0 10px;
+  white-space: pre;
+  padding: 5px 10px 5px 10px;
   cursor: pointer;
   width: 80px;
   color: var(--clr-gray8);
   justify-content: center;
   align-items: center;
+  text-align: center;
   display: flex;
 }
 
-.button:hover{
+.button:hover {
   background-color: var(--clr-brand4);
 }
 
-.button:active{
-  transition:0.1s;
+.button:active {
+  transition: 0.1s;
   background-color: var(--clr-brand5);
   box-shadow: 0 0 0 3px var(--clr-brand8);
 }

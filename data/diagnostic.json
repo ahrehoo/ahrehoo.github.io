@@ -1,1 +1,4 @@
-{}
+{
+    "check-sensors-connectivity-automatically":1,
+    "send-batteries-sms-log":1
+}

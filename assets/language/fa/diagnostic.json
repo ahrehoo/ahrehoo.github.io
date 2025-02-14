@@ -1,4 +1,19 @@
 {
     "title": "بررسی و چکاپ",
-    "dir": "بررسی و چکاپ"
+    "dir": "بررسی و چکاپ",
+
+    "sensors": "سنسور ها",
+    "check-sensors-connectivity-automatically": "بررسی اتوماتیک اتصال سنسور ها",
+    "check-sensors-connectivity-interval": "بررسی اتوماتیک اتصال سنسور ها",
+    "send-batteries-sms-log": "ارسال پیامک گزارش وضعیت باتری ها",
+    "battery-sms-log-interval": "ارسال پیامک گزارش وضعیت باتری ها",
+    "check-now": "الان بررسی کن!",
+    "simcard": "سیمکارت",
+    "send-test-sms": "ارسال پیامک تست",
+    "send-test-sms-to-all-numbers": "ارسال به\nتمامی شماره ها",
+    "send-test-sms-to-main-number": "ارسال به\nشماره اصلی",
+    "call-test": "تست تماس",
+    "call": "تماس بگیر",
+
+    "hour":"(ساعت)"
 }
