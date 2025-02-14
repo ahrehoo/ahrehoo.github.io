@@ -1,4 +1,7 @@
 {
     "title": "Language",
-    "dir": "Language"
+    "dir": "Language",
+
+    "language":"Language",
+    "save-changes":"Save changes"
 }

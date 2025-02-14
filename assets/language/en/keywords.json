@@ -28,5 +28,8 @@
     "alarm-siren":"Siren",
     "alarm-fog":"Spotlight",
     "tool-electronic-key":"Electric key",
-    "protective-electric-fance":"Electrinc fance"
+    "protective-electric-fance":"Electrinc fance",
+
+    "english":"English",
+    "persian":"Persian"
 }

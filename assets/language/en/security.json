@@ -6,10 +6,10 @@
     "two-step-number":"Two step number",
     "number":"Number",
     "send-verfication-code":"Send code",
-    "verfication-code":"verfication code",
+    "verfication-code":"Enter code",
     "authentication-on-login":"Authentication on login",
     "authentication-on-saving-changes":"Authentication on saving changes",
-    "restore-password-by-phone":"Restore password by phone number",
+    "restore-password-by-phone":"Recover password by SMS",
     "verfication-code-incurrent":"Verfication code incurrent!",
     "invalid-number":"Invalid phone number!",
 

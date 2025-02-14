@@ -3,7 +3,7 @@
     "dir": "Diagnostic",
 
     "sensors": "Sensors",
-    "check-sensors-connectivity-automatically": "Check sensors connectivity automatically",
+    "check-sensors-connectivity-automatically": "Sensors connectivity check",
     "check-sensors-connectivity-interval": "Sensors connectivity check interval",
     "send-batteries-sms-log": "Send batteries SMS log",
     "battery-sms-log-interval": "Battery SMS log interval",
