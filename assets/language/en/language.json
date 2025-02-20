@@ -3,5 +3,7 @@
     "dir": "Language",
 
     "language":"Language",
+    "persian":"فارسی",
+    "english":"English",
     "save-changes":"Save changes"
 }

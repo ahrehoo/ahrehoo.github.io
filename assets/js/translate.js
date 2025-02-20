@@ -23,11 +23,6 @@ function translateContent(element) {
         const translatedWord =
             translatedContent[key] == null ?
                 undef[lang] : translatedContent[key];
-        var endingParam = element.getAttribute("ending-param");
-        endingParam = endingParam == null ? "" : endingParam;
-        var startingParam = element.getAttribute("starting-param");
-        startingParam = startingParam == null ? "" : startingParam;
-        const data = startingParam + translatedWord + endingParam;
         if (
             element.type == "text" ||
             element.type == "email" ||
@@ -35,15 +30,13 @@ function translateContent(element) {
             element.type == "username" ||
             element.type == "password" ||
             element.type == "address") {
-            element.placeholder = data;
+            element.placeholder = translatedWord;
         }
-        else if (element.type == "submit") {
-            element.value = data;
-        } else {
-            element.innerHTML = data;
-        }
+        else if (element.type == "submit")
+            element.value = translatedWord;
+        else
+            element.innerHTML = translatedWord;
     }
-
     if (element.hasAttribute("data")) {
         fillElementData(element);
         replaceKeywords(element);
@@ -196,7 +189,7 @@ async function reloadPage() {
     document.documentElement.setAttribute('dir', dir);
     const pageData = await fetchData(`assets/language/${lang}/${page}.json`);
     const commonData = await fetchData(`assets/language/${lang}/common.json`);
-    globalThis.translatedContent = { ...pageData, ...commonData };
+    globalThis.translatedContent = { ...commonData, ...pageData };
     globalThis.keywords = await fetchData(`assets/language/${lang}/keywords.json`);
     globalThis.timespanWords = await fetchData(`assets/language/${lang}/timespanWords.json`);
     reloadData();
