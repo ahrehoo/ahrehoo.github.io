@@ -1,4 +1,12 @@
 {
     "title": "Backup",
-    "dir": "Backup & Restore"
+    "dir": "Backup & Restore",
+
+    "backup":"Backup",
+    "download-backup":"Download backup file",
+    "download":"Download",
+    
+    "restore":"Restore",
+    "restore-from-file":"Choose backup file and restore",
+    "upload":"Browse"
 }

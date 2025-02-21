@@ -14,9 +14,5 @@
     "invalid-number":"Invalid phone number!",
 
     "change-password":"Change password",
-    "current-password":"Current password",
-    "new-password":"New password",
-    "confirm-password":"Confirm password",
-    "set-password":"Set password",
-    "password-wrong":"Password wrong!"
+    "go-to-password-change-page":"Go to password change page"
 }

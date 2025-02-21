@@ -12,6 +12,11 @@
   border-radius: var(--obj-brdr-radius);
 }
 
+.cinput::placeholder{
+  color: var(--clr-gray6);
+  font-variation-settings: var(--font-variation-thin);
+}
+
 .username-input {
   background: url(/assets/image/user.svg);
 }
@@ -327,7 +332,7 @@
   display: flex;
   flex-shrink: 0;
   line-height: var(--line-height);
-  width: 210px;
+  width: calc(210px - (-1 * (100% - 530px)));
 }
 
 .objrow-content {
@@ -409,4 +414,14 @@
   background-color: white;
   border: 2px solid var(--clr-brand5);
   box-shadow: 0px 0px 0px 3px var(--clr-gray7);
+}
+
+.hyper-link{
+  color: var(--clr-brand);
+  cursor: pointer;
+}
+
+.hyper-link:hover{
+  color: var(--clr-brand6);
+  text-decoration: underline;
 }

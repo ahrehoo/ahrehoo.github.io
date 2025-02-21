@@ -30,6 +30,7 @@
 }
 
 :root {
+  --font-variation-thin: "wght" 300, "DOTS" 8;
   --font-variation-regular: "wght" 450, "DOTS" 8;
   --font-variation-demi-bold: "wght" 700, "DOTS" 8;
   --font-variation-bold: "wght" 880, "DOTS" 8;

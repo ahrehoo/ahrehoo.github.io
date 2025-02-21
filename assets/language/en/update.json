@@ -1,4 +1,8 @@
 {
     "title": "Update",
-    "dir": "Update"
+    "dir": "Update",
+    
+    "update-from-file":"Update from file",
+    "upload-update-file":"Choose update file",
+    "upload":"Browse"
 }

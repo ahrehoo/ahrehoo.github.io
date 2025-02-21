@@ -1,4 +1,14 @@
 {
     "title": "اطلاعات کاربری",
-    "dir": "اطلاعات کابری"
+    "dir": "اطلاعات کابری",
+
+    "user-information": "اطلاعات کاربری",
+    "username": "نام کاربری",
+
+    "change-password":"تغییر رمز عبور",
+    "current-password":"رمز عبور فعلی",
+    "new-password":"رمز عبور جدید",
+    "confirm-password":"تکرار رمز عبور",
+    "set-password":"ثبت رمز عبور",
+    "password-wrong":"پسورد اشتباه است!"
 }
