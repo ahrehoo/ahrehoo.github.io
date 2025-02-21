@@ -184,6 +184,12 @@ async function getSetting(key) {
     return settings[key];
 }
 
+function setPage(_page, _pageData) {
+    page = _page;
+    pageData = _pageData;
+    reloadPage();
+}
+
 async function reloadPage() {
     const cPage = document.documentElement.getAttribute("page");
     const cLang = await getSetting('lang');
@@ -197,7 +203,7 @@ async function reloadPage() {
         pageData = await fetchData(`assets/language/${cLang}/${cPage}.json`);
     }
     translatedContent = { ...commonData, ...pageData };
-    dir = lang == 'fa' ? 'rtl' : 'ltr';
+    dir = cLang == 'fa' ? 'rtl' : 'ltr';
     document.documentElement.setAttribute('dir', dir);
     lang = cLang;
     page = cPage;
