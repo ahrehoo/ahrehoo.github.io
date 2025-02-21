@@ -3,13 +3,15 @@ const undef = {
     "fa": "تعریف نشده"
 }
 
-var lang;
-var page;
-var translatedContent;
-var data;
-var keywords;
-var timespanWords;
-var dir;
+let lang;
+let page;
+let translatedContent;
+let data;
+let keywords;
+let timespanWords;
+let commonData;
+let pageData;
+let dir;
 
 function translatePage() {
     document.querySelectorAll('[utext]').forEach(element => {
@@ -183,21 +185,28 @@ async function getSetting(key) {
 }
 
 async function reloadPage() {
-    globalThis.page = document.documentElement.getAttribute("page");
-    globalThis.lang = await getSetting('lang');
+    const cPage = document.documentElement.getAttribute("page");
+    const cLang = await getSetting('lang');
+    if (cLang != lang) {
+        pageData = await fetchData(`assets/language/${cLang}/${cPage}.json`);
+        commonData = await fetchData(`assets/language/${cLang}/common.json`);
+        keywords = await fetchData(`assets/language/${cLang}/keywords.json`);
+        timespanWords = await fetchData(`assets/language/${cLang}/timespanWords.json`);
+    }
+    if (cPage != page) {
+        pageData = await fetchData(`assets/language/${cLang}/${cPage}.json`);
+    }
+    translatedContent = { ...commonData, ...pageData };
     dir = lang == 'fa' ? 'rtl' : 'ltr';
     document.documentElement.setAttribute('dir', dir);
-    const pageData = await fetchData(`assets/language/${lang}/${page}.json`);
-    const commonData = await fetchData(`assets/language/${lang}/common.json`);
-    globalThis.translatedContent = { ...commonData, ...pageData };
-    globalThis.keywords = await fetchData(`assets/language/${lang}/keywords.json`);
-    globalThis.timespanWords = await fetchData(`assets/language/${lang}/timespanWords.json`);
+    lang = cLang;
+    page = cPage;
     reloadData();
 }
 
 async function reloadData() {
     if (document.documentElement.getAttribute("hasData") == "true")
-        globalThis.data = await fetchData(`data/${page}.json`);
+        data = await fetchData(`data/${page}.json`);
     translatePage();
     if (dir == "rtl") fixDir();
 }
