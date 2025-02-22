@@ -1,4 +1,6 @@
 {
     "title": "Modules",
-    "dir": "Modules"
+    "dir": "Modules",
+
+    "add-new-module":"Add new module"
 }

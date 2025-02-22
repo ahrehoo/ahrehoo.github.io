@@ -157,6 +157,8 @@ table {
   height: calc(100% - var(--white-container-padding) * 2);
   position: absolute;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .cat-button {

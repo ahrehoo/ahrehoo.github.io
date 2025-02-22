@@ -73,6 +73,11 @@ function fillElementData(element) {
         if (dataType == "table") {
             elementText = fillTable(element, dataKeyInformation);
         }
+        if (dataType == "img") {
+            fetchText('/assets/image/' + dataKey).then(t => {
+                element.innerHTML = t;
+            });
+        }
         elementText = elementText.replace(dataKey, valueToReplace);
     });
     element.innerHTML = elementText;
@@ -169,18 +174,22 @@ function translateDate(dateData) {
         });
 }
 
-async function fetchData(url) {
-    const response = await fetch(url);
-    if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const textData = await response.text();
+async function fetchJSON(url) {
+    const textData = await fetchText(url);
     const jsonData = JSON.parse(textData);
     return jsonData;
 }
 
+async function fetchText(url) {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return await response.text();
+}
+
 async function getSetting(key) {
-    const settings = await fetchData('user-setting.json');
+    const settings = await fetchJSON('user-setting.json');
     return settings[key];
 }
 
@@ -194,13 +203,13 @@ async function reloadPage() {
     const cPage = document.documentElement.getAttribute("page");
     const cLang = await getSetting('lang');
     if (cLang != lang) {
-        pageData = await fetchData(`assets/language/${cLang}/${cPage}.json`);
-        commonData = await fetchData(`assets/language/${cLang}/common.json`);
-        keywords = await fetchData(`assets/language/${cLang}/keywords.json`);
-        timespanWords = await fetchData(`assets/language/${cLang}/timespanWords.json`);
+        pageData = await fetchJSON(`assets/language/${cLang}/${cPage}.json`);
+        commonData = await fetchJSON(`assets/language/${cLang}/common.json`);
+        keywords = await fetchJSON(`assets/language/${cLang}/keywords.json`);
+        timespanWords = await fetchJSON(`assets/language/${cLang}/timespanWords.json`);
     }
     if (cPage != page) {
-        pageData = await fetchData(`assets/language/${cLang}/${cPage}.json`);
+        pageData = await fetchJSON(`assets/language/${cLang}/${cPage}.json`);
     }
     translatedContent = { ...commonData, ...pageData };
     dir = cLang == 'fa' ? 'rtl' : 'ltr';
@@ -212,7 +221,7 @@ async function reloadPage() {
 
 async function reloadData() {
     if (document.documentElement.getAttribute("hasData") == "true")
-        data = await fetchData(`data/${page}.json`);
+        data = await fetchJSON(`data/${page}.json`);
     translatePage();
     if (dir == "rtl") fixDir();
 }

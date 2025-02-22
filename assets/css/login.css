@@ -20,7 +20,7 @@
 }
 
 .content-container {
-  display: flex;
+  flex-direction: unset;
 }
 
 .login-form-container {

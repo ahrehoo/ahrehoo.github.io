@@ -15,7 +15,7 @@ async function loadPage(page) {
         window.location.search = urlParams;
     }*/
     const lang = await getSetting('lang');
-    const pageTData = await fetchData(`assets/language/${lang}/${page}.json`);
+    const pageTData = await fetchJSON(`assets/language/${lang}/${page}.json`);
     const pageData = await fetchPage(`pages/${page}.html`);
     document.getElementById("container").innerHTML = pageData;
     document.documentElement.setAttribute("page", page);

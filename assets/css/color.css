@@ -18,11 +18,13 @@
                       --clr-gray4:      hsl(209 ,28%  ,43% );
                       --clr-gray5:      hsl(209 ,28%  ,54% );
                       --clr-gray6:      hsl(209 ,28%  ,75% );
+                      --clr-gray6-5:    hsl(209 ,28%  ,80% );
                       --clr-gray7:      hsl(209 ,28%  ,85% );
+                      --clr-gray7-5:    hsl(209 ,28%  ,90% );
                       --clr-gray8:      hsl(209 ,28%  ,93% );
                       --clr-gray9:      hsl(209 ,15%  ,99% );
                       /*    black                            */
-                      --clr-black:      hsl(0, 98%, 16%);
+                      --clr-black:      hsl(0   ,0%   ,0%  );
                       --clr-black1:     hsl(209 ,0%   ,10% );
                       --clr-black2:     hsl(209 ,0%   ,19% );
                       --clr-black3:     hsl(209 ,0%   ,30% );
@@ -153,7 +155,7 @@
 .clr-blueb6         { background-color: hsl(209 ,88%  ,65% ); }
 .clr-blueb7         { background-color: hsl(209 ,100% ,76% ); }
 .clr-blueb8         { background-color: hsl(209 ,100% ,93% ); }
-.clr-blueb9         { background-color: hsl(208, 100%, 97%); }
+.clr-blueb9         { background-color: hsl(208 ,100% ,97% ); }
 .clr-bluec          { color:            hsl(209 ,80%  ,54% ); }
 .clr-bluec1         { color:            hsl(209 ,100% ,15% ); }
 .clr-bluec2         { color:            hsl(209 ,100% ,24% ); }

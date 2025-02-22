@@ -1,4 +1,7 @@
 {
     "title": "Phones",
-    "dir": "Phones"
+    "dir": "Phones",
+
+    "add-new-phone":"Add new phone",
+    "default-calling-phone":"Default calling phone"
 }
