@@ -24,12 +24,12 @@ p {
   white-space: pre-wrap;
 }
 
-td {
+.inner-mini-table-container td {
   font-size: var(--font-size-smaller);
 }
 
-table {
-  display: flex;
+.inner-mini-table-container table{
+  width: 100%;
 }
 
 :root {
