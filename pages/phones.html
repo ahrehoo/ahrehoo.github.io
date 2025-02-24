@@ -14,19 +14,48 @@
     </select>
 </div>
 
-<div class="content-header large-table-container fix-dir">
-    <table>
-        <tr>
-            <th><input type="checkbox"></th>
-            <th>نام و نام خانوادگی</th>
-            <th>شماره تلفن</th>
-            <th>پیامک</th>
-            <th>عملیات</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>ali</td>
-            <td>12</td>
-        </tr>
-    </table>
+<div class="content-header large-table-container">
+    <div class="content-container large-table-scroller">
+        <table class="fix-dir">
+            <tr>
+                <th class="checkbox-cell">
+                    <div><input type="checkbox"></div>
+                </th>
+                <th>نام و نام خانوادگی</th>
+                <th>شماره تلفن</th>
+                <th>پیامک</th>
+                <th>عملیات</th>
+            </tr>
+            <tr>
+                <td class="checkbox-cell">
+                    <div><input type="checkbox"></div>
+                </td>
+                <td>ali</td>
+                <td>12</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td class="checkbox-cell">
+                    <div><input type="checkbox"></div>
+                </td>
+                <td>ali</td>
+                <td>12</td>
+                <td>
+                    <div class="checkbox-container next-margin mini-checkbox">
+                        <input type="checkbox" utext="" data="[['alarms-state','checkbox']]" id="general-alarms-chkbx">
+                        <label for="general-alarms-chkbx" class="checkbox">
+                            <div class="checkbox-handle"></div>
+                        </label>
+                    </div></td>
+                <td>13</td>
+            </tr>
+        </table>
+        <style>
+            .large-table-container tr td:nth-child(n+3)
+            {
+               text-align: center;
+            }
+        </style>
+    </div>
 </div>

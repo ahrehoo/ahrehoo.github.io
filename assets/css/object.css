@@ -501,7 +501,63 @@
 }
 
 .large-table-container table {
+  position: absolute;
   table-layout: auto;
-  width: 100%;
+  width: calc(100% - 10px);
   display: table;
+  margin-right: 10px;
+}
+
+.large-table-scroller {
+  --white-container-padding:9px;
+  --padding-for-scroll: 7px;
+  position: relative;
+  width: 100%;
+  overflow-y: auto;
+  height: 100%;
+  display: flex;
+}
+
+.checkbox-cell div {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: start;
+}
+
+.checkbox-cell div input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px var(--clr-gray7);
+}
+
+.checkbox-cell div :checked {
+  background-color: var(--clr-brand);
+  background-image: url("/assets/image/tick.svg");
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-cell div input:hover {
+  border: 2px solid var(--clr-brand5);
+  box-shadow: 0px 0px 0px 3px var(--clr-gray7);
+}
+
+.checkbox-cell div input:active {
+  box-shadow: 0 0 0 10px var(--clr-brand5);
+}
+
+.checkbox-cell {
+  width: 35px;
+  padding: 4px 0 4px 0;
+}
+
+.mini-checkbox{
+  scale: 0.7;
 }
