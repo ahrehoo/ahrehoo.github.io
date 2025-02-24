@@ -8,12 +8,12 @@ window.addEventListener('DOMContentLoaded', async () => {
 });
 
 async function loadPage(page) {
-    page = page == null ? "dashboard" : page;/*
+    page = page == null ? "dashboard" : page;
     if (debug && window.location.search != "?page=" + page) {
         const urlParams = new URLSearchParams(window.location.search);
         urlParams.set('page', page);
         window.location.search = urlParams;
-    }*/
+    }
     const lang = await getSetting('lang');
     const pageTData = await fetchJSON(`assets/language/${lang}/${page}.json`);
     const pageData = await fetchPage(`pages/${page}.html`);
