@@ -102,7 +102,7 @@ async function fillElementData(element) {
         }
         if (dataType == "datetime")
             valueToReplace = translateDate(data[dataKey]);
-        if (dataType == "table") {
+        if (dataType == "table" || dataType == "h-table") {
             fillTable(element, dataKeyInformation).then(t => {
                 element.innerHTML = t;
             });
@@ -150,13 +150,16 @@ function getTimespanFromMilliseconds(milliseconds) {
 }
 
 async function fillTable(element, dataKeyInformation) {
-    const tableName = dataKeyInformation[0];
-    const rowTemplate = await fetchText(`pages/row-templates/${page}-${tableName}.html`);
+    const tableName = dataKeyInformation[2];
+    const rowTemplate = await fetchText(`pages/row-templates/${page}-${tableName}-row.html`);
     var elementText = "";
-    let i = 0;
+    if (dataKeyInformation[1] == "h-table")
+        elementText += await fetchText(`pages/row-templates/${page}-${tableName}-header.html`)
+    elementText += "<tbody>"
     data[dataKeyInformation[0]].forEach(row => {
-        elementText += replaceRowDatas(rowTemplate, data[dataKeyInformation[0]][i++]);
+        elementText += replaceRowDatas(rowTemplate, row);
     });
+    elementText += "</tbody>";
     return replaceTextKeywords(elementText);
 }
 

@@ -548,8 +548,19 @@
   display: flex;
 }
 
-.large-table-container table *{
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-  width: 100%;
+.large-table-container table thead{
+  position: sticky;
+  background-color: var(--clr-gray9);
+  z-index: 1;
+  top: 0;
+}
+
+.large-table-container table {
+  width: 98%;
   table-layout: auto;
+  position: absolute;
+}
+
+.large-table-container td{
+  text-align: center;
 }

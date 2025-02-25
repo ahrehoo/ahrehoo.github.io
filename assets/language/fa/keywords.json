@@ -32,5 +32,10 @@
     "protective-electric-fance":"حفاظ الکتریگی",
 
     "english":"انگلیسی",
-    "persian":"فارسی"
+    "persian":"فارسی",
+
+    "phone-name":"نام و نام خانوادگی",
+    "phone-number":"شماره تلفن",
+    "phone-sms":"پیامک",
+    "phone-function":"عملیات"
 }

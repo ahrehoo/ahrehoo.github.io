@@ -31,5 +31,10 @@
     "protective-electric-fance":"Electrinc fance",
 
     "english":"English",
-    "persian":"Persian"
+    "persian":"Persian",
+    
+    "phone-name":"Name",
+    "phone-number":"Phone",
+    "phone-sms":"SMS",
+    "phone-function":"Function"
 }

@@ -31,6 +31,9 @@ p {
 .inner-mini-table-container table{
   width: 100%;
 }
+label{
+  cursor: pointer;
+}
 
 :root {
   --page-brdr-radius: 25px;
