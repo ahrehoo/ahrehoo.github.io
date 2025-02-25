@@ -16,16 +16,8 @@ async function loadPage(page) {
     }
     const lang = await getSetting('lang');
     const pageTData = await fetchJSON(`assets/language/${lang}/${page}.json`);
-    const pageData = await fetchPage(`pages/${page}.html`);
+    const pageData = await fetchText(`pages/${page}.html`);
     document.getElementById("container").innerHTML = pageData;
     document.documentElement.setAttribute("page", page);
-    setPage(page,pageTData);
-}
-
-
-async function fetchPage(url) {
-    var response = await fetch(url);
-    if (!response.ok)
-        throw new Error(`HTTP error! status: ${response.status}`);
-    return await response.text();
+    setPage(page, pageTData);
 }

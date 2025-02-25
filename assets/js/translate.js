@@ -41,24 +41,56 @@ function translateContent(element) {
     }
     if (element.hasAttribute("data")) {
         fillElementData(element);
-        replaceKeywords(element);
+        replaceElementKeywords(element);
     }
 }
 
-function replaceKeywords(element) {
-    var text = element.innerHTML;
+function replaceTextKeywords(input) {
+    var text = input;
+    var sIndex = 0;
+    var pIndex = -1;
+    while ((sIndex = text.indexOf("{")) > pIndex) {
+        var eIndex = text.indexOf("}");
+        var key = text.substring(sIndex + 1, eIndex);
+        if (keywords[key] == null) pIndex = sIndex;
+        text = text.replace("{" + key + "}", keywords[key]);
+    }
+    return text;
+}
+
+function replaceElementKeywords(element) {
+    element.innerHTML = replaceTextKeywords(element.innerHTML);
+}
+
+function replaceRowDatas(input, row) {
+    var text = input;
     var sIndex = 0;
     var pIndex = -1;
     while ((sIndex = text.indexOf("[")) > pIndex) {
         var eIndex = text.indexOf("]");
         var key = text.substring(sIndex + 1, eIndex);
-        if (keywords[key] == null) pIndex = sIndex;
-        text = text.replace("[" + key + "]", keywords[key]);
-        element.innerHTML = text;
+        let valueToReplace = "";
+        if (key == "module-uptime")
+            if (row[key] == -1)
+                valueToReplace = keywords["disconnected"];
+            else {
+                var timespan = getTimespanFromMilliseconds(Date.now() - Date.parse(row[key]));
+                valueToReplace = translateTimespan(timespan);
+            }
+        else
+            if (row[key] == -1)
+                valueToReplace = keywords["disconnected"];
+            else {
+                valueToReplace = row[key] == null ? key : row[key];
+                if (key == "module-battery")
+                    valueToReplace += "%"
+            }
+        text = text.replace("[" + key + "]", valueToReplace);
     }
+    return text;
 }
 
-function fillElementData(element) {
+async function fillElementData(element) {
     var elementText = element.innerHTML;
     const dataKeys = JSON.parse(element.getAttribute('data').replace(/\'/g, '"'));
     dataKeys.forEach(dataKeyInformation => {
@@ -71,7 +103,9 @@ function fillElementData(element) {
         if (dataType == "datetime")
             valueToReplace = translateDate(data[dataKey]);
         if (dataType == "table") {
-            elementText = fillTable(element, dataKeyInformation);
+            fillTable(element, dataKeyInformation).then(t => {
+                element.innerHTML = t;
+            });
         }
         if (dataType == "img") {
             fetchText('/assets/image/' + dataKey).then(t => {
@@ -115,34 +149,15 @@ function getTimespanFromMilliseconds(milliseconds) {
         return Math.round(milliseconds / second).toString() + " second ago";
 }
 
-function fillTable(element, dataKeyInformation) {
+async function fillTable(element, dataKeyInformation) {
+    const tableName = dataKeyInformation[0];
+    const rowTemplate = await fetchText(`pages/row-templates/${page}-${tableName}.html`);
     var elementText = "";
+    let i = 0;
     data[dataKeyInformation[0]].forEach(row => {
-        elementText += "<tr>";
-        dataKeyInformation[2].forEach(colm => {
-            elementText += "<td>";
-            colm.split('^').forEach(key => {
-                if (key == "module-uptime")
-                    if (row[key] == -1)
-                        elementText += keywords["disconnected"];
-                    else {
-                        var timespan = getTimespanFromMilliseconds(Date.now() - Date.parse(row[key]));
-                        elementText += translateTimespan(timespan);
-                    }
-                else
-                    if (row[key] == -1)
-                        elementText += keywords["disconnected"];
-                    else {
-                        elementText += row[key] == null ? key : row[key];
-                        if (key == "module-battery")
-                            elementText += "%"
-                    }
-            });
-            elementText += "</td>";
-        })
-        elementText += "</tr>";
+        elementText += replaceRowDatas(rowTemplate, data[dataKeyInformation[0]][i++]);
     });
-    return elementText;
+    return replaceTextKeywords(elementText);
 }
 
 function translateDate(dateData) {
