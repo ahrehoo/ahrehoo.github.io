@@ -249,7 +249,7 @@
   height: 18px;
   border-radius: var(--group-brdr-radius);
   position: relative;
-  display: inline-block;
+  display: flex;
   background-color: var(--clr-gray9);
 }
 
@@ -537,6 +537,10 @@
 }
 
 .mini-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
   scale: 0.7;
 }
 
