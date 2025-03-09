@@ -19,5 +19,5 @@ async function loadPage(page) {
     const pageData = await fetchText(`pages/${page}.html`);
     document.getElementById("container").innerHTML = pageData;
     document.documentElement.setAttribute("page", page);
-    setPage(page, pageTData);
+    await setPage(page, pageTData);
 }

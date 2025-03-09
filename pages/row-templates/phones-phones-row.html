@@ -1,18 +1,23 @@
 <tr">
     <td>
         <div class="checkbox-cell">
-            <div><input id="[phone-number]-ch" type="checkbox"></div>
+            <div><input id="^phone-number,text!^-ch" type="checkbox"></div>
         </div>
     </td>
-    <td><label for="[phone-number]-ch">[phone-name]</label></td>
-    <td><label for="[phone-number]-ch">[phone-number]</label></td>
+    <td><label for="^phone-number,text!^-ch">^phone-name,text!^</label></td>
+    <td><label for="^phone-number,text!^-ch">^phone-number,text!^</label></td>
     <td>
         <div class="checkbox-container mini-checkbox">
-            <input type="checkbox" utext="" data="[['alarms-state','checkbox']]" id="[phone-number]-sms">
-            <label for="[phone-number]-sms" class="checkbox">
+            <input type="checkbox" utext="" data="[['phone-state','checkbox']]" id="^phone-number,text!^-sms">
+            <label for="^phone-number,text!^-sms" class="checkbox">
                 <div class="checkbox-handle"></div>
             </label>
         </div>
     </td>
-    <td>test</td>
+    <td>
+        <div class="fill-cell">
+            <div class="small-img-button small-edit-button"></div>
+            <div class="small-img-button small-remove-button"></div>
+        </div>
+    </td>
     </tr>

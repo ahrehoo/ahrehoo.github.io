@@ -10,13 +10,20 @@
     </div>
     <div class="next-margin"></div>
     <div class="next-margin" utext="default-calling-phone"></div>
-    <select class="cinput selectable-dropdown" style="background-color: var(--clr-gray8);">
-    </select>
+    <div class="select-holder" id="default-phone-select">
+        <div class="cinput textbox select-header" onclick="selectClick(this);"></div>
+        <div class="select-items-box">
+            <div class="select-items-scroll" dir="ltr">
+                <div utext="" data="[['phone-name','select','phones']]" class="select-items-holder fix-dir">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="content-header large-table-container">
     <div class="content-container large-table-scroller">
-        <table utext="" data="[['phones','h-table','phones']]" class="fix-dir">
+        <table id="phones-table" utext="" data="[['phones','h-table','phones']]" class="fix-dir">
         </table>
     </div>
 </div>

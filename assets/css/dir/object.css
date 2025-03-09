@@ -125,3 +125,21 @@
 [dir="rtl"] .button-with-pic-label {
     padding-right: 10px;
 }
+
+[dir="ltr"] .select-header {
+    background-position: right 3px bottom 50%;
+    padding-right: 20px;
+}
+
+[dir="rtl"] .select-header {
+    background-position: left 3px bottom 50%;
+    padding-left: 20px;
+}
+
+[dir="ltr"] .select-item {
+    margin-left: 7px;
+}
+
+[dir="rtl"] .select-item {
+    margin-right: 7px;
+}

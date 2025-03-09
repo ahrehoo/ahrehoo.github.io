@@ -11,20 +11,16 @@ document.addEventListener('load', function (event) {
 
 function loading() {
     document.querySelector('.white-container').style.opacity = 1;
-    setTimeout(function () {
         document.querySelector('.element-container').style.transform = "translateY(5vh)";
         document.querySelector('.loading-container').style.opacity = 0;
         document.querySelector('.background-image-top-left').style.width = "100%";
         document.querySelector('.background-image-top-right').style.width = "100%";
         document.querySelector('.background-image-bottom-left').style.width = "100%";
         document.querySelector('.background-image-bottom-right').style.width = "100%";
-    }, 500);
     setTimeout(function () {
         const element = document.getElementById("loading-element");
         element.remove(element);
-    }, 1250);
-    setTimeout(function () {
-    }, 700);
+    }, 750);
 }
 
 function chchanged(){

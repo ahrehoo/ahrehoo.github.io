@@ -12,11 +12,44 @@ let timespanWords;
 let commonData;
 let pageData;
 let dir;
+let dataFilling = [];
 
 function translatePage() {
     document.querySelectorAll('[utext]').forEach(element => {
         translateContent(element);
     });
+}
+
+function translateElementContents(element, d) {
+    element.querySelectorAll('[utext]').forEach(e => {
+        translateContentWithData(e, d);
+    });
+}
+
+function translateContentWithData(element, d) {
+    const key = element.getAttribute('utext');
+    if (translatedContent[key] != null) {
+        const translatedWord =
+            d[key] == null ?
+                undef[lang] : translatedContent[key];
+        if (
+            element.type == "text" ||
+            element.type == "email" ||
+            element.type == "tel" ||
+            element.type == "username" ||
+            element.type == "password" ||
+            element.type == "address") {
+            element.placeholder = translatedWord;
+        }
+        else if (element.type == "submit")
+            element.value = translatedWord;
+        else
+            element.innerHTML = translatedWord;
+    }
+    if (element.hasAttribute("data")) {
+        fillElementDataWithData(element, d);
+        replaceElementKeywords(element);
+    }
 }
 
 function translateContent(element) {
@@ -65,27 +98,30 @@ function replaceElementKeywords(element) {
 function replaceRowDatas(input, row) {
     var text = input;
     var sIndex = 0;
-    var pIndex = -1;
-    while ((sIndex = text.indexOf("[")) > pIndex) {
-        var eIndex = text.indexOf("]");
-        var key = text.substring(sIndex + 1, eIndex);
-        let valueToReplace = "";
-        if (key == "module-uptime")
-            if (row[key] == -1)
-                valueToReplace = keywords["disconnected"];
-            else {
-                var timespan = getTimespanFromMilliseconds(Date.now() - Date.parse(row[key]));
-                valueToReplace = translateTimespan(timespan);
-            }
-        else
-            if (row[key] == -1)
-                valueToReplace = keywords["disconnected"];
-            else {
+    while ((sIndex = text.indexOf("^")) > -1) {
+        var eIndex = text.indexOf("!^");
+        var valueForReplace = text.substring(sIndex, eIndex + 2);
+        var variable = text.substring(sIndex + 1, eIndex);
+        var key = variable.split(',')[0];
+        var type = variable.split(',')[1];
+        let valueToReplace = variable;
+        if (type == "text") {
+            if (key == "module-uptime")
+                if (row[key] == -1)
+                    valueToReplace = keywords["disconnected"];
+                else {
+                    var timespan = getTimespanFromMilliseconds(Date.now() - Date.parse(row[key]));
+                    valueToReplace = translateTimespan(timespan);
+                }
+            else if (key == "module-battery")
+                if (row[key] == -1)
+                    valueToReplace = keywords["disconnected"];
+                else
+                    valueToReplace = row[key] + "%";
+            else
                 valueToReplace = row[key] == null ? key : row[key];
-                if (key == "module-battery")
-                    valueToReplace += "%"
-            }
-        text = text.replace("[" + key + "]", valueToReplace);
+        }
+        text = text.replace(valueForReplace, valueToReplace);
     }
     return text;
 }
@@ -98,13 +134,60 @@ async function fillElementData(element) {
         const dataType = dataKeyInformation[1];
         var valueToReplace = data[dataKey];
         if (dataType == "checkbox") {
-            element.checked = ["on", "active", "1", 1, "true", "[on]", "[active]", "[1]", 1, "[true]"].includes(data[dataKey]);
+            element.checked = ["on", "active", "1", 1, "true", "[on]", "[active]", "[1]", 1, "[true]", "{on}", "{active}", "{1}", "{true}"].includes(data[dataKey]);
         }
         if (dataType == "datetime")
             valueToReplace = translateDate(data[dataKey]);
         if (dataType == "table" || dataType == "h-table") {
-            fillTable(element, dataKeyInformation).then(t => {
+            fillTable(dataKeyInformation).then(t => {
                 element.innerHTML = t;
+                let i = -1;
+                element.querySelectorAll('tr').forEach(row => {
+                    translateElementContents(row, data[dataKey][i++]);
+                });
+            });
+        }
+        if (dataType == "select") {
+            elementText = fillSelect(dataKeyInformation);
+        }
+        if (dataType == "img") {
+            fetchText('/assets/image/' + dataKey).then(t => {
+                element.innerHTML = t;
+            });
+        }
+        elementText = elementText.replace(dataKey, valueToReplace);
+    });
+    element.innerHTML = elementText;
+}
+
+function fillSelect(dataKeyInformation) {
+    let text = "";
+    const tabelName = dataKeyInformation[2];
+    const dataKey = dataKeyInformation[0];
+    let i = 0;
+    data[tabelName].forEach(row => {
+        text += "<div class=\"select-item\"  onclick=\"selectClick(this);\">" + row[dataKey] + "</div>";
+    });
+    return text;
+}
+
+function fillElementDataWithData(element, d) {
+    var elementText = element.innerHTML;
+    const dataKeys = JSON.parse(element.getAttribute('data').replace(/\'/g, '"'));
+    dataKeys.forEach(dataKeyInformation => {
+        const dataKey = dataKeyInformation[0];
+        const dataType = dataKeyInformation[1];
+        var valueToReplace = d[dataKey];
+        if (dataType == "checkbox") {
+            element.checked = ["on", "active", "1", 1, "true", "[on]", "[active]", "[1]", 1, "[true]", "{on}", "{active}", "{1}", "{true}"].includes(d[dataKey]);
+        }
+        if (dataType == "datetime")
+            valueToReplace = translateDate(d[dataKey]);
+        if (dataType == "table" || dataType == "h-table") {
+            element.innerHTML = fillTable(dataKeyInformation);
+            let i = -1;
+            element.querySelectorAll('tr').forEach(row => {
+                translateElementContents(row);
             });
         }
         if (dataType == "img") {
@@ -149,7 +232,7 @@ function getTimespanFromMilliseconds(milliseconds) {
         return Math.round(milliseconds / second).toString() + " second ago";
 }
 
-async function fillTable(element, dataKeyInformation) {
+async function fillTable(dataKeyInformation) {
     const tableName = dataKeyInformation[2];
     const rowTemplate = await fetchText(`pages/row-templates/${page}-${tableName}-row.html`);
     var elementText = "";
@@ -238,10 +321,11 @@ async function reloadPage() {
 }
 
 async function reloadData() {
+    dataFilling[dataFilling.length] = true;
     if (document.documentElement.getAttribute("hasData") == "true")
         data = await fetchJSON(`data/${page}.json`);
-    translatePage();
     if (dir == "rtl") fixDir();
+    translatePage();
 }
 
 function fixDir() {
