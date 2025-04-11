@@ -130,9 +130,7 @@ body{
   --element-container-height: calc(var(--top-items-height) + var(--white-container-margin) + var(--white-container-height));
   width: var(--element-container-width);
   height: var(--element-container-height);
-  display: flex;
   font-size: 0;
-
 }
 
 .top-items-container {

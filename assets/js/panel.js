@@ -68,9 +68,9 @@ async function editPhone(id) {
 }
 
 async function smsChange(id) {
-    showNotification("sms-ok", "sms-change", "green", "/assets/image/success.svg");
+    //showNotification("sms-ok", "sms-change", "green", "/assets/image/success.svg");
     //showNotification("sms-ok1", "sms-change1", "red", "/assets/image/fail.svg");
-    //showNotification("sms-ok2", "sms-change2", "yellow", "/assets/image/error.svg");
+    showNotification("sms-ok2", "sms-change2", "yellow", "/assets/image/error.svg");
 }
 
 async function showNotification(header, message, color, img) {

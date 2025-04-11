@@ -3,5 +3,30 @@
     "dir": "Phones",
 
     "add-new-phone":"Add new phone",
-    "default-calling-phone":"Default calling phone"
+    "default-calling-phone":"Default calling phone",
+    
+    "dialogue-new-phone-header":"Add new phone",
+    "dialogue-add-desc":"Please enter a phone number and name.",
+    "phone-name":"Name",
+    "phone-number":"Phone number",
+    "dialogue-add-phone-ok":"Add phone",
+    "dialogue-add-phone-cancel":"Cancel",
+
+    "dialogue-remove-phone-header":"Remove phone",
+    "dialogue-remove-phone-desc":"Are you sure to remove phone/phones?",
+    "dialogue-remove-phone-ok":"Remove",
+    "dialogue-remove-phone-cancel":"Cancel",
+
+    "dialogue-edit-phone-header":"Edit phone",
+    "dialogue-edit-phone-ok":"Apply",
+    "dialogue-edit-phone-cancel":"Cancel",
+
+    "sms-change":"SMS for ali akbar firozi activated successfully.",
+    "sms-ok":"Done!",
+
+    "sms-change1":"Activating SMS for ali akbar firozi borzabadi failed.",
+    "sms-ok1":"Failed!",
+
+    "sms-change2":"Battery running low.",
+    "sms-ok2":"Low battery!"
 }

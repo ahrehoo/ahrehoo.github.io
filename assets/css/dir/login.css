@@ -1,15 +1,7 @@
-.logo:dir(rtl) {
+[dir="rtl"] .logo:dir {
     margin-right: 15px;
 }
 
-.logo:dir(ltr) {
+[dir="ltr"] .logo:dir {
     margin-left: 15px;
-}
-
-.content-container:dir(rtl) {
-    direction: ltr;
-}
-
-.content-container:dir(ltr) {
-    direction: rtl;
 }

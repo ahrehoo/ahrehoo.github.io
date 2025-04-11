@@ -151,3 +151,11 @@
 [dir="rtl"] .notification-container {
     right: 0;
 }
+
+[dir="ltr"] .notification-box {
+    padding: 5px 5px 10px 10px;
+}
+
+[dir="rtl"] .notification-box {
+    padding: 5px 10px 10px 5px;
+}
