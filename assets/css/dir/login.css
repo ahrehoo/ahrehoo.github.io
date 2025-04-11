@@ -5,3 +5,11 @@
 .logo:dir(ltr) {
     margin-left: 15px;
 }
+
+.content-container:dir(rtl) {
+    direction: ltr;
+}
+
+.content-container:dir(ltr) {
+    direction: rtl;
+}

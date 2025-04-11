@@ -1,0 +1,20 @@
+<div id="dialogue-container" class="dialogue-container">
+    <div id="dialogue-white-container" class="dialogue-white-container">
+        <div class="dialogue-header-container">
+            <div class="dialogue-close-button" onclick="closeDialogue()"></div>
+            <img src="/assets/image/phone.svg" class="dialogue-icon">
+            <div class="dialogue-header-label" utext="dialogue-new-phone-header"></div>
+        </div>
+        <div class="dialogue-content-container">
+            <div class="dialogue-desc bottom-margin" utext="dialogue-add-desc"></div>
+            <input class="cinput textbox bottom-margin" type="text" utext="phone-name" style="margin-top: 7px;">
+            <input class="cinput textbox bottom-margin" type="text" utext="phone-number">
+            <div class="dialogue-row" style="margin-top: 7px;">
+                <div class="button next-margin red-button" style=" width: 40px;" utext="dialogue-add-phone-cancel"
+                    onclick="submitNewPhone();"></div>
+                <div class="button" style="width: 70px;" utext="dialogue-add-phone-ok" onclick="submitNewPhone();">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

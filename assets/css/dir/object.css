@@ -143,3 +143,11 @@
 [dir="rtl"] .select-item {
     margin-right: 7px;
 }
+
+[dir="ltr"] .notification-container {
+    left: 0;
+}
+
+[dir="rtl"] .notification-container {
+    right: 0;
+}

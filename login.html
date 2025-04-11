@@ -16,7 +16,7 @@
     <title id="page-title" utext="title"></title>
 </head>
 
-<body class="clr-brandb" onload="loading(); reloadPage();">
+<body class="clr-brandb" onload="reloadPage(); loading();">
     <!--loading area-->
     <div id="loading-element" class="loading-container clr-brandb">
         <img src="assets/image/loading.svg" class="loading-img">
@@ -29,29 +29,31 @@
         <img class="background-image background-image-bottom-right" src="assets/image/background-bottom-right.svg">
     </div>
     <!--content area-->
-    <div class="element-container">
-        <div class="white-container clr-grayb8">
-            <div class="content-container fix-dir">
-                <div class="login-form-container">
-                    <!--content-->
-                    <form action="panel.html" class="login-form">
-                        <p class="title fnt-s8 fnt-wb clr-brandc" utext="title"></p>
-                        <div class="input-holder">
-                            <input class="cinput icon-textbox textbox username-input" type="text" utext="username">
-                        </div>
-                        <div class="input-holder pass-holder">
-                            <input class="cinput icon-textbox textbox password-input" type="password" utext="password">
-                            <img class="eye" src="assets/image/close-eye.svg">
-                        </div>
-                        <div class="input-holder submit-holder">
-                            <input class="cinput submit" type="submit" utext="login-button">
-                            <div class="arrow-wrapper">
-                                <div class="arrow"></div>
+    <div class="inner-body">
+        <div class="element-container">
+            <div class="white-container clr-grayb8">
+                <div class="content-container">
+                    <div class="logo-container fix-dir"><img class="logo" src="assets/image/cheetah.svg"></div>
+                    <div class="login-form-container fix-dir">
+                        <!--content-->
+                        <form action="login.html" method="POST" class="login-form">
+                            <p class="title fnt-s8 fnt-wb clr-brandc" utext="title"></p>
+                            <div class="input-holder">
+                                <input class="cinput icon-textbox textbox username-input" name="username" type="text" utext="username" required>
                             </div>
-                        </div>
-                    </form>
+                            <div class="input-holder pass-holder">
+                                <input class="cinput icon-textbox textbox password-input" name="password" type="password" utext="password" required>
+                                <img class="eye" src="assets/image/close-eye.svg">
+                            </div>
+                            <div class="input-holder submit-holder">
+                                <input class="cinput submit" type="submit" utext="login-button">
+                                <div class="arrow-wrapper">
+                                    <div class="arrow"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="logo-container"><img class="logo" src="assets/image/cheetah.svg"></div>
             </div>
         </div>
     </div>

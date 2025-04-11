@@ -20,6 +20,18 @@ function translatePage() {
     });
 }
 
+function translateDialogue() {
+    document.getElementById("dialogue-container").querySelectorAll('[utext]').forEach(element => {
+        translateContent(element);
+    });
+}
+
+function translateNotification() {
+    document.getElementById("notification-container").querySelectorAll('[utext]').forEach(element => {
+        translateContent(element);
+    });
+}
+
 function translateElementContents(element, d) {
     element.querySelectorAll('[utext]').forEach(e => {
         translateContentWithData(e, d);
@@ -301,8 +313,11 @@ function setPage(_page, _pageData) {
 }
 
 async function reloadPage() {
-    const cPage = document.documentElement.getAttribute("page");
     const cLang = await getSetting('lang');
+    dir = cLang == 'fa' ? 'rtl' : 'ltr';
+    if (dir == "rtl") fixDir();
+    const cPage = document.documentElement.getAttribute("page");
+
     if (cLang != lang) {
         pageData = await fetchJSON(`assets/language/${cLang}/${cPage}.json`);
         commonData = await fetchJSON(`assets/language/${cLang}/common.json`);
@@ -313,7 +328,6 @@ async function reloadPage() {
         pageData = await fetchJSON(`assets/language/${cLang}/${cPage}.json`);
     }
     translatedContent = { ...commonData, ...pageData };
-    dir = cLang == 'fa' ? 'rtl' : 'ltr';
     document.documentElement.setAttribute('dir', dir);
     lang = cLang;
     page = cPage;
@@ -324,7 +338,6 @@ async function reloadData() {
     dataFilling[dataFilling.length] = true;
     if (document.documentElement.getAttribute("hasData") == "true")
         data = await fetchJSON(`data/${page}.json`);
-    if (dir == "rtl") fixDir();
     translatePage();
 }
 

@@ -91,17 +91,19 @@
   font-size: var(--font-size-xtitle);
 }
 
-/*@media only screen and (max-width: 1000px) and (orientation:portrait) {
-    :root {
-        --font-variation-regular: "wght" 500, "DOTS" 8;
-        --font-variation-demi-bold: "wght" 750, "DOTS" 8;
-        --font-variation-bold: "wght" 950, "DOTS" 8;
-
-        --font-size-smaller: 32px;
-        --font-size-small: 36px;
-        --font-size-normal: 44px;
-        --font-size-big: 48px;
-        --font-size-bigger: 54px;
-        --title-font-size: 60px;
-    }
-}*/
+@media only screen and (max-width: 60rem){
+  :root {
+    --font-variation-thin: "wght" 300, "DOTS" 8;
+    --font-variation-regular: "wght" 450, "DOTS" 8;
+    --font-variation-demi-bold: "wght" 700, "DOTS" 8;
+    --font-variation-bold: "wght" 880, "DOTS" 8;
+    --font-size-smaller: 11px;
+    --font-size-small: 12px;
+    --font-size-normal: 13px;
+    --font-size-xnormal: 15px;
+    --font-size-big: 20px;
+    --font-size-bigger: 24px;
+    --font-size-title: 32px;
+    --font-size-xtitle:40px;
+  }
+}

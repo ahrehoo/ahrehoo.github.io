@@ -24,7 +24,6 @@ function loading() {
 }
 
 function chchanged(){
-    console.log("changed");
 }
 
 

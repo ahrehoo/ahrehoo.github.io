@@ -20,13 +20,13 @@
 }
 
 .content-container {
-  flex-direction: unset;
+  flex-direction: row;
 }
 
 .login-form-container {
   text-align: center;
   align-items: center;
-  display: inline-flex;
+  display: flex;
   overflow: hidden;
   width: 250px;
   height: 100%;
@@ -34,7 +34,8 @@
 
 .logo-container {
   align-items: center;
-  display: inline-flex;
+  justify-content: end;
+  display: flex;
   width: 250px;
   height: 100%;
 }
@@ -53,11 +54,11 @@
   margin-bottom: 15px;
 }
 
-.cinput{
+.cinput {
   width: calc(100% - 60px);
 }
 
-.textbox{
+.textbox {
   background-color: var(--clr-gray8);
 }
 
@@ -68,4 +69,49 @@
 
 .submit-holder {
   margin-top: 20px;
+}
+
+@media only screen and (max-width: 60rem) and (orientation:portrait) {
+  .content-container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .logo-container{
+    margin-bottom: 15px;
+  }
+
+  .logo {
+    margin: 0 !important;
+    width: 200px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .element-container{
+    width: fit-content;
+  }
+
+  .white-container{
+    width: 300px;
+    height: 550px;
+  }
+
+  .login-form-container {
+    width: 100%;
+  }
+
+  .login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

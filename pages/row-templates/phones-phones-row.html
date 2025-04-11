@@ -8,7 +8,7 @@
     <td><label for="^phone-number,text!^-ch">^phone-number,text!^</label></td>
     <td>
         <div class="checkbox-container mini-checkbox">
-            <input type="checkbox" utext="" data="[['phone-state','checkbox']]" id="^phone-number,text!^-sms">
+            <input type="checkbox" utext="" data="[['phone-state','checkbox']]" id="^phone-number,text!^-sms" onchange="smsChange(this.id);">
             <label for="^phone-number,text!^-sms" class="checkbox">
                 <div class="checkbox-handle"></div>
             </label>
@@ -16,8 +16,8 @@
     </td>
     <td>
         <div class="fill-cell">
-            <div class="small-img-button small-edit-button"></div>
-            <div class="small-img-button small-remove-button"></div>
+            <div id="^phone-number,text!^-edit" class="small-img-button small-edit-button" onclick="editPhone(this.id);"></div>
+            <div id="^phone-number,text!^-remove" class="small-img-button small-remove-button" onclick="removePhone(this.id);"></div>
         </div>
     </td>
     </tr>

@@ -16,7 +16,7 @@
     <title id="page-title" utext="title"></title>
 </head>
 
-<body class="clr-brandb" onload="loading(); reloadPage();">
+<body class="clr-brandb" onload="reloadPage(); loading();">
     <!--loading area-->
     <div id="loading-element" class="loading-container clr-brandb">
         <img src="assets/image/loading.svg" class="loading-img">
@@ -29,38 +29,40 @@
         <img class="background-image background-image-bottom-right" src="assets/image/background-bottom-right.svg">
     </div>
     <!--content area-->
-    <div class="element-container">
-        <div class="white-container clr-grayb9">
-            <div class="content-container fix-dir">
-                <div class="login-form-container">
-                    <!--content-->
-                    <form action="login.html" class="login-form">
-                        <p class="title fnt-s8 fnt-wb clr-brandc" utext="title"></p>
-                        <div class="input-holder">
-                            <input class="cinput icon-textbox textbox tel-input" type="tel" utext="tel"
-                                pattern="[0]{1}[9]{1}[0-9]{9}">
-                        </div>
-                        <div class="input-holder">
-                            <input class="cinput icon-textbox textbox username-input" type="text" utext="username">
-                        </div>
-                        <div class="input-holder pass-holder">
-                            <input class="cinput icon-textbox textbox password-input" type="password" utext="password">
-                            <img class="eye" src="assets/image/close-eye.svg">
-                        </div>
-                        <div class="input-holder pass-holder">
-                            <input class="cinput icon-textbox textbox password-input" type="password"
-                                utext="repeat-password">
-                            <img class="eye" src="assets/image/close-eye.svg">
-                        </div>
-                        <div class="input-holder submit-holder">
-                            <input class="cinput submit" type="submit" utext="register-button">
-                            <div class="arrow-wrapper">
-                                <div class="arrow"></div>
+    <div class="inner-body">
+        <div class="element-container">
+            <div class="white-container clr-grayb9">
+                <div class="content-container fix-dir">
+                    <div class="logo-container"><img class="logo" src="assets/image/cheetah.svg"></div>
+                    <div class="login-form-container">
+                        <!--content-->
+                        <form action="login.html" class="login-form">
+                            <p class="title fnt-s8 fnt-wb clr-brandc" utext="title"></p>
+                            <div class="input-holder">
+                                <input class="cinput icon-textbox textbox tel-input" type="tel" utext="tel"
+                                    pattern="[0]{1}[9]{1}[0-9]{9}">
                             </div>
-                        </div>
-                    </form>
+                            <div class="input-holder">
+                                <input class="cinput icon-textbox textbox username-input" type="text" utext="username">
+                            </div>
+                            <div class="input-holder pass-holder">
+                                <input class="cinput icon-textbox textbox password-input" type="password" utext="password">
+                                <img class="eye" src="assets/image/close-eye.svg">
+                            </div>
+                            <div class="input-holder pass-holder">
+                                <input class="cinput icon-textbox textbox password-input" type="password"
+                                    utext="repeat-password">
+                                <img class="eye" src="assets/image/close-eye.svg">
+                            </div>
+                            <div class="input-holder submit-holder">
+                                <input class="cinput submit" type="submit" utext="register-button">
+                                <div class="arrow-wrapper">
+                                    <div class="arrow"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="logo-container"><img class="logo" src="assets/image/cheetah.svg"></div>
             </div>
         </div>
     </div>

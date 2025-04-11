@@ -46,7 +46,7 @@
                       --clr-blue8:      hsl(209 ,100% ,93% );
                       --clr-blue9:      hsl(209 ,100% ,97% );
                       /*    green                            */
-                      --clr-green:      hsl(140 ,82%  ,51% );
+                      --clr-green:      rgb(28, 233, 96);
                       --clr-green1:     hsl(140 ,100% ,15% );
                       --clr-green2:     hsl(140 ,100% ,24% );
                       --clr-green3:     hsl(140 ,100% ,31% );

@@ -3,5 +3,30 @@
     "dir": "تلفن ها",
 
     "add-new-phone":"افزودن تلفن جدید",
-    "default-calling-phone":"تلفن تماس پیشفرض"
+    "default-calling-phone":"تلفن تماس پیشفرض",
+    
+    "dialogue-new-phone-header":"افزودن شماره تلفن",
+    "dialogue-add-desc":"شماره تلفن مورد نظر را وارد کرده و یک نام برای آن انتخاب کنید.",
+    "phone-name":"نام و نام خانوادگی",
+    "phone-number":"شماره تلفن",
+    "dialogue-add-phone-ok":"افزودن تلفن",
+    "dialogue-add-phone-cancel":"لغو",
+
+    "dialogue-remove-phone-header":"حذف شماره تلفن",
+    "dialogue-remove-phone-desc":"آیا از حذف تلفن/ تلفن های انتخابی اطمینان دارید؟",
+    "dialogue-remove-phone-ok":"تایید و حذف",
+    "dialogue-remove-phone-cancel":"لغو",
+
+    "dialogue-edit-phone-header":"ویرایش شماره تلفن",
+    "dialogue-edit-phone-ok":"تایید",
+    "dialogue-edit-phone-cancel":"لغو",
+
+    "sms-change":"پیامک برای علی اکبر فیروزی برز آبادی غیرفعال گردید!",
+    "sms-ok":"انجام شد!",
+
+    "sms-change1":"غیرفعال سازی پیامک برای علی اکبر فیروزی برز آبادی با شکست مواجه شد!",
+    "sms-ok1":"انجام نشد!",
+
+    "sms-change2":"باتری رو به اتمام است!",
+    "sms-ok2":"باتری کم!"
 }

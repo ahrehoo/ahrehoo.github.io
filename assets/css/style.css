@@ -12,6 +12,8 @@
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
   transition: 0.3s;
   font-variation-settings: var(--font-variation-regular);
   font-size: var(--font-size-normal);
@@ -28,10 +30,11 @@ p {
   font-size: var(--font-size-smaller);
 }
 
-.inner-mini-table-container table{
+.inner-mini-table-container table {
   width: 100%;
 }
-label{
+
+label {
   cursor: pointer;
 }
 
@@ -47,6 +50,10 @@ label{
   --white-container-height: 500px;
   --white-container-padding: 30px;
   --white-container-margin: 10px;
+}
+
+body{
+  overflow: hidden;
 }
 
 .loading-container {
@@ -108,14 +115,22 @@ label{
   transition: 0.7s;
 }
 
+.inner-body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-5vh);
+}
+
 .element-container {
   position: absolute;
   --element-container-width: calc(var(--white-container-width) + var(--white-container-margin) + var(--side-items-width));
   --element-container-height: calc(var(--top-items-height) + var(--white-container-margin) + var(--white-container-height));
   width: var(--element-container-width);
   height: var(--element-container-height);
-  left: calc(50vw - var(--element-container-width) / 2);
-  top: calc(50vh - var(--element-container-height) / 2 - 5vh);
+  display: flex;
   font-size: 0;
 
 }
@@ -231,6 +246,7 @@ label{
   background-color: var(--clr-gray8);
   cursor: default;
   overflow: hidden;
+  z-index: 1;
 }
 
 .dropdown-container:hover {
@@ -281,4 +297,9 @@ label{
 
 .content-container:hover {
   --scrollbar-color: var(--clr-gray5);
+}
+
+@media only screen and (max-width: 60rem) and (orientation:portrait) {
+  *{
+  }
 }
