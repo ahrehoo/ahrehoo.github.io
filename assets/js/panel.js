@@ -68,14 +68,15 @@ async function editPhone(id) {
 }
 
 async function smsChange(id) {
-    //showNotification("sms-ok", "sms-change", "green", "/assets/image/success.svg");
+    showNotification("sms-ok", "sms-change", "green", "/assets/image/success.svg");
     //showNotification("sms-ok1", "sms-change1", "red", "/assets/image/fail.svg");
-    showNotification("sms-ok2", "sms-change2", "yellow", "/assets/image/error.svg");
+    //showNotification("sms-ok2", "sms-change2", "yellow", "/assets/image/error.svg");
 }
 
 async function showNotification(header, message, color, img) {
     const pageData = await fetchText(`pages/notification.html`);
     document.getElementById("notification-container").innerHTML = pageData;
+    document.getElementById("notification-container").style.zIndex = 2;
     document.getElementById("notification-container").querySelector(".notification-icon").setAttribute("src", img);
     document.getElementById("notification-container").querySelector(".notification-message").setAttribute("utext", message);
     document.getElementById("notification-container").querySelector(".notification-header").setAttribute("utext", header);
@@ -102,4 +103,14 @@ function setNotificationColors(color) {
             document.querySelector(".notification-background").classList.add('notification-background-yellow');
             break;
     }
+}
+
+function dashboardMode(element) {
+    let parent = element.parentElement;
+    console.log(parent);
+    parent.style.backgroundColor = "green";
+    for (const child of parent.children) {
+        child.style.zIndex = 1;
+    }
+    element.zIndex = 2;
 }

@@ -10,5 +10,19 @@
     "modules-counter": "متصل: connected-modules-count عدد\nقطع ارتباط: disconnected-modules-count عدد",
     "main-battery-level": "main-battery-level%",
     "battery-overal-level": "دستگاه اصلی: main-battery-level%\nمیانگین ماژول ها: modules-avg-battery-level%",
-    "battery-status":"وضعیت باتری ها"
+    "battery-status":"وضعیت باتری ها",
+    "advanced-dashboard":"داشبورد پیشرفته",
+
+    "dialogue-edit-phone-header":"ویرایش شماره تلفن",
+    "dialogue-edit-phone-ok":"تایید",
+    "dialogue-edit-phone-cancel":"لغو",
+
+    "sms-change":"پیامک برای علی اکبر فیروزی برزآبادی غیرفعال گردید!",
+    "sms-ok":"انجام شد!",
+
+    "sms-change1":"غیرفعال سازی پیامک برای علی اکبر فیروزی برزآبادی با شکست مواجه شد!",
+    "sms-ok1":"انجام نشد!",
+
+    "sms-change2":"باتری رو به اتمام است!",
+    "sms-ok2":"باتری کم!"
 }

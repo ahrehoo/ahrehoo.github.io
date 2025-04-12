@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/dir/style.css">
     <link rel="stylesheet" href="assets/css/object.css">
     <link rel="stylesheet" href="assets/css/dir/object.css">
+    <link rel="stylesheet" href="assets/css/vertical-panel.css">
     <script src="assets/js/scripts.js"></script>
     <title id="page-title" utext="title"></title>
 </head>
@@ -36,11 +37,12 @@
                 <div class="cat-button dir-container">
                     <p utext="dir" class="top-dir clr-grayc9 fnt-wb fnt-s6"></p>
                 </div>
-                <div class="cat-button">
+                <div class="cat-button quick-setup">
                     <p class="cat-button-label" utext="quick-setup" onclick="loadPage('quick-setup')"></p>
                 </div>
-                <div class="cat-button">
-                    <p class="cat-button-label" utext="save-changes"></p>
+                <div class="cat-button save-but" onclick="smsChange(this.id);">
+                    <p class="cat-button-label save" utext="save-changes"></p>
+                    <p class="cat-button-label minimal-save" utext="save" style="display: none;"></p>
                 </div>
             </div>
             <div class="side-items-container">

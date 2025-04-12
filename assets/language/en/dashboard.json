@@ -10,5 +10,15 @@
     "modules-counter":"Connected modules: connected-modules-count\nDisconnected modules: disconnected-modules-count",
     "main-battery-level": "main-battery-level%",
     "battery-overal-level": "Main device: main-battery-level%\nModules avg: modules-avg-battery-level%",
-    "battery-status":"Battery status"
+    "battery-status":"Battery status",
+    "advanced-dashboard":"Advanced dashboard",
+
+    "sms-change":"SMS for ali akbar firozi activated successfully.",
+    "sms-ok":"Done!",
+
+    "sms-change1":"Activating SMS for ali akbar firozi borzabadi failed.",
+    "sms-ok1":"Failed!",
+
+    "sms-change2":"Battery running low.",
+    "sms-ok2":"Low battery!"
 }

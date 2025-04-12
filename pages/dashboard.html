@@ -1,4 +1,13 @@
-<div class="stat-container fix-dir clr-brandb">
+<div class="dashboard-mode-pointer">
+    <div class="dashboard-mode-container">
+        <div class="tab-selector">
+            <div class="tab" id="simple-dashboard" onclick="dashboardMode(true);"></div>
+            <div class="tab" id="advanced-dashboard" onclick="dashboardMode(this);"></div>
+        </div>
+    </div>
+</div>
+
+<div id="stat-container-alarm" class="stat-container fix-dir clr-brandb">
     <div class="stat-label-container">
         <p utext="alarms" class="stat-label fnt-wdb clr-grayc9"></p>
     </div>
@@ -85,7 +94,7 @@
     </div>
 </div>
 
-<div class="stat-container fix-dir clr-greenb">
+<div class="stat-container fix-dir clr-greenb last-stat-container">
     <div class="stat-label-container">
         <p utext="battery" class="stat-label fnt-wdb clr-grayc9"></p>
     </div>
