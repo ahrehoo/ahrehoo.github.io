@@ -106,11 +106,8 @@ function setNotificationColors(color) {
 }
 
 function dashboardMode(element) {
-    let parent = element.parentElement;
-    console.log(parent);
-    parent.style.backgroundColor = "green";
-    for (const child of parent.children) {
-        child.style.zIndex = 1;
+    for (const child of element.parentElement.children) {
+        child.classList.remove('tab-active');
     }
-    element.zIndex = 2;
+    element.classList.add('tab-active');
 }

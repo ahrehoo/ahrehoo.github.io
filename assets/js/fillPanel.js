@@ -18,6 +18,8 @@ async function loadPage(page) {
     const pageTData = await fetchJSON(`assets/language/${lang}/${page}.json`);
     const pageData = await fetchText(`pages/${page}.html`);
     document.getElementById("container").innerHTML = pageData;
+    if (page == "dashboard" || page == "phones" || page == "modules")
+        document.getElementsByClassName("scrolling-page")[0].classList.remove("scrolling-page");
     document.documentElement.setAttribute("page", page);
     await setPage(page, pageTData);
 }

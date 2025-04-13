@@ -18,6 +18,8 @@
     "signal-reception":"Signal",
     "signal-strength":"Signal strength",
     "battery":"Battery",
+    "simple":"Simple",
+    "advanced":"Advanced",
     
     "username":"Username",
     "password":"Password",

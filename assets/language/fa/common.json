@@ -18,6 +18,8 @@
     "signal-reception":"آنتن دهی",
     "signal-strength":"شدت سیگنال",
     "battery":"باتری",
+    "simple":"ساده",
+    "advanced":"پیشرفته",
     
     "username": "نام کاربری",
     "password": "رمز عبور",

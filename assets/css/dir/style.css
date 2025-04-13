@@ -60,11 +60,11 @@
     margin-left: 15px;
 }
 
-[dir="ltr"] .content-container {
-    padding-right: calc(var(--padding-for-scroll));
+[dir="ltr"] .scrolling-page {
+  padding-right: calc(var(--padding-for-scroll));
 }
 
-[dir="rtl"] .content-container {
+[dir="rtl"] .scrolling-page {
     width: calc(100% - var(--white-container-padding) * 2 - var(--padding-for-scroll) + 5px);
     padding-right: calc(var(--padding-for-scroll) + 10px);
     margin-right: var(--padding-for-scroll);

@@ -171,7 +171,6 @@ body{
 .content-container {
   --padding-for-scroll: 10px;
   transition: --scrollbar-color .3s;
-  padding-right: 5px;
   direction: ltr;
   margin: var(--white-container-padding);
   width: calc(100% - var(--white-container-padding) * 2);

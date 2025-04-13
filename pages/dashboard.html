@@ -1,8 +1,9 @@
 <div class="dashboard-mode-pointer">
     <div class="dashboard-mode-container">
+        <div class="dashboard-mode-line"></div>
         <div class="tab-selector">
-            <div class="tab" id="simple-dashboard" onclick="dashboardMode(true);"></div>
-            <div class="tab" id="advanced-dashboard" onclick="dashboardMode(this);"></div>
+            <div class="tab" utext="advanced" id="advanced-dashboard" onclick="dashboardMode(this);"></div>
+            <div class="tab tab-active" utext="simple" id="simple-dashboard" onclick="dashboardMode(this);"></div>
         </div>
     </div>
 </div>
