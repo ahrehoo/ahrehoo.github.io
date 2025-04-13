@@ -19,7 +19,9 @@ async function loadPage(page) {
     const pageData = await fetchText(`pages/${page}.html`);
     document.getElementById("container").innerHTML = pageData;
     if (page == "dashboard" || page == "phones" || page == "modules")
-        document.getElementsByClassName("scrolling-page")[0].classList.remove("scrolling-page");
+        try {
+            document.getElementsByClassName("scrolling-page")[0].classList.remove("scrolling-page");
+        } catch { }
     document.documentElement.setAttribute("page", page);
     await setPage(page, pageTData);
 }

@@ -12,6 +12,9 @@
     "restore-password-by-phone":"بازیابی رمز عبور توسط پیامک ",
     "verfication-code-incurrent":"کد فعالسازی نامعتبر است!",
     "invalid-number":"تلفن وارد شده معتبر نمیباشد!",
+    "activate-two-step":"فعالسازی",
+    "dectivate-two-step":"غیرفعالسازی",
+    "edit-two-step-phone":"ویرایش شماره",
 
     "change-password":"تغییر رمز عبور",
     "go-to-password-change-page":"برو به صفحه تغییر رمز عبور"

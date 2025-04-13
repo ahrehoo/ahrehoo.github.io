@@ -434,7 +434,7 @@
 
 .select-holder {
   --height: 24px;
-  --width: 110px;
+  --width: 130px;
   width: fit-content;
   position: relative;
   height: calc(var(--height) + 4px);
@@ -502,10 +502,22 @@
   height: fit-content;
   background-color: var(--clr-gray9);
   padding: 9px;
-  display: inline-flex;
+  display: flex;
   border-radius: calc(var(--page-brdr-radius) - 10px);
   align-items: center;
   flex-direction: row;
+}
+
+.content-header-items{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content-header-row{
+  flex-direction: row;
+  align-items: center;
+  display: flex;
 }
 
 .h-logo-container {
@@ -537,6 +549,10 @@
   background-color: var(--clr-gray7);
   padding: 3px;
   border-radius: calc(var(--page-brdr-radius) - 15px);
+}
+
+.button-with-pic-container{
+  width: 175px;
 }
 
 .button-with-pic {
@@ -631,11 +647,21 @@
   width: 98%;
   table-layout: auto;
   position: absolute;
-  border-spacing: 10px;
+  border-spacing: 0px;
 }
 
 .large-table-container td {
   text-align: center;
+  padding-bottom: 10px;
+}
+
+.large-table-container th {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.large-table-container tr:first-of-type td{
+  padding-top: 10px;
 }
 
 .small-img-button {
