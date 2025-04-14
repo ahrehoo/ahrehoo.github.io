@@ -22,7 +22,7 @@
   padding: 0;
 }
 
-img{
+img {
   pointer-events: none;
 }
 
@@ -56,7 +56,7 @@ label {
   --white-container-margin: 10px;
 }
 
-body{
+body {
   overflow: hidden;
 }
 
@@ -78,7 +78,7 @@ body{
 
 .background-image {
   width: 120%;
-  transition: 2s ease-out;
+  transition: 3s ease-out;
   position: absolute;
 }
 
@@ -119,7 +119,7 @@ body{
   transition: 0.7s;
 }
 
-.inner-body{
+.inner-body {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -196,7 +196,7 @@ body{
   background-color: var(--clr-gray8);
 }
 
-.cat-button:active{
+.cat-button:active {
   background-color: var(--clr-gray9);
 }
 
