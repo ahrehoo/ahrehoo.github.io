@@ -10,7 +10,6 @@ document.addEventListener('load', function (event) {
 })
 
 function loading() {
-    setTimeout(function () {
         document.querySelector('.white-container').style.opacity = 1;
         document.querySelector('.element-container').style.transform = "translateY(0vh)";
         document.querySelector('.loading-container').style.opacity = 0;
@@ -18,11 +17,8 @@ function loading() {
         document.querySelector('.background-image-top-right').style.width = "100%";
         document.querySelector('.background-image-bottom-left').style.width = "100%";
         document.querySelector('.background-image-bottom-right').style.width = "100%";
-    }, 250);
-    setTimeout(function () {
         const element = document.getElementById("loading-element");
         element.remove(element);
-    }, 1000);
 }
 
 function chchanged() {
