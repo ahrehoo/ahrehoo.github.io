@@ -110,4 +110,7 @@ function dashboardMode(element) {
         child.classList.remove('tab-active');
     }
     element.classList.add('tab-active');
+    document.querySelectorAll('.stat-second').forEach(e=>{
+        e.style.display='flex';
+    });
 }

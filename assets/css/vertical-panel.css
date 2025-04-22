@@ -7,11 +7,6 @@
         padding: 0;
     }
 
-    .stat-white-container .vertical-border,
-    .stat-white-container .stat-second {
-        display: none;
-    }
-
     .dashboard-mode-container {
         width: 100%;
         height: 35px;
@@ -343,5 +338,15 @@
     }
     .objrow-content{
         justify-content: center;
+    }
+    .stat-white-container{
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 5px;
+    }
+
+    .stat-white-container .vertical-border,
+    .stat-white-container .stat-second {
+        width: 100%;
     }
 }
