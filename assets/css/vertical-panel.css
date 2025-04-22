@@ -344,4 +344,7 @@
     .objrow-content{
         justify-content: center;
     }
+    .advanced-phone{
+        display: flex;
+    }
 }

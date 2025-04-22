@@ -110,4 +110,9 @@ function dashboardMode(element) {
         child.classList.remove('tab-active');
     }
     element.classList.add('tab-active');
+    if(element.id=="advanced-dashboard"){
+        document.getElementsByClassName("stat-second").forEach(e=>{
+            e.classList.add("advanced-phone");
+        });
+    }
 }
