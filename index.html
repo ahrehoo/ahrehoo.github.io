@@ -1,15 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" page="index">
 
 <head>
+    <script src="assets/js/translate.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <style>
+        body {
+            background-color: hsl(209, 80%, 54%);
+        }
+
+        a {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
+    <a href="reload.html" id="reload">redirect</a>
     <a href="panel.html" id="redirect">redirect</a>
-
-
-    <script>document.getElementById('redirect').click();
-    </script>
 </body>
+<script>
+        checkCache();
+        async function checkCache() {
+            let cache_version = await fetch('/firmware.json', { cache: 'force-cache' }).then(response => response.json());
+            console.log(Date.now());
+            console.log(cache_version);
+            console.log('time ' + cache_version['time']);
+            if (cache_version['time'] == '-1') {
+                //console.log('reload');
+                window.location.href = "/reload.html";
+            }
+            let dev_version = await fetch('/firmware.json?time=' + Date.now(), { cache: 'reload' }).then(response => response.json());
+            console.log(dev_version);
+            console.log("c:" + cache_version['ver'] + " d:" + dev_version['ver']);
+            if (cache_version['ver'] != dev_version['ver']) {
+                //console.log('reload');
+                window.location.href = "/reload.html";
+            }
+            document.documentElement.setAttribute('wait', false);
+            document.getElementById('redirect').click();
+        }</script>
 
 </html>

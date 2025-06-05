@@ -304,3 +304,6 @@ body {
 .content-container:hover {
   --scrollbar-color: var(--clr-gray5);
 }
+
+.noTransition{
+}

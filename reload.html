@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" page="reload">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/js/translate.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .inner {
+            background-color: hsl(209, 80%, 54%);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        a {
+            display: none;
+        }
+
+        svg {
+            opacity: 0;
+            transition: 1s;
+            width: 50px;
+            height: 50px;
+            animation: spin 0.7s infinite linear;
+        }
+
+        #text {
+            -webkit-tap-highlight-color: transparent;
+            transition: 0.5s;
+            position: absolute;
+            line-height: 30px;
+            text-align: center;
+            width: 200px;
+            top: calc(50% + 50px + 20px);
+            font-family: "Segoe UI";
+            font-weight: bold;
+            color: hsl(209, 28%, 93%);
+            opacity: 0;
+        }
+
+        @-moz-keyframes spin {
+            100% {
+                -moz-transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0;
+            }
+
+            45% {
+                opacity: 100;
+            }
+
+            70% {
+                opacity: 100;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @media only screen and (max-width: 70rem) and (orientation:portrait) {
+            body {
+                height: 100svh;
+            }
+
+            svg {
+                width: 150px;
+                height: 150px;
+            }
+
+            div {
+                top: auto;
+                bottom: 200px;
+                width: 700px;
+                font-size: 60px;
+                line-height: 90px;
+            }
+        }
+    </style>
+</head>
+
+<body onload="reloadPage(); preload();">
+    <div class="inner">
+        <div class="container">
+            <a href="panel.html" id="redirect">redirect</a>
+            <svg id="loading" width="200" height="200" viewBox="0 0 200 200" color="#f0f8ff" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="spinner-secondHalf">
+                        <stop offset="0%" stop-opacity="0" stop-color="currentColor" />
+                        <stop offset="100%" stop-opacity="0.5" stop-color="currentColor" />
+                    </linearGradient>
+                    <linearGradient id="spinner-firstHalf">
+                        <stop offset="0%" stop-opacity="1" stop-color="currentColor" />
+                        <stop offset="100%" stop-opacity="0.5" stop-color="currentColor" />
+                    </linearGradient>
+                </defs>
+                <g stroke-width="26">
+                    <path stroke="url(#spinner-secondHalf)" d="M 13 100 A 87 87 0 0 1 187 100" />
+                    <path stroke="url(#spinner-firstHalf)" d="M 187 100 A 87 87 0 0 1 13 100" />
+                    <path stroke="currentColor" stroke-linecap="round" d="M 13 100 A 87 87 0 0 1 13 98" />
+                </g>
+            </svg>
+            <div id="text" utext="preload"></div>
+        </div>
+    </div>
+</body>
+<script>
+    async function preload() {
+        document.getElementById('loading').style.opacity = 1;
+        if (document.getElementById('text').innerHTML.length < 10) {
+            setTimeout(() => { preload(); }, 50);
+            return;
+        }
+        document.getElementById('text').style.animation = 'fade 7s infinite linear';
+        await Promise.all([
+            fetch('/assets/css/dir/login.css', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/css/dir/object.css', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/css/dir/style.css', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/css/animation.css', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/css/color.css', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/css/font.css', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/css/login.css', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/css/object.css', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/css/style.css', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/css/vertical-panel.css', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/font/iransansx-black.woff', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/font/iransansx-bold.woff', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/font/iransansx-extrablack.woff', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/font/iransansx-regular.woff', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/font/iransansxv.woff', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/404.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/add.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/alarm.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/antena.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/arrow-down.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/arrow-up.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/background-bottom-left.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/background-bottom-right.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/background-top-left.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/background-top-right.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/battery.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/cheetah-white.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/cheetah.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/close-eye.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/close.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/edit.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/error.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/fail.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/loading.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/module-signal.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/module.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/open-eye.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/password.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/phone.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/remove.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/save.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/signal.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/success.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/tick.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/image/user.svg', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/js/fillPanel.js', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/js/panel.js', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/js/password.js', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/js/scripts.js', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/js/translate.js', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/alarms.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/backup-and-restore.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/common.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/dashboard.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/diagnostic.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/factory-reset.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/keywords.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/language.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/login.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/modules.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/phones.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/quick-setup.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/register.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/security.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/timespanWords.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/update.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/en/user-area.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/alarms.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/backup-and-restore.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/common.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/dashboard.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/diagnostic.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/factory-reset.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/keywords.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/language.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/login.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/modules.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/phones.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/quick-setup.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/register.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/security.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/timespanWords.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/update.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/assets/language/fa/user-area.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/row-templates/dashboard-batteries-row.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/row-templates/dashboard-modules-row.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/row-templates/modules-modules-header.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/row-templates/modules-modules-row.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/row-templates/modules.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/row-templates/phones-phones-header.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/row-templates/phones-phones-row.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/alarms.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/backup-and-restore.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/dashboard.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/diagnostic.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/factory-reset.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/language.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/module-add-dialogue.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/module-edit-dialogue.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/module-remove-dialogue.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/modules.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/notification.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/phone-add-dialogue.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/phone-edit-dialogue.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/phone-remove-dialogue.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/phones.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/quick-setup.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/security.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/update.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/pages/user-area.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/favicon.ico', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/index.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/login.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/panel.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/register.html', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/report.csv', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/settings.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/sms-dialog.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } }),
+            fetch('/user-setting.json', { cache: 'reload', headers: { 'Cache-Control': 'max-age=94608000' } })
+        ]);
+
+        let dev_version = await fetch('/firmware.json', {
+            cache: 'reload'
+        }).then(response => response.json());
+        localStorage.setItem('cache-ver', dev_version['ver']);
+
+        document.getElementById('loading').style.opacity = 0;
+        document.getElementById('text').style.animation = 'none';
+        document.getElementById('text').style.opacity = 0;
+        setTimeout(() => {
+            document.getElementById('redirect').click();
+        }, 1500);
+    }</script>
+
+</html>

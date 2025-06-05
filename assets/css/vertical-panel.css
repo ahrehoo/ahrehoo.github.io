@@ -349,4 +349,13 @@
     .stat-white-container .stat-second {
         width: 100%;
     }
+
+    .dialogue-row{
+        flex-direction: column;
+    }
+    .dialogue-row-info{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+    }
 }

@@ -12,7 +12,6 @@ let timespanWords;
 let commonData;
 let pageData;
 let dir;
-let dataFilling = [];
 
 function translatePage() {
     document.querySelectorAll('[utext]').forEach(element => {
@@ -118,7 +117,7 @@ function replaceRowDatas(input, row) {
         var type = variable.split(',')[1];
         let valueToReplace = variable;
         if (type == "text") {
-            if (key == "module-uptime")
+            if (key == "module-contime")
                 if (row[key] == -1)
                     valueToReplace = keywords["disconnected"];
                 else {
@@ -306,39 +305,75 @@ async function getSetting(key) {
     return settings[key];
 }
 
-function setPage(_page, _pageData) {
-    page = _page;
-    pageData = _pageData;
-    reloadPage();
-}
-
-async function reloadPage() {
+async function reloadPage(pd) {
+    if (document.documentElement.getAttribute('wait') == 'true') {
+        setTimeout(() => {
+            reloadPage();
+        }, 50);
+        return;
+    }
     const cLang = await getSetting('lang');
     dir = cLang == 'fa' ? 'rtl' : 'ltr';
-    if (dir == "rtl") fixDir();
     const cPage = document.documentElement.getAttribute("page");
-
+    if (dir == "rtl") fixDir();
+    let d;
     if (cLang != lang) {
-        pageData = await fetchJSON(`assets/language/${cLang}/${cPage}.json`);
-        commonData = await fetchJSON(`assets/language/${cLang}/common.json`);
-        keywords = await fetchJSON(`assets/language/${cLang}/keywords.json`);
-        timespanWords = await fetchJSON(`assets/language/${cLang}/timespanWords.json`);
+        lang = cLang;
+        page = cPage;
+        if (pd == null && document.documentElement.getAttribute("hasData") == "true") {
+            let [_data, _pageData, _commonData, _keywords, _timespanWords] = await Promise.all([
+                fetch(`data/${page}.json`).then(response => response.json()),
+                fetch(`assets/language/${lang}/${page}.json`).then(response => response.json()),
+                fetch(`assets/language/${lang}/common.json`).then(response => response.json()),
+                fetch(`assets/language/${lang}/keywords.json`).then(response => response.json()),
+                fetch(`assets/language/${lang}/timespanWords.json`).then(response => response.json())
+            ]);
+            d = _data;
+            pageData = _pageData;
+            commonData = _commonData;
+            keywords = _keywords;
+            timespanWords = _timespanWords;
+        } else {
+            let [_pageData, _commonData, _keywords, _timespanWords] = await Promise.all([
+                fetch(`assets/language/${lang}/${page}.json`).then(response => response.json()),
+                fetch(`assets/language/${lang}/common.json`).then(response => response.json()),
+                fetch(`assets/language/${lang}/keywords.json`).then(response => response.json()),
+                fetch(`assets/language/${lang}/timespanWords.json`).then(response => response.json()),
+            ]);
+            pageData = _pageData;
+            commonData = _commonData;
+            keywords = _keywords;
+            timespanWords = _timespanWords;
+        }
     }
     if (cPage != page) {
-        pageData = await fetchJSON(`assets/language/${cLang}/${cPage}.json`);
+        page = cPage;
+        pageData = await fetchJSON(`assets/language/${lang}/${page}.json`);
     }
     translatedContent = { ...commonData, ...pageData };
     document.documentElement.setAttribute('dir', dir);
-    lang = cLang;
-    page = cPage;
-    reloadData();
+    reloadData(pd == null ? d : pd);
 }
 
-async function reloadData() {
-    dataFilling[dataFilling.length] = true;
+async function reloadData(d) {
+    let elements = document.getElementsByClassName("noTransition");
+    for (let i = 0; i < elements.length; i++)
+        elements[i].style.transition = "0s";
+
     if (document.documentElement.getAttribute("hasData") == "true")
-        data = await fetchJSON(`data/${page}.json`);
+        data = d == null ? await fetchJSON(`data/${page}.json`) : d;
     translatePage();
+
+    setTimeout(() => {
+        let elements = document.getElementsByClassName("noTransition");
+        for (let i = 0; i < elements.length; i++)
+            elements[i].style.transition = "";
+    }, 500);
+}
+
+async function loadIndex(d) {
+    translateContent = d;
+    reloadData();
 }
 
 function fixDir() {

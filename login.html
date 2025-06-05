@@ -1,9 +1,35 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" hasData="false" page="login">
+<html wait="true" lang="fa" dir="rtl" hasData="false" page="login">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        checkCache();
+        async function checkCache() {
+            try {
+                let cache_version = localStorage.getItem('cache-ver');
+                if (cache_version == null) {
+                    console.log('reload assets');
+                    window.location.href = "/reload.html";
+                }
+                let dev_version = await fetch('/firmware.json', {
+                    cache: 'reload'
+                }).then(response => response.json());
+                console.log(dev_version);
+                console.log("c:" + cache_version + " d:" + dev_version['ver']);
+                if (cache_version != dev_version['ver']) {
+                    console.log('reload assets');
+                    window.location.href = "/reload.html";
+                }
+                document.documentElement.setAttribute('wait', false);
+            } catch (error) {
+                console.log(error);
+                console.log('reload assets');
+                window.location.href = "/reload.html";
+            }
+        }
+    </script>
     <link rel="stylesheet" href="assets/css/color.css">
     <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="assets/css/animation.css">
@@ -19,7 +45,7 @@
 <body class="clr-brandb" onload="reloadPage(); loading();">
     <!--loading area-->
     <div id="loading-element" class="loading-container clr-brandb">
-        <img src="assets/image/loading.svg" class="loading-img">
+        <img src="assets/image/loading.svg" class="loading-img" style="opacity: 0;">
     </div>
     <!--background image area-->
     <div class="background-image-container">
@@ -32,17 +58,19 @@
     <div class="inner-body">
         <div class="element-container">
             <div class="white-container clr-grayb8">
-                <div class="content-container">
+                <div class="content-container fix-dir">
                     <div class="logo-container fix-dir"><img class="logo" src="assets/image/cheetah.svg"></div>
                     <div class="login-form-container fix-dir">
                         <!--content-->
                         <form action="login.html" method="POST" class="login-form">
                             <p class="title fnt-s8 fnt-wb clr-brandc" utext="title"></p>
                             <div class="input-holder">
-                                <input class="cinput icon-textbox textbox username-input" name="username" type="text" utext="username" required>
+                                <input class="cinput icon-textbox textbox username-input" name="username" type="text"
+                                    utext="username" required>
                             </div>
                             <div class="input-holder pass-holder">
-                                <input class="cinput icon-textbox textbox password-input" name="password" type="password" utext="password" required>
+                                <input class="cinput icon-textbox textbox password-input" name="password"
+                                    type="password" utext="password" required>
                                 <img class="eye" src="assets/image/close-eye.svg">
                             </div>
                             <div class="input-holder submit-holder">

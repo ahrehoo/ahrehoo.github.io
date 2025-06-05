@@ -4,6 +4,12 @@ function phonesAllCheckedChanged(checked) {
     });
 }
 
+function modulesAllCheckedChanged(checked) {
+    document.querySelectorAll(".checkbox-cell div input").forEach(element => {
+        element.checked = checked;
+    });
+}
+
 function runPageScript(page) {
     switch (page) {
         case "phones":
@@ -110,7 +116,43 @@ function dashboardMode(element) {
         child.classList.remove('tab-active');
     }
     element.classList.add('tab-active');
-    document.querySelectorAll('.stat-second').forEach(e=>{
-        e.style.display='flex';
+    document.querySelectorAll('.stat-second').forEach(e => {
+        e.style.display = 'flex';
     });
+}
+
+async function addNewModule() {
+    const pageData = await fetchText(`pages/phone-add-dialogue.html`);
+    document.getElementById("body").insertAdjacentHTML('afterend', pageData);
+    translateDialogue();
+}
+
+function closeDialogue() {
+    document.querySelector(".dialogue-white-container").style.animation = "dialogue-out 0.5s 0s forwards";
+    document.querySelector(".dialogue-container").style.animation = "dialogue-blur-out 0.5s 0s forwards";
+    setTimeout(() => {
+        document.getElementById("dialogue-container").remove();
+    }, 700);
+}
+
+function submitNewModule() {
+    closeDialogue();
+}
+
+async function removeModule(id) {
+    const pageData = await fetchText(`pages/phone-remove-dialogue.html`);
+    document.getElementById("body").insertAdjacentHTML('afterend', pageData);
+    translateDialogue();
+}
+
+async function editModule(id) {
+    const pageData = await fetchText(`pages/phone-edit-dialogue.html`);
+    document.getElementById("body").insertAdjacentHTML('afterend', pageData);
+    translateDialogue();
+}
+
+async function moduleActivityChange(id) {
+    showNotification("sms-ok", "sms-change", "green", "/assets/image/success.svg");
+    //showNotification("sms-ok1", "sms-change1", "red", "/assets/image/fail.svg");
+    //showNotification("sms-ok2", "sms-change2", "yellow", "/assets/image/error.svg");
 }

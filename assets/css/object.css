@@ -78,6 +78,7 @@
   cursor: pointer;
   z-index: 2;
   position: absolute;
+  margin: 0 10px;
   top: 15px;
   display: flex;
   justify-content: center;
@@ -1073,6 +1074,10 @@
   }
 
   .button:active {
-    background-color: var(--clr-brand3) !important;
+    background-color: var(--clr-brand3);
+  }
+
+  .red-button:active {
+    background-color: var(--clr-red3);
   }
 }

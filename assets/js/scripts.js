@@ -18,14 +18,11 @@ function loading() {
         document.querySelector('.background-image-top-right').style.width = "100%";
         document.querySelector('.background-image-bottom-left').style.width = "100%";
         document.querySelector('.background-image-bottom-right').style.width = "100%";
-    }, 250);
+    }, 0);
     setTimeout(function () {
         const element = document.getElementById("loading-element");
         element.remove(element);
-    }, 1000);
-}
-
-function chchanged() {
+    }, 750);
 }
 
 

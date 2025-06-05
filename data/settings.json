@@ -1,0 +1,215 @@
+{
+    "device-state": 1,
+    
+    "modules": [
+        {
+            "module-type": "{sensor-pir}",
+            "module-name": "آشپزخانه",
+            "module-contime": "12/23/2024 11:46 PM",
+            "module-serial": "135463614681",
+            "module-state": 1
+        },
+        {
+            "module-type": "{alarm-siren}",
+            "module-name": "حیاط",
+            "module-contime": "12/23/2012 11:46 PM",
+            "module-serial": "645136486744",
+            "module-state": 1
+        },
+        {
+            "module-type": "{sensor-sound}",
+            "module-name": "سالن",
+            "module-contime": -1,
+            "module-serial": "546278877524",
+            "module-state": 0
+        },
+        {
+            "module-type": "{sensor-pir}",
+            "module-name": "حیاط",
+            "module-contime": "12/23/2012 11:46 PM",
+            "module-serial": "456425454767",
+            "module-state": 1
+        },
+        {
+            "module-type": "{sensor-laser}",
+            "module-name": "اتاق کار",
+            "module-contime": "12/23/2012 11:46 PM",
+            "module-serial": "544524532545",
+            "module-state": 1
+        },
+        {
+            "module-type": "{sensor-weather}",
+            "module-name": "پشت بام",
+            "module-contime": "12/23/2012 11:46 PM",
+            "module-serial": "452454524254",
+            "module-state": 0
+        },
+        {
+            "module-type": "{tool-electronic-key}",
+            "module-name": "مودم",
+            "module-contime": -1,
+            "module-serial": "164513464612",
+            "module-state": 1
+        }
+    ],
+
+    "call-phone": "09179095451",
+    "phones": [
+        {
+            "phone-name": "علی اکبر فیروزی برز آبادی",
+            "phone-number": "09179095451",
+            "phone-state": 0,
+            "phone-priority": 1
+        },
+        {
+            "phone-name": "مصطفی اکبری",
+            "phone-number": "09164521646",
+            "phone-state": 1,
+            "phone-priority": 2
+        },
+        {
+            "phone-name": "اکبر علی آبادی",
+            "phone-number": "09134681594",
+            "phone-state": 1,
+            "phone-priority": 4
+        },
+        {
+            "phone-name": "محمد شوشتری",
+            "phone-number": "09466548845",
+            "phone-state": 1,
+            "phone-priority": 3
+        },
+        {
+            "phone-name": "محمدرضا جعفری",
+            "phone-number": "09167446549",
+            "phone-state": 1,
+            "phone-priority": 5
+        },
+        {
+            "phone-name": "مرتضی شاهمیرزایی",
+            "phone-number": "09133549845",
+            "phone-state": 1,
+            "phone-priority": 6
+        },
+        {
+            "phone-name": "اکبر اکبری",
+            "phone-number": "09136465284",
+            "phone-state": 1,
+            "phone-priority": 8
+        },
+        {
+            "phone-name": "دکتر رضایی",
+            "phone-number": "09146543521",
+            "phone-state": 1,
+            "phone-priority": 7
+        },
+        {
+            "phone-name": "سیدرضا رضایی",
+            "phone-number": "09396543578",
+            "phone-state": 1,
+            "phone-priority": 9
+        },
+        {
+            "phone-name": "محمدعلی رضایی",
+            "phone-number": "09456518546",
+            "phone-state": 1,
+            "phone-priority": 10
+        },
+        {
+            "phone-name": "مسعود محمدی",
+            "phone-number": "09136549859",
+            "phone-state": 111
+        },
+        {
+            "phone-name": "سعید اکبری",
+            "phone-number": "09143548796",
+            "phone-state": 1,
+            "phone-priority": 12
+        },
+        {
+            "phone-name": "احمد حسینی",
+            "phone-number": "09546531568",
+            "phone-state": 1,
+            "phone-priority": 13
+        },
+        {
+            "phone-name": "پارسا ولی الله",
+            "phone-number": "09566535456",
+            "phone-state": 1,
+            "phone-priority": 1
+        },
+        {
+            "phone-name": "بیگ سید",
+            "phone-number": "09366544585",
+            "phone-state": 1,
+            "phone-priority": 14
+        },
+        {
+            "phone-name": "شمس الله محمدی",
+            "phone-number": "09464565135",
+            "phone-state": 1,
+            "phone-priority": 15
+        },
+        {
+            "phone-name": "محمدرضا فیروزی",
+            "phone-number": "09655465351",
+            "phone-state": 1,
+            "phone-priority": 16
+        },
+        {
+            "phone-name": "موسی کاظمی",
+            "phone-number": "09133546854",
+            "phone-state": 1,
+            "phone-priority": 19
+        },
+        {
+            "phone-name": "مرتضی عباسی",
+            "phone-number": "09126548545",
+            "phone-state": 1,
+            "phone-priority": 17
+        },
+        {
+            "phone-name": "معین محمدی",
+            "phone-number": "09133546851",
+            "phone-state": 1,
+            "phone-priority": 18
+        }
+    ],
+
+    "alarms-warning-call": 1,
+    "alarms-warning-sms": 1,
+    "alarms-warning-spotlight": 1,
+    "alarms-warning-siren": 1,
+    "alarms-powerloss-call": 1,
+    "alarms-powerloss-sms": 1,
+    "alarms-powerloss-spotlight": 1,
+    "alarms-powerloss-siren": 1,
+    "alarms-sim-noservice-spotlight": 1,
+    "alarms-sim-noservice-siren": 1,
+    "alarms-device-lowbattery-call": 1,
+    "alarms-device-lowbattery-sms": 1,
+    "alarms-module-connectionfail-call": 1,
+    "alarms-module-connectionfail-sms": 1,
+    "alarms-module-connectionfail-spotlight": 1,
+    "alarms-module-connectionfail-siren": 1,
+    "alarms-module-lowbattery-call": 1,
+    "alarms-module-lowbattery-sms": 1,
+    "alarms-userlogin-call": 1,
+    "alarms-userlogin-sms": 1,
+    "alarms-setting-changes-call": 1,
+    "alarms-setting-changes-sms": 1,
+    "two-step-state": 1,
+    "two-step-phone": "09179095451",
+    "two-step-on-login": 1,
+    "two-step-on-changes": 1,
+    "two-step-recovery-password": 1,
+
+    "check-sensors-connectivity-automatically": 1,
+    "check-sensors-connectivity-interval": 5,
+    "send-batteries-sms-log": 1,
+    "send-batteries-sms-log-interval": 5,
+
+    "lang": "fa",
+
+    "firmware-version": "1.0.0"
+}

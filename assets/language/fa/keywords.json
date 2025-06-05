@@ -37,5 +37,10 @@
     "phone-name":"نام و نام خانوادگی",
     "phone-number":"شماره تلفن",
     "phone-sms":"پیامک",
-    "phone-function":"عملیات"
+    "phone-function":"عملیات",
+
+    "module-type":"نوع ماژول",
+    "module-name":"نام ماژول",
+    "module-state":"وضعیت",
+    "module-function":"عملیات"
 }

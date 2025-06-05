@@ -1,1 +1,95 @@
-{}
+{
+    "modules": [
+        {
+            "module-type": "{sensor-pir}",
+            "module-name": "آشپزخانه",
+            "module-contime": "12/23/2024 11:46 PM",
+            "module-serial": "135463614681",
+            "module-state": 1
+        },
+        {
+            "module-type": "{alarm-siren}",
+            "module-name": "حیاط",
+            "module-contime": "12/23/2012 11:46 PM",
+            "module-serial": "554164652164",
+            "module-state": 1
+        },
+        {
+            "module-type": "{alarm-fog}",
+            "module-name": "حیاط",
+            "module-contime": "12/23/2012 11:46 PM",
+            "module-serial": "641536464135",
+            "module-state": 1
+        },
+        {
+            "module-type": "{sensor-fire}",
+            "module-name": "پارکینگ",
+            "module-contime": "12/23/2012 11:46 PM",
+            "module-serial": "641352146413",
+            "module-state": 1
+        },
+        {
+            "module-type": "{sensor-laser}",
+            "module-name": "ورودی",
+            "module-contime": "12/23/2012 11:46 PM",
+            "module-serial": "641316946948",
+            "module-state": 1
+        },
+        {
+            "module-type": "{sensor-sound}",
+            "module-name": "سالن",
+            "module-contime": -1,
+            "module-serial": "415631464613",
+            "module-state": 0
+        },
+        {
+            "module-type": "{sensor-pir}",
+            "module-name": "حیاط",
+            "module-contime": "12/23/2012 11:46 PM",
+            "module-serial": "857461674354",
+            "module-state": 1
+        },
+        {
+            "module-type": "{sensor-light}",
+            "module-name": "اتاق خواب",
+            "module-contime": "12/23/2012 11:46 PM",
+            "module-serial": "463413548643",
+            "module-state": 1
+        },
+        {
+            "module-type": "{sensor-weather}",
+            "module-name": "پشت بام",
+            "module-contime": "12/23/2012 11:46 PM",
+            "module-serial": "754164631436",
+            "module-state": 0
+        },
+        {
+            "module-type": "{tool-electronic-key}",
+            "module-name": "مودم",
+            "module-contime": -1,
+            "module-serial": "646453468412",
+            "module-state": 1
+        },
+        {
+            "module-type": "{protective-electric-fance}",
+            "module-name": "حیاط",
+            "module-contime": -1,
+            "module-serial": "141654131612",
+            "module-state": 1
+        },
+        {
+            "module-type": "{tool-electronic-key}",
+            "module-name": "مودم",
+            "module-contime": -1,
+            "module-serial": "141646164642",
+            "module-state": 1
+        },
+        {
+            "module-type": "{tool-electronic-key}",
+            "module-name": "چراغ های پذیرایی",
+            "module-contime": -1,
+            "module-serial": "645143564532",
+            "module-state": 1
+        }
+    ]
+}

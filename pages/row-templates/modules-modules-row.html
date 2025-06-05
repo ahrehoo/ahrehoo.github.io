@@ -1,0 +1,28 @@
+<tr">
+    <td>
+        <div class="checkbox-cell">
+            <div><input id="^module-serial,text!^-ch" type="checkbox"></div>
+        </div>
+    </td>
+    <div>
+        <td><label for="^module-serial,text!^-ch">^module-type,text!^</label></td>
+        <td><label for="^module-serial,text!^-ch">^module-name,text!^</label></td>
+    </div>
+    <td>
+        <div class="checkbox-container mini-checkbox">
+            <input type="checkbox" utext="" data="[['module-state','checkbox']]" id="^module-serial,text!^-sms"
+                onchange="moduleActivityChange(this.id);">
+            <label for="^module-serial,text!^-sms" class="checkbox">
+                <div class="checkbox-handle"></div>
+            </label>
+        </div>
+    </td>
+    <td>
+        <div class="fill-cell">
+            <div id="^module-serial,text!^-edit" class="small-img-button small-edit-button"
+                onclick="editModule();"(this.id);"></div>
+            <div id="^module-serial,text!^-remove" class="small-img-button small-remove-button"
+                onclick="removeModule(this.id);"></div>
+        </div>
+    </td>
+    </tr>

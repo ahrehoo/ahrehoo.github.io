@@ -20,7 +20,7 @@
 }
 
 .content-container {
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
 
 .login-form-container {
@@ -34,7 +34,7 @@
 
 .logo-container {
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   display: flex;
   width: 250px;
   height: 100%;
@@ -78,12 +78,13 @@
   }
 
   .logo-container{
+    padding-top: 20px;
     margin-bottom: 15px;
   }
 
   .logo {
     margin: 0 !important;
-    width: 200px;
+    width: 150px;
   }
 
   .logo-container {

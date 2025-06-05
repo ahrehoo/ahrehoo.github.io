@@ -1,9 +1,35 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" hasData="true" page="">
+<html wait="true" lang="fa" dir="rtl" hasData="true" page="">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        checkCache();
+        async function checkCache() {
+            try {
+                let cache_version = localStorage.getItem('cache-ver');
+                if (cache_version == null) {
+                    console.log('reload assets');
+                    window.location.href = "/reload.html";
+                }
+                let dev_version = await fetch('/firmware.json', {
+                    cache: 'reload'
+                }).then(response => response.json());
+                console.log(dev_version);
+                console.log("c:" + cache_version + " d:" + dev_version['ver']);
+                if (cache_version != dev_version['ver']) {
+                    console.log('reload assets');
+                    window.location.href = "/reload.html";
+                }
+                document.documentElement.setAttribute('wait', false);
+            } catch (error) {
+                console.log(error);
+                console.log('reload assets');
+                window.location.href = "/reload.html";
+            }
+        }
+    </script>
     <link rel="stylesheet" href="assets/css/color.css">
     <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="assets/css/animation.css">
@@ -19,7 +45,7 @@
 <body id="body" class="clr-brandb" onload="loading();">
     <!--loading area-->
     <div id="loading-element" class="loading-container clr-brandb">
-        <img src="assets/image/loading.svg" class="loading-img">
+        <img src="assets/image/loading.svg" class="loading-img" style="opacity: 0;">
     </div>
     </div>
     <!--background image area-->
@@ -85,8 +111,8 @@
     </div>
     <script src="assets/js/password.js"></script>
 </body>
-<script src="assets/js/fillPanel.js"></script>
 <script src="assets/js/translate.js"></script>
+<script src="assets/js/fillPanel.js"></script>
 <script src="assets/js/panel.js"></script>
 
 </html>
